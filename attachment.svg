@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="77" height="77" viewBox="0 0 77 77">
+  <g id="Group_485" data-name="Group 485" transform="translate(-0.041 -0.329)">
+    <g id="Ellipse_528" data-name="Ellipse 528" transform="translate(0.041 0.329)" fill="#0c0e0d" stroke="#009ee2" stroke-width="2">
+      <circle cx="38.5" cy="38.5" r="38.5" stroke="none"/>
+      <circle cx="38.5" cy="38.5" r="37.5" fill="none"/>
+    </g>
+    <path id="attachment-09" d="M18.353,21.539V7.41c0-4.086-3.6-7.41-8.057-7.41H8.057C3.6,0,0,3.324,0,7.41V35a5.872,5.872,0,0,0,5.864,5.864H7.6A5.872,5.872,0,0,0,13.459,35V11.8a3.374,3.374,0,0,0-3.37-3.37h0a3.374,3.374,0,0,0-3.37,3.37V29.365" transform="matrix(0.891, 0.454, -0.454, 0.891, 41.517, 16.344)" fill="none" stroke="#009ee2" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+  </g>
+</svg>

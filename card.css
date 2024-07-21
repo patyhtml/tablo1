@@ -1,0 +1,149 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.product-card {
+    width: 330px;
+    background-color: #151515;
+    font-family: 'Gilroy';
+    font-weight: 400;
+    color: #B9B8B8;
+    font-size: 16px;
+    border-radius: 10px;
+    overflow: visible; /* Allow overflow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.image-container {
+    width: 100%;
+    height: 170px;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #222222;
+    transition: height 0.3s ease-in-out;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-container.collapsed {
+    height: 0;
+}
+
+.expand-button {
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.expand-button img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.expand-button.rotated img {
+    transform: rotate(90deg);
+}
+
+
+
+
+
+
+
+
+
+
+.project-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.project-title {
+    margin: 0;
+    font-size: 20px;
+}
+
+.project-tag {
+    background-color: #753476;
+    color: #FFFFFF;
+    padding: 8px 16px;
+    border-radius: 16px;
+    font-size: 12px;
+}
+
+.expand-button {
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.expand-button img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-description {
+    padding: 10px;
+    font-family: 'Gilroy';
+    font-weight: 300;
+    line-height: 1.6; /* Dodano line-height dla zwiększenia interlinii */
+    font-size: 16px;
+}
+
+.project-details {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 8px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    font-size: 11px;
+    gap: 3px;
+    position: relative;
+}
+
+.detail-item .icon {
+    margin-right: 5px;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    fill: #ffffff;
+}
+
+.detail-item .dropdown-content {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    background-color: #222222;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.detail-item:hover .dropdown-content {
+    display: flex;
+}
