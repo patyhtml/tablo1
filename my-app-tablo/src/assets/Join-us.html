@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Join-us.css">
+</head>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @font-face {
+            font-family: 'Gilroy';
+            src: url('Gilroy-Light') format('opentype');
+            font-weight: 300;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Gilroy';
+            src: url('Gilroy-Regular') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Gilroy';
+            src: url('Gilroy-SemiBold') format('opentype');
+            font-weight: 600;
+            font-style: normal;
+        }
+        </style>
+</head>
+<body>
+    
+    
+    <header class="header">
+        <div class="left-section">
+            <div class="logo">Tablo</div>
+            <nav class="menu">
+                <a href="#tools">Tools</a>
+                <a href="#pricing">Pricing</a>
+            </nav>
+        </div>
+        <div class="auth-buttons">
+            <button class="login-form-button">Log in</button>
+            <button class="join-button">Join us</button>
+        </div>
+    </header>
+    <img src="divider.svg" alt="Divider" class="svg-divider">
+
+    <body>
+
+      <div class="container">
+      <div class="form-container">
+      
+        <form id="join-form">
+            <div class="form-group">
+              <h1> Sign Up </h1>
+                <label for="name">Name</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" required>
+            </div>
+           
+            <div class="form-group horizontal">
+              <input type="checkbox" id="subscribe">
+              <label for="subscribe">Subscribe to GreenSock Insider: tips for getting started, access to special tools, update notifications and more.</label>
+          </div>
+          <div class="form-group horizontal">
+              <input type="checkbox" id="agree" required>
+              <label for="agree">I agree to the <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a> REQUIRED</label>
+          </div>
+            <button type="submit" class="create-account-button">Create my Account</button>
+        </form>
+      
+    </div>
+  </div>
+
+    <script src="script.js">
+document.getElementById('join-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirm-password').value;
+    const subscribe = document.getElementById('subscribe').checked;
+    const agree = document.getElementById('agree').checked;
+    
+    // Walidacja hasła
+    if (password !== confirmPassword) {
+        alert('Passwords do not match!');
+        return;
+    }
+
+    // Można tu dodać dalszą logikę, np. wysłanie danych do serwera
+    console.log('Name:', name);
+    console.log('Email:', email);
+    console.log('Password:', password);
+    console.log('Subscribe:', subscribe);
+    console.log('Agree:', agree);
+    
+    alert('Account created successfully!');
+});
+
+    </script>
+  </body>
+    
+</body>
+</html>
