@@ -1,0 +1,374 @@
+divaid mockup from react
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Na gałęzi master
+# Twoja gałąź jest na bieżąco z „origin/master”.
+#
+# Zmiany do złożenia:
+#	zmieniono:       .DS_Store
+#	nowy plik:       mockup/.DS_Store
+#	zmieniono nazwę: Calendar-app.css -> mockup/Calendar-app.css
+#	zmieniono nazwę: Calendar-app.html -> mockup/Calendar-app.html
+#	zmieniono nazwę: Confirm-information.css -> mockup/Confirm-information.css
+#	zmieniono nazwę: Confirm-information.html -> mockup/Confirm-information.html
+#	zmieniono nazwę: Create-point-pain.css -> mockup/Create-point-pain.css
+#	zmieniono nazwę: Create-point-pain.html -> mockup/Create-point-pain.html
+#	zmieniono nazwę: Gilroy-Light.otf -> mockup/Gilroy-Light.otf
+#	zmieniono nazwę: Gilroy-Regular.otf -> mockup/Gilroy-Regular.otf
+#	zmieniono nazwę: Gilroy-SemiBold.otf -> mockup/Gilroy-SemiBold.otf
+#	zmieniono nazwę: Join-us.css -> mockup/Join-us.css
+#	zmieniono nazwę: Join-us.html -> mockup/Join-us.html
+#	zmieniono nazwę: Login.css -> mockup/Login.css
+#	zmieniono nazwę: Login.html -> mockup/Login.html
+#	zmieniono nazwę: New-project.css -> mockup/New-project.css
+#	zmieniono nazwę: New-project.html -> mockup/New-project.html
+#	zmieniono nazwę: Payment.css -> mockup/Payment.css
+#	zmieniono nazwę: Payment.html -> mockup/Payment.html
+#	zmieniono nazwę: Point.svg -> mockup/Point.svg
+#	zmieniono nazwę: Pricing.html -> mockup/Pricing.html
+#	zmieniono nazwę: Table-app.html -> mockup/Table-app.html
+#	zmieniono nazwę: Tablo.html -> mockup/Tablo.html
+#	zmieniono nazwę: add-new-project.svg -> mockup/add-new-project.svg
+#	zmieniono nazwę: add-photo.svg -> mockup/add-photo.svg
+#	zmieniono nazwę: arrow-1.svg -> mockup/arrow-1.svg
+#	zmieniono nazwę: arrow-2.svg -> mockup/arrow-2.svg
+#	zmieniono nazwę: assigned.svg -> mockup/assigned.svg
+#	zmieniono nazwę: attachment.svg -> mockup/attachment.svg
+#	zmieniono nazwę: awatar-chat.png -> mockup/awatar-chat.png
+#	zmieniono nazwę: awatar-chat.svg -> mockup/awatar-chat.svg
+#	zmieniono nazwę: awatar.svg -> mockup/awatar.svg
+#	zmieniono nazwę: awatar1x.svg -> mockup/awatar1x.svg
+#	zmieniono nazwę: awatar2x.svg -> mockup/awatar2x.svg
+#	zmieniono nazwę: awatar3x.svg -> mockup/awatar3x.svg
+#	zmieniono nazwę: awatarx4.svg -> mockup/awatarx4.svg
+#	zmieniono nazwę: button-footer.svg -> mockup/button-footer.svg
+#	zmieniono nazwę: calendar-image.svg -> mockup/calendar-image.svg
+#	zmieniono nazwę: calendar.svg -> mockup/calendar.svg
+#	zmieniono nazwę: card-kopia.textClipping -> mockup/card-kopia.textClipping
+#	zmieniono nazwę: card.css -> mockup/card.css
+#	zmieniono nazwę: card.html -> mockup/card.html
+#	zmieniono nazwę: carousel-button-next.svg -> mockup/carousel-button-next.svg
+#	zmieniono nazwę: carousel-button-prev.svg -> mockup/carousel-button-prev.svg
+#	zmieniono nazwę: correction-point-image.svg -> mockup/correction-point-image.svg
+#	zmieniono nazwę: correction-point-image2.svg -> mockup/correction-point-image2.svg
+#	zmieniono nazwę: correction-point-image3.svg -> mockup/correction-point-image3.svg
+#	zmieniono nazwę: divider.svg -> mockup/divider.svg
+#	zmieniono nazwę: down.svg -> mockup/down.svg
+#	zmieniono nazwę: drag-end-drop-icon.svg -> mockup/drag-end-drop-icon.svg
+#	zmieniono nazwę: dropdown-icon.svg -> mockup/dropdown-icon.svg
+#	zmieniono nazwę: expand-button-default.svg -> mockup/expand-button-default.svg
+#	zmieniono nazwę: expand-button.svg -> mockup/expand-button.svg
+#	zmieniono nazwę: hamburger-icon.svg -> mockup/hamburger-icon.svg
+#	zmieniono nazwę: icon-calendar.svg -> mockup/icon-calendar.svg
+#	zmieniono nazwę: icon-new-project.svg -> mockup/icon-new-project.svg
+#	zmieniono nazwę: icon-table.png -> mockup/icon-table.png
+#	zmieniono nazwę: icon-table.svg -> mockup/icon-table.svg
+#	zmieniono nazwę: image.png -> mockup/image.png
+#	zmieniono nazwę: image1.svg -> mockup/image1.svg
+#	zmieniono nazwę: image3.svg -> mockup/image3.svg
+#	zmieniono nazwę: image5.svg -> mockup/image5.svg
+#	zmieniono nazwę: line.svg -> mockup/line.svg
+#	zmieniono nazwę: month-dropdown-icon.svg -> mockup/month-dropdown-icon.svg
+#	zmieniono nazwę: nav-button.svg -> mockup/nav-button.svg
+#	zmieniono nazwę: next-day.svg -> mockup/next-day.svg
+#	zmieniono nazwę: next-section.svg -> mockup/next-section.svg
+#	zmieniono nazwę: pain-point.svg -> mockup/pain-point.svg
+#	zmieniono nazwę: path.svg -> mockup/path.svg
+#	zmieniono nazwę: point.png -> mockup/point.png
+#	zmieniono nazwę: prev-day.svg -> mockup/prev-day.svg
+#	zmieniono nazwę: pricing.css -> mockup/pricing.css
+#	zmieniono nazwę: priority.svg -> mockup/priority.svg
+#	zmieniono nazwę: rectangle1.svg -> mockup/rectangle1.svg
+#	zmieniono nazwę: rectangle2.svg -> mockup/rectangle2.svg
+#	zmieniono nazwę: rectangle3.svg -> mockup/rectangle3.svg
+#	zmieniono nazwę: rectangle4.svg -> mockup/rectangle4.svg
+#	zmieniono nazwę: set-priority-green.svg -> mockup/set-priority-green.svg
+#	zmieniono nazwę: set-priority-red.svg -> mockup/set-priority-red.svg
+#	zmieniono nazwę: set-priority-yellow.svg -> mockup/set-priority-yellow.svg
+#	zmieniono nazwę: table-app.css -> mockup/table-app.css
+#	zmieniono nazwę: tablo.css -> mockup/tablo.css
+#	zmieniono nazwę: window-chat.css -> mockup/window-chat.css
+#	zmieniono nazwę: window-chat.html -> mockup/window-chat.html
+#	zmieniono nazwę: window1.svg -> mockup/window1.svg
+#	zmieniono nazwę: window2.svg -> mockup/window2.svg
+#	zmieniono nazwę: window3.svg -> mockup/window3.svg
+#	zmieniono nazwę: year-dropdown-icon.svg -> mockup/year-dropdown-icon.svg
+#	nowy plik:       my-app-tablo/.gitignore
+#	nowy plik:       my-app-tablo/README.md
+#	nowy plik:       my-app-tablo/mockup/Calendar-app.css
+#	nowy plik:       my-app-tablo/mockup/Calendar-app.html
+#	nowy plik:       my-app-tablo/mockup/Confirm-information.css
+#	nowy plik:       my-app-tablo/mockup/Confirm-information.html
+#	nowy plik:       my-app-tablo/mockup/Create-point-pain.css
+#	nowy plik:       my-app-tablo/mockup/Create-point-pain.html
+#	nowy plik:       my-app-tablo/mockup/Gilroy-Light.otf
+#	nowy plik:       my-app-tablo/mockup/Gilroy-Regular.otf
+#	nowy plik:       my-app-tablo/mockup/Gilroy-SemiBold.otf
+#	nowy plik:       my-app-tablo/mockup/Join-us.css
+#	nowy plik:       my-app-tablo/mockup/Join-us.html
+#	nowy plik:       my-app-tablo/mockup/Login.css
+#	nowy plik:       my-app-tablo/mockup/Login.html
+#	nowy plik:       my-app-tablo/mockup/New-project.css
+#	nowy plik:       my-app-tablo/mockup/New-project.html
+#	nowy plik:       my-app-tablo/mockup/Payment.css
+#	nowy plik:       my-app-tablo/mockup/Payment.html
+#	nowy plik:       my-app-tablo/mockup/Point.svg
+#	nowy plik:       my-app-tablo/mockup/Pricing.html
+#	nowy plik:       my-app-tablo/mockup/Table-app.html
+#	nowy plik:       my-app-tablo/mockup/Tablo.html
+#	nowy plik:       my-app-tablo/mockup/add-new-project.svg
+#	nowy plik:       my-app-tablo/mockup/add-photo.svg
+#	nowy plik:       my-app-tablo/mockup/arrow-1.svg
+#	nowy plik:       my-app-tablo/mockup/arrow-2.svg
+#	nowy plik:       my-app-tablo/mockup/assigned.svg
+#	nowy plik:       my-app-tablo/mockup/attachment.svg
+#	nowy plik:       my-app-tablo/mockup/awatar-chat.png
+#	nowy plik:       my-app-tablo/mockup/awatar-chat.svg
+#	nowy plik:       my-app-tablo/mockup/awatar.svg
+#	nowy plik:       my-app-tablo/mockup/awatar1x.svg
+#	nowy plik:       my-app-tablo/mockup/awatar2x.svg
+#	nowy plik:       my-app-tablo/mockup/awatar3x.svg
+#	nowy plik:       my-app-tablo/mockup/awatarx4.svg
+#	nowy plik:       my-app-tablo/mockup/button-footer.svg
+#	nowy plik:       my-app-tablo/mockup/calendar-image.svg
+#	nowy plik:       my-app-tablo/mockup/calendar.svg
+#	nowy plik:       my-app-tablo/mockup/card-kopia.textClipping
+#	nowy plik:       my-app-tablo/mockup/card.css
+#	nowy plik:       my-app-tablo/mockup/card.html
+#	nowy plik:       my-app-tablo/mockup/carousel-button-next.svg
+#	nowy plik:       my-app-tablo/mockup/carousel-button-prev.svg
+#	nowy plik:       my-app-tablo/mockup/correction-point-image.svg
+#	nowy plik:       my-app-tablo/mockup/correction-point-image2.svg
+#	nowy plik:       my-app-tablo/mockup/correction-point-image3.svg
+#	nowy plik:       my-app-tablo/mockup/divider.svg
+#	nowy plik:       my-app-tablo/mockup/down.svg
+#	nowy plik:       my-app-tablo/mockup/drag-end-drop-icon.svg
+#	nowy plik:       my-app-tablo/mockup/dropdown-icon.svg
+#	nowy plik:       my-app-tablo/mockup/expand-button-default.svg
+#	nowy plik:       my-app-tablo/mockup/expand-button.svg
+#	nowy plik:       my-app-tablo/mockup/hamburger-icon.svg
+#	nowy plik:       my-app-tablo/mockup/icon-calendar.svg
+#	nowy plik:       my-app-tablo/mockup/icon-new-project.svg
+#	nowy plik:       my-app-tablo/mockup/icon-table.png
+#	nowy plik:       my-app-tablo/mockup/icon-table.svg
+#	nowy plik:       my-app-tablo/mockup/image.png
+#	nowy plik:       my-app-tablo/mockup/image1.svg
+#	nowy plik:       my-app-tablo/mockup/image3.svg
+#	nowy plik:       my-app-tablo/mockup/image5.svg
+#	nowy plik:       my-app-tablo/mockup/line.svg
+#	nowy plik:       my-app-tablo/mockup/month-dropdown-icon.svg
+#	nowy plik:       my-app-tablo/mockup/nav-button.svg
+#	nowy plik:       my-app-tablo/mockup/next-day.svg
+#	nowy plik:       my-app-tablo/mockup/next-section.svg
+#	nowy plik:       my-app-tablo/mockup/pain-point.svg
+#	nowy plik:       my-app-tablo/mockup/path.svg
+#	nowy plik:       my-app-tablo/mockup/point.png
+#	nowy plik:       my-app-tablo/mockup/prev-day.svg
+#	nowy plik:       my-app-tablo/mockup/pricing.css
+#	nowy plik:       my-app-tablo/mockup/priority.svg
+#	nowy plik:       my-app-tablo/mockup/rectangle1.svg
+#	nowy plik:       my-app-tablo/mockup/rectangle2.svg
+#	nowy plik:       my-app-tablo/mockup/rectangle3.svg
+#	nowy plik:       my-app-tablo/mockup/rectangle4.svg
+#	nowy plik:       my-app-tablo/mockup/set-priority-green.svg
+#	nowy plik:       my-app-tablo/mockup/set-priority-red.svg
+#	nowy plik:       my-app-tablo/mockup/set-priority-yellow.svg
+#	nowy plik:       my-app-tablo/mockup/table-app.css
+#	nowy plik:       my-app-tablo/mockup/tablo.css
+#	nowy plik:       my-app-tablo/mockup/window-chat.css
+#	nowy plik:       my-app-tablo/mockup/window-chat.html
+#	nowy plik:       my-app-tablo/mockup/window1.svg
+#	nowy plik:       my-app-tablo/mockup/window2.svg
+#	nowy plik:       my-app-tablo/mockup/window3.svg
+#	nowy plik:       my-app-tablo/mockup/year-dropdown-icon.svg
+#	nowy plik:       my-app-tablo/package-lock.json
+#	nowy plik:       my-app-tablo/package.json
+#	nowy plik:       my-app-tablo/public/assets/Calendar-app.css
+#	nowy plik:       my-app-tablo/public/assets/Calendar-app.html
+#	nowy plik:       my-app-tablo/public/assets/Confirm-information.css
+#	nowy plik:       my-app-tablo/public/assets/Confirm-information.html
+#	nowy plik:       my-app-tablo/public/assets/Create-point-pain.css
+#	nowy plik:       my-app-tablo/public/assets/Create-point-pain.html
+#	nowy plik:       my-app-tablo/public/assets/Join-us.css
+#	nowy plik:       my-app-tablo/public/assets/Join-us.html
+#	nowy plik:       my-app-tablo/public/assets/Login.css
+#	nowy plik:       my-app-tablo/public/assets/Login.html
+#	nowy plik:       my-app-tablo/public/assets/New-project.css
+#	nowy plik:       my-app-tablo/public/assets/New-project.html
+#	nowy plik:       my-app-tablo/public/assets/Payment.css
+#	nowy plik:       my-app-tablo/public/assets/Payment.html
+#	nowy plik:       my-app-tablo/public/assets/Pricing.html
+#	nowy plik:       my-app-tablo/public/assets/Table-app.html
+#	nowy plik:       my-app-tablo/public/assets/Tablo.html
+#	nowy plik:       my-app-tablo/public/assets/card.css
+#	nowy plik:       my-app-tablo/public/assets/card.html
+#	nowy plik:       my-app-tablo/public/assets/font/Gilroy-Light.otf
+#	nowy plik:       my-app-tablo/public/assets/font/Gilroy-Regular.otf
+#	nowy plik:       my-app-tablo/public/assets/font/Gilroy-SemiBold.otf
+#	nowy plik:       my-app-tablo/public/assets/img/Point.svg
+#	nowy plik:       my-app-tablo/public/assets/img/add-new-project.svg
+#	nowy plik:       my-app-tablo/public/assets/img/add-photo.svg
+#	nowy plik:       my-app-tablo/public/assets/img/arrow-1.svg
+#	nowy plik:       my-app-tablo/public/assets/img/arrow-2.svg
+#	nowy plik:       my-app-tablo/public/assets/img/assigned.svg
+#	nowy plik:       my-app-tablo/public/assets/img/attachment.svg
+#	nowy plik:       my-app-tablo/public/assets/img/awatar-chat.png
+#	nowy plik:       my-app-tablo/public/assets/img/awatar-chat.svg
+#	nowy plik:       my-app-tablo/public/assets/img/awatar.svg
+#	nowy plik:       my-app-tablo/public/assets/img/awatar1x.svg
+#	nowy plik:       my-app-tablo/public/assets/img/awatar2x.svg
+#	nowy plik:       my-app-tablo/public/assets/img/awatar3x.svg
+#	nowy plik:       my-app-tablo/public/assets/img/awatarx4.svg
+#	nowy plik:       my-app-tablo/public/assets/img/button-footer.svg
+#	nowy plik:       my-app-tablo/public/assets/img/calendar-image.svg
+#	nowy plik:       my-app-tablo/public/assets/img/calendar.svg
+#	nowy plik:       my-app-tablo/public/assets/img/carousel-button-next.svg
+#	nowy plik:       my-app-tablo/public/assets/img/carousel-button-prev.svg
+#	nowy plik:       my-app-tablo/public/assets/img/correction-point-image.svg
+#	nowy plik:       my-app-tablo/public/assets/img/correction-point-image2.svg
+#	nowy plik:       my-app-tablo/public/assets/img/correction-point-image3.svg
+#	nowy plik:       my-app-tablo/public/assets/img/divider.svg
+#	nowy plik:       my-app-tablo/public/assets/img/down.svg
+#	nowy plik:       my-app-tablo/public/assets/img/drag-end-drop-icon.svg
+#	nowy plik:       my-app-tablo/public/assets/img/dropdown-icon.svg
+#	nowy plik:       my-app-tablo/public/assets/img/expand-button-default.svg
+#	nowy plik:       my-app-tablo/public/assets/img/expand-button.svg
+#	nowy plik:       my-app-tablo/public/assets/img/hamburger-icon.svg
+#	nowy plik:       my-app-tablo/public/assets/img/icon-calendar.svg
+#	nowy plik:       my-app-tablo/public/assets/img/icon-new-project.svg
+#	nowy plik:       my-app-tablo/public/assets/img/icon-table.png
+#	nowy plik:       my-app-tablo/public/assets/img/icon-table.svg
+#	nowy plik:       my-app-tablo/public/assets/img/image.png
+#	nowy plik:       my-app-tablo/public/assets/img/image1.svg
+#	nowy plik:       my-app-tablo/public/assets/img/image3.svg
+#	nowy plik:       my-app-tablo/public/assets/img/image5.svg
+#	nowy plik:       my-app-tablo/public/assets/img/line.svg
+#	nowy plik:       my-app-tablo/public/assets/img/month-dropdown-icon.svg
+#	nowy plik:       my-app-tablo/public/assets/img/nav-button.svg
+#	nowy plik:       my-app-tablo/public/assets/img/next-day.svg
+#	nowy plik:       my-app-tablo/public/assets/img/next-section.svg
+#	nowy plik:       my-app-tablo/public/assets/img/pain-point.svg
+#	nowy plik:       my-app-tablo/public/assets/img/path.svg
+#	nowy plik:       my-app-tablo/public/assets/img/point.png
+#	nowy plik:       my-app-tablo/public/assets/img/prev-day.svg
+#	nowy plik:       my-app-tablo/public/assets/img/priority.svg
+#	nowy plik:       my-app-tablo/public/assets/img/rectangle1.svg
+#	nowy plik:       my-app-tablo/public/assets/img/rectangle2.svg
+#	nowy plik:       my-app-tablo/public/assets/img/rectangle3.svg
+#	nowy plik:       my-app-tablo/public/assets/img/rectangle4.svg
+#	nowy plik:       my-app-tablo/public/assets/img/set-priority-green.svg
+#	nowy plik:       my-app-tablo/public/assets/img/set-priority-red.svg
+#	nowy plik:       my-app-tablo/public/assets/img/set-priority-yellow.svg
+#	nowy plik:       my-app-tablo/public/assets/img/window1.svg
+#	nowy plik:       my-app-tablo/public/assets/img/window2.svg
+#	nowy plik:       my-app-tablo/public/assets/img/window3.svg
+#	nowy plik:       my-app-tablo/public/assets/img/year-dropdown-icon.svg
+#	nowy plik:       my-app-tablo/public/assets/pricing.css
+#	nowy plik:       my-app-tablo/public/assets/table-app.css
+#	nowy plik:       my-app-tablo/public/assets/tablo.css
+#	nowy plik:       my-app-tablo/public/assets/window-chat.css
+#	nowy plik:       my-app-tablo/public/assets/window-chat.html
+#	nowy plik:       my-app-tablo/public/favicon.ico
+#	nowy plik:       my-app-tablo/public/index.html
+#	nowy plik:       my-app-tablo/public/logo192.png
+#	nowy plik:       my-app-tablo/public/logo512.png
+#	nowy plik:       my-app-tablo/public/manifest.json
+#	nowy plik:       my-app-tablo/public/robots.txt
+#	nowy plik:       my-app-tablo/src/App.css
+#	nowy plik:       my-app-tablo/src/App.js
+#	nowy plik:       my-app-tablo/src/App.test.js
+#	nowy plik:       my-app-tablo/src/assets/Calendar-app.css
+#	nowy plik:       my-app-tablo/src/assets/Calendar-app.html
+#	nowy plik:       my-app-tablo/src/assets/Confirm-information.css
+#	nowy plik:       my-app-tablo/src/assets/Confirm-information.html
+#	nowy plik:       my-app-tablo/src/assets/Create-point-pain.css
+#	nowy plik:       my-app-tablo/src/assets/Create-point-pain.html
+#	nowy plik:       my-app-tablo/src/assets/Join-us.css
+#	nowy plik:       my-app-tablo/src/assets/Join-us.html
+#	nowy plik:       my-app-tablo/src/assets/Login.css
+#	nowy plik:       my-app-tablo/src/assets/Login.html
+#	nowy plik:       my-app-tablo/src/assets/New-project.css
+#	nowy plik:       my-app-tablo/src/assets/New-project.html
+#	nowy plik:       my-app-tablo/src/assets/Payment.css
+#	nowy plik:       my-app-tablo/src/assets/Payment.html
+#	nowy plik:       my-app-tablo/src/assets/Pricing.html
+#	nowy plik:       my-app-tablo/src/assets/Table-app.html
+#	nowy plik:       my-app-tablo/src/assets/Tablo.html
+#	nowy plik:       my-app-tablo/src/assets/card.css
+#	nowy plik:       my-app-tablo/src/assets/card.html
+#	nowy plik:       my-app-tablo/src/assets/font/Gilroy-Light.otf
+#	nowy plik:       my-app-tablo/src/assets/font/Gilroy-Regular.otf
+#	nowy plik:       my-app-tablo/src/assets/font/Gilroy-SemiBold.otf
+#	nowy plik:       my-app-tablo/src/assets/img/Point.svg
+#	nowy plik:       my-app-tablo/src/assets/img/add-new-project.svg
+#	nowy plik:       my-app-tablo/src/assets/img/add-photo.svg
+#	nowy plik:       my-app-tablo/src/assets/img/arrow-1.svg
+#	nowy plik:       my-app-tablo/src/assets/img/arrow-2.svg
+#	nowy plik:       my-app-tablo/src/assets/img/assigned.svg
+#	nowy plik:       my-app-tablo/src/assets/img/attachment.svg
+#	nowy plik:       my-app-tablo/src/assets/img/awatar-chat.png
+#	nowy plik:       my-app-tablo/src/assets/img/awatar-chat.svg
+#	nowy plik:       my-app-tablo/src/assets/img/awatar.svg
+#	nowy plik:       my-app-tablo/src/assets/img/awatar1x.svg
+#	nowy plik:       my-app-tablo/src/assets/img/awatar2x.svg
+#	nowy plik:       my-app-tablo/src/assets/img/awatar3x.svg
+#	nowy plik:       my-app-tablo/src/assets/img/awatarx4.svg
+#	nowy plik:       my-app-tablo/src/assets/img/button-footer.svg
+#	nowy plik:       my-app-tablo/src/assets/img/calendar-image.svg
+#	nowy plik:       my-app-tablo/src/assets/img/calendar.svg
+#	nowy plik:       my-app-tablo/src/assets/img/carousel-button-next.svg
+#	nowy plik:       my-app-tablo/src/assets/img/carousel-button-prev.svg
+#	nowy plik:       my-app-tablo/src/assets/img/correction-point-image.svg
+#	nowy plik:       my-app-tablo/src/assets/img/correction-point-image2.svg
+#	nowy plik:       my-app-tablo/src/assets/img/correction-point-image3.svg
+#	nowy plik:       my-app-tablo/src/assets/img/divider.svg
+#	nowy plik:       my-app-tablo/src/assets/img/down.svg
+#	nowy plik:       my-app-tablo/src/assets/img/drag-end-drop-icon.svg
+#	nowy plik:       my-app-tablo/src/assets/img/dropdown-icon.svg
+#	nowy plik:       my-app-tablo/src/assets/img/expand-button-default.svg
+#	nowy plik:       my-app-tablo/src/assets/img/expand-button.svg
+#	nowy plik:       my-app-tablo/src/assets/img/hamburger-icon.svg
+#	nowy plik:       my-app-tablo/src/assets/img/icon-calendar.svg
+#	nowy plik:       my-app-tablo/src/assets/img/icon-new-project.svg
+#	nowy plik:       my-app-tablo/src/assets/img/icon-table.png
+#	nowy plik:       my-app-tablo/src/assets/img/icon-table.svg
+#	nowy plik:       my-app-tablo/src/assets/img/image.png
+#	nowy plik:       my-app-tablo/src/assets/img/image1.svg
+#	nowy plik:       my-app-tablo/src/assets/img/image3.svg
+#	nowy plik:       my-app-tablo/src/assets/img/image5.svg
+#	nowy plik:       my-app-tablo/src/assets/img/line.svg
+#	nowy plik:       my-app-tablo/src/assets/img/month-dropdown-icon.svg
+#	nowy plik:       my-app-tablo/src/assets/img/nav-button.svg
+#	nowy plik:       my-app-tablo/src/assets/img/next-day.svg
+#	nowy plik:       my-app-tablo/src/assets/img/next-section.svg
+#	nowy plik:       my-app-tablo/src/assets/img/pain-point.svg
+#	nowy plik:       my-app-tablo/src/assets/img/path.svg
+#	nowy plik:       my-app-tablo/src/assets/img/point.png
+#	nowy plik:       my-app-tablo/src/assets/img/prev-day.svg
+#	nowy plik:       my-app-tablo/src/assets/img/priority.svg
+#	nowy plik:       my-app-tablo/src/assets/img/rectangle1.svg
+#	nowy plik:       my-app-tablo/src/assets/img/rectangle2.svg
+#	nowy plik:       my-app-tablo/src/assets/img/rectangle3.svg
+#	nowy plik:       my-app-tablo/src/assets/img/rectangle4.svg
+#	nowy plik:       my-app-tablo/src/assets/img/set-priority-green.svg
+#	nowy plik:       my-app-tablo/src/assets/img/set-priority-red.svg
+#	nowy plik:       my-app-tablo/src/assets/img/set-priority-yellow.svg
+#	nowy plik:       my-app-tablo/src/assets/img/window1.svg
+#	nowy plik:       my-app-tablo/src/assets/img/window2.svg
+#	nowy plik:       my-app-tablo/src/assets/img/window3.svg
+#	nowy plik:       my-app-tablo/src/assets/img/year-dropdown-icon.svg
+#	nowy plik:       my-app-tablo/src/assets/pricing.css
+#	nowy plik:       my-app-tablo/src/assets/table-app.css
+#	nowy plik:       my-app-tablo/src/assets/tablo.css
+#	nowy plik:       my-app-tablo/src/assets/window-chat.css
+#	nowy plik:       my-app-tablo/src/assets/window-chat.html
+#	nowy plik:       my-app-tablo/src/index.css
+#	nowy plik:       my-app-tablo/src/index.js
+#	nowy plik:       my-app-tablo/src/logo.svg
+#	nowy plik:       my-app-tablo/src/modules/tablo/tablo.css
+#	nowy plik:       my-app-tablo/src/modules/tablo/tablo.js
+#	nowy plik:       my-app-tablo/src/pages/home/home.js
+#	nowy plik:       my-app-tablo/src/reportWebVitals.js
+#	nowy plik:       my-app-tablo/src/setupTests.js
+#
