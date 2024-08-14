@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="table-app.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @font-face {
+            font-family: 'Gilroy';
+            src: url('Gilroy-Light') format('opentype');
+            font-weight: 300;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Gilroy';
+            src: url('Gilroy-Regular') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Gilroy';
+            src: url('Gilroy-SemiBold') format('opentype');
+            font-weight: 600;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="left-section">
+            <div class="logo">Tablo</div>
+            <nav class="menu">
+                <a href="#tools">Tools</a>
+                <a href="#pricing">Pricing</a>
+            </nav>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <img src="hamburger-icon.svg" alt="hamburger-icon" class="hamburger-icon" id="hamburger-icon">
+                <nav class="mobile-menu" id="mobile-menu">
+                    <a href="#tools">Tools</a>
+                    <a href="#pricing">Pricing</a>
+                    <button class="login-button">Log in</button>
+                    <button class="join-button">Join us</button>
+                </nav>
+            </div>
+        </div>
+        <div class="auth-buttons">
+            <button class="login-button">Log in</button>
+            <button class="join-button">Join us</button>
+        </div>
+    </header>
+    <img src="divider.svg" alt="Divider" class="svg-divider">
+    <div class="container">
+        <aside class="sidebar">
+            <ul>
+                <li><img src="icon-table.svg" alt="icon-table" class="custom-icon">Table</li>
+                <li><img src="icon-calendar.svg" alt="icon-calendar" class="custom-icon">Calendar</li>
+                <div class="spacer"></div>
+                <img src="line.svg" alt="line" class="svg-line">
+                <li class="new-project-item">New Project<img src="add-new-project.svg" alt="add-new-project" class="custom-icon new-project-icon"></li>
+                <li><img src="icon-new-project.svg" alt="icon-new-project" class="custom-icon">Creative logo</li>
+                <li><img src="icon-new-project.svg" alt="icon-new-project" class="custom-icon">Creative logo</li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <div class="list" id="to-do">
+                <div class="list-header">
+                    <h3 style="color: #F788CC;">To do</h3>
+                    <button class="add-list">+</button>
+                    <button class="more-options">...</button>
+                </div>
+                <div class="tasks"></div>
+            </div>
+            <div class="list" id="doing">
+                <div class="list-header">
+                    <h3 style="color: #FC7309;">Doing</h3>
+                    <button class="add-list">+</button>
+                    <button class="more-options">...</button>
+                </div>
+                <div class="tasks"></div>
+            </div>
+            <div class="list" id="done">
+                <div class="list-header">
+                    <h3 style="color: #816AD3;">Done</h3>
+                    <button class="add-list">+</button>
+                    <button class="more-options">...</button>
+                </div>
+                <div class="tasks"></div>
+            </div>
+            <div class="list" id="add-section">
+                <div class="list-header">
+                    <h3>Add sections</h3>
+                    <button class="add-list">+</button>
+                    <button class="more-options">...</button>
+                </div>
+                <div class="tasks"></div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburgerIcon = document.getElementById('hamburger-icon');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            hamburgerIcon.addEventListener('click', function () {
+                mobileMenu.classList.toggle('show');
+            });
+
+            const addListButtons = document.querySelectorAll('.add-list');
+            addListButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const list = button.closest('.list');
+                    const taskTemplate = document.querySelector('#task-template').content.cloneNode(true);
+                    list.querySelector('.tasks').appendChild(taskTemplate);
+                });
+            });
+
+            const moreOptionsButtons = document.querySelectorAll('.more-options');
+            moreOptionsButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    alert('Add task - karta projektu');
+                });
+            });
+
+            const mainContent = document.querySelector('.main-content');
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+            mainContent.addEventListener('mousedown', (e) => {
+                isDown = true;
+                mainContent.classList.add('active');
+                startX = e.pageX - mainContent.offsetLeft;
+                scrollLeft = mainContent.scrollLeft;
+            });
+
+            mainContent.addEventListener('mouseleave', () => {
+                isDown = false;
+                mainContent.classList.remove('active');
+            });
+
+            mainContent.addEventListener('mouseup', () => {
+                isDown = false;
+                mainContent.classList.remove('active');
+            });
+
+            mainContent.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - mainContent.offsetLeft;
+                const walk = (x - startX) * 3; // Adjust scroll speed
+                mainContent.scrollLeft = scrollLeft - walk;
+            });
+        });
+    </script>
+</body>
+</html>

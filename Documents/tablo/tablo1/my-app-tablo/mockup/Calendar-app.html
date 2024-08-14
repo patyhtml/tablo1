@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Calendar-app.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @font-face {
+            font-family: 'Gilroy';
+            src: url('Gilroy-Light') format('opentype');
+            font-weight: 300;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Gilroy';
+            src: url('Gilroy-Regular') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Gilroy';
+            src: url('Gilroy-SemiBold') format('opentype');
+            font-weight: 600;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="left-section">
+            <div class="logo">Tablo</div>
+            <nav class="menu">
+                <a href="#tools">Tools</a>
+                <a href="#pricing">Pricing</a>
+            </nav>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <img src="hamburger-icon.svg" alt="hamburger-icon" class="hamburger-icon" id="hamburger-icon">
+                <nav class="mobile-menu" id="mobile-menu">
+                    <a href="#tools">Tools</a>
+                    <a href="#pricing">Pricing</a>
+                    <button class="login-button">Log in</button>
+                    <button class="join-button">Join us</button>
+                </nav>
+            </div>
+        </div>
+        <div class="auth-buttons">
+            <button class="login-button">Log in</button>
+            <button class="join-button">Join us</button>
+        </div>
+    </header>
+
+    <img src="divider.svg" alt="Divider" class="svg-divider">
+
+    <div class="container">
+        <aside class="sidebar">
+            <ul>
+                <li><img src="icon-table.svg" alt="icon-table" class="custom-icon">Table</li>
+                <li><img src="icon-calendar.svg" alt="icon-calendar" class="custom-icon">Calendar</li>
+                <div class="spacer"></div>
+                <img src="line.svg" alt="line" class="svg-line">
+                <li class="new-project-item">New Project<img src="add-new-project.svg" alt="add-new-project" class="custom-icon new-project-icon"></li>
+                <li><img src="icon-new-project.svg" alt="icon-new-project" class="custom-icon">Creative logo</li>
+                <li><img src="icon-new-project.svg" alt="icon-new-project" class="custom-icon">Creative logo</li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <div class="calendar-header">
+                <div class="calendar-navigation">
+                    <select class="month-dropdown" id="month-dropdown">
+                        <option value="0">January</option>
+                        <option value="1">February</option>
+                        <option value="2">March</option>
+                        <option value="3">April</option>
+                        <option value="4">May</option>
+                        <option value="5">June</option>
+                        <option value="6">July</option>
+                        <option value="7">August</option>
+                        <option value="8">September</option>
+                        <option value="9">October</option>
+                        <option value="10">November</option>
+                        <option value="11">December</option>
+                    </select>
+                    <button class="nav-button" id="prev-day">&lt;</button>
+                    <span class="today-button" id="today-button">Today</span>
+                    <button class="nav-button" id="next-day">&gt;</button>
+                    <select class="year-dropdown" id="year-dropdown">
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                        <option value="2029">2029</option>
+                        <option value="2030">2030</option>
+                    </select>
+                </div>
+                <div class="calendar-invite">
+                    <div class="avatars">
+                        <img src="awatar1x.svg" alt="Avatar 1">
+                        <img src="awatar2x.svg" alt="Avatar 2">
+                        <img src="awatar3x.svg" alt="Avatar 3">
+                        <img src="awatarx4.svg" alt="Avatar 4">
+                    </div>
+                    <span class="invite-text">Invite</span>
+                    <input type="email" class="invite-input" placeholder="Enter email address">
+                </div>
+            </div>
+            <div class="calendar-grid" id="calendar-grid">
+                <!-- Siatka dni kalendarza zostanie wygenerowana tutaj -->
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburgerIcon = document.getElementById('hamburger-icon');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            hamburgerIcon.addEventListener('click', function () {
+                mobileMenu.classList.toggle('show');
+            });
+
+            const monthDropdown = document.getElementById('month-dropdown');
+            const yearDropdown = document.getElementById('year-dropdown');
+            const calendarGrid = document.getElementById('calendar-grid');
+            const todayButton = document.getElementById('today-button');
+
+            function generateCalendar(month, year) {
+                calendarGrid.innerHTML = '';
+                const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+                daysOfWeek.forEach(day => {
+                    const dayHeader = document.createElement('div');
+                    dayHeader.classList.add('day', 'header');
+                    dayHeader.textContent = day;
+                    calendarGrid.appendChild(dayHeader);
+                });
+
+                const date = new Date(year, month, 1);
+                const firstDay = (date.getDay() + 6) % 7;  // Adjusting to make Monday the first day
+                const lastDate = new Date(year, month + 1, 0).getDate();
+
+                for (let i = 0; i < firstDay; i++) {
+                    const emptyCell = document.createElement('div');
+                    emptyCell.classList.add('day');
+                    calendarGrid.appendChild(emptyCell);
+                }
+
+                for (let day = 1; day <= lastDate; day++) {
+                    const dayCell = document.createElement('div');
+                    dayCell.classList.add('day');
+                    dayCell.textContent = day;
+                    calendarGrid.appendChild(dayCell);
+                }
+            }
+
+            function updateCalendar() {
+                const selectedMonth = parseInt(monthDropdown.value);
+                const selectedYear = parseInt(yearDropdown.value);
+                generateCalendar(selectedMonth, selectedYear);
+            }
+
+            monthDropdown.addEventListener('change', updateCalendar);
+            yearDropdown.addEventListener('change', updateCalendar);
+            todayButton.addEventListener('click', function () {
+                const today = new Date();
+                monthDropdown.value = today.getMonth();
+                yearDropdown.value = today.getFullYear();
+                updateCalendar();
+            });
+
+            document.getElementById('prev-day').addEventListener('click', function () {
+                const selectedMonth = parseInt(monthDropdown.value);
+                const selectedYear = parseInt(yearDropdown.value);
+                const date = new Date(selectedYear, selectedMonth - 1);
+                monthDropdown.value = date.getMonth();
+                yearDropdown.value = date.getFullYear();
+                updateCalendar();
+            });
+
+            document.getElementById('next-day').addEventListener('click', function () {
+                const selectedMonth = parseInt(monthDropdown.value);
+                const selectedYear = parseInt(yearDropdown.value);
+                const date = new Date(selectedYear, selectedMonth + 1);
+                monthDropdown.value = date.getMonth();
+                yearDropdown.value = date.getFullYear();
+                updateCalendar();
+            });
+
+            updateCalendar();
+        });
+    </script>
+</body>
+</html>

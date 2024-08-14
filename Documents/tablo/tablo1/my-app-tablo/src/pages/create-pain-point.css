@@ -1,0 +1,130 @@
+
+body {
+    background-color: #0C0E0D;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+.container-wrapper {
+    background-color: #0C0E0D;
+    width: 100%;
+    height: 100vh;
+}
+
+
+.sidebar {
+    width: 20%;
+}
+
+
+.cre-new-project-wrapper .cre-main-content  {
+    flex-grow: 1;
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    background-color: #0C0E0D;
+ 
+}
+
+.cre-chat-column {
+    width: 29%;  /* Ustaw odpowiednią szerokość dla kolumny czatu */
+    height: 100vh;
+    background-color: #151515;
+    border-right: 1px solid #565656;
+    border-bottom: 1px solid #565656;
+   
+}
+
+.cre-chat-header {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #565656;
+    background-color: #0C0E0D;
+    padding: 10px;
+}
+
+.svg-pain-point {
+    
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+}
+
+.cre-chat-header h3 {
+    font-family: 'Gilroy';
+    font-weight: 300;
+    font-size: 20px;
+    color: #B9B8B8;
+    padding: 0;
+    margin-top: 10px;
+    margin-inline: 0;
+    margin-bottom: 0;
+}
+
+.cre-chat-header h4 {
+    font-family: 'Gilroy';
+    font-weight: 200;
+    font-size: 13px;
+    color: #B9B8B8;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.cre-chat-content {
+    flex-grow: 1;
+    overflow-y: auto;
+    height: 100vh;
+}
+
+
+
+.cre-image-column {
+    width: 69%;  /* Ustaw resztę szerokości dla kolumny obrazu */
+    height: 85vh;
+    box-sizing: border-box;
+}
+
+.image-container {
+    height: 85vh; /* Ustaw wysokość kontenera obrazu, aby wypełniał kolumnę */
+    background-color: #07003B;
+    border-bottom: 1px solid #353434;
+    border-right: 1px solid #353434;
+}
+
+.buttons {
+    
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.back-to-task, .save-as {
+    padding: 10px 20px;
+    border-radius: 36px;
+    cursor: pointer;
+}
+
+.back-to-task {
+    background-color: #0C0E0D;
+    font-family: 'Gilroy';
+    font-weight: 500;
+    color: #FFFBDA;
+    font-size: 16px;
+    border: 1px solid #F2ADF3;
+}
+
+.save-as {
+    background-color: #F788CC;
+    font-family: 'Gilroy';
+    font-weight: 500;
+    font-size: 16px;
+    color: #000000;
+    border: none;
+}
+

@@ -1,0 +1,131 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #0C0E0D;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-right: 20px;
+}
+
+.logo a {
+    color: #FFFBDA;
+    text-decoration: none;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 600;
+    font-size: 42px;
+}
+
+.menu {
+    display: flex;
+    gap: 28px;
+}
+
+.menu a {
+    text-decoration: none;
+    font-family: 'Gilroy';
+    font-weight: normal;
+    color: #908F8F;
+    font-size: 20px;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.auth-buttons button {
+    padding: 8px 34px;
+    border-radius: 36px;
+    cursor: pointer;
+}
+
+.login-button {
+    background-color: #0C0E0D;
+    font-family: 'Gilroy';
+    font-weight: normal;
+    color: #FFFBDA;
+    font-size: 16px;
+    border: 1px solid #F2ADF3;
+}
+
+.join-button {
+    background-color: #F2ADF3;
+    border: none;
+    font-family: 'Gilroy';
+    font-weight: normal;
+    color: #0C0E0D;
+    font-size: 16px;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    padding-right: 10px;
+}
+
+.hamburger-icon {
+    font-size: 20px;
+    cursor: pointer;
+    color: #FFFBDA;
+    position: relative;
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 140px;
+    right: 0px;
+    background-color: #0C0E0D;
+    border: 1px solid #565656;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.mobile-menu a {
+    text-decoration: none;
+    font-family: 'Gilroy';
+    font-weight: normal;
+    color: #908F8F;
+    font-size: 16px;
+    padding: 10px 0;
+}
+
+.mobile-menu button {
+    text-decoration: none;
+    font-family: 'Gilroy';
+    font-weight: normal;
+    margin: 5px 0;
+    padding: 10px 20px;
+    border-radius: 36px;
+    cursor: pointer;
+}
+
+.show {
+    display: flex;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .header .menu,
+    .header .auth-buttons {
+        display: none !important; /* Ukryj przyciski tylko w nagłówku */
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .svg-divider {
+        width: 100%;
+    }
+}

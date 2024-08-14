@@ -1,0 +1,1134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="pricing.css">
+</head>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @font-face {
+            font-family: 'Gilroy';
+            src: url('Gilroy-Light') format('opentype');
+            font-weight: 300;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Gilroy';
+            src: url('Gilroy-Regular') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Gilroy';
+            src: url('Gilroy-SemiBold') format('opentype');
+            font-weight: 600;
+            font-style: normal;
+        }
+        </style>
+</head>
+<body>
+    <div class="background-pattern"></div>
+    
+    <header class="header">
+        <div class="left-section">
+            <div class="logo">Tablo</div>
+            <nav class="menu">
+                <a href="#tools">Tools</a>
+                <a href="#pricing">Pricing</a>
+            </nav>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <img src="hamburger-icon.svg" alt="hamburger-icon" class="hamburger-icon" id="hamburger-icon">
+                <nav class="mobile-menu" id="mobile-menu">
+                    <a href="#tools">Tools</a>
+                    <a href="#pricing">Pricing</a>
+                    <button class="login-button">Log in</button>
+                    <button class="join-button">Join us</button>
+                </nav>
+            </div>
+        </div>
+        <div class="auth-buttons">
+            <button class="login-button">Log in</button>
+            <button class="join-button">Join us</button>
+        </div>
+    </header>
+
+    <img src="divider.svg" alt="Divider" class="svg-divider">
+
+
+   <section class="Section1" data-block="Section1">
+        <div class="make-goal"> </div>
+        <h1 id="make-goal-heading" class="make-goal__heading-text heading-xl" aria-hidden="true">
+            <span class="make-goal__animate">J</span>
+            <span class="make-goal__animate">o</span>
+            <span class="make-goal__animate">i</span>
+            <span class="make-goal__animate">n</span>
+            <span class="make-goal__animate">&nbsp;</span>
+            <span class="make-goal__animate">u</span>
+            <span class="make-goal__animate">s</span>
+            <span class="make-goal__animate">&nbsp;</span>
+            <span class="make-goal__animate">a</span>
+            <span class="make-goal__animate">n</span>
+            <span class="make-goal__animate">d</span>
+          
+        </h1>
+        <div class="sub-headings-container"></div>
+        <h2 id="make-goal2-heading" class="make-goal2__heading-text heading-xl" aria-hidden="true">
+            <span class="make-goal__animate">&nbsp;</span>
+            <span class="make-goal2__animate">b</span>
+            <span class="make-goal2__animate">u</span>
+            <span class="make-goal2__animate">i</span>
+            <span class="make-goal2__animate">l</span>
+            <span class="make-goal2__animate">d</span>
+            <span class="make-goal__animate">&nbsp;</span>
+        </h2>
+      
+        <h3 id="make-goal3-heading" class="make-goal3__heading-text heading-xl" aria-hidden="true">
+            
+            <span class="make-goal3__animate">a</span>
+            <span class="make-goal__animate">&nbsp;</span>
+        </h3>
+       
+        <h4 id="make-goal4-heading" class="make-goal4__heading-text heading-xl" aria-hidden="true">
+        <span class="make-goal4__animate">c</span>
+        <span class="make-goal4__animate">r</span>
+        <span class="make-goal4__animate">e</span>
+        <span class="make-goal4__animate">a</span>
+        </h4>
+       
+            <h4 id="make-goal5-heading" class="make-goal5__heading-text heading-xl" aria-hidden="true">
+            <span class="make-goal5__animate">t</span>
+            <span class="make-goal5__animate">i</span>
+            <span class="make-goal5__animate">v</span>
+            <span class="make-goal5__animate">e</span>
+            <span class="make-goal__animate">&nbsp;</span>
+            </h4>
+            <div class="make-goal6"> </div>
+            <h4 id="make-goal6-heading" class="make-goal6__heading-text heading-xl" aria-hidden="true">
+            <span class="make-goal6__animate">t</span>
+            <span class="make-goal6__animate">e</span>
+            <span class="make-goal6__animate">a</span>
+            <span class="make-goal6__animate">m</span>
+            </h4>
+          
+            <h7 id="make-goal7-heading" class="make-goal7__heading-text heading-xl" aria-hidden="true">
+            <span class="make-goal7__animate">make managing creative projects easy and transparent for teams</span>
+        </h7>
+       
+        
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const hamburgerIcon = document.getElementById('hamburger-icon');
+                const mobileMenu = document.getElementById('mobile-menu');
+                hamburgerIcon.addEventListener('click', function () {
+                    mobileMenu.classList.toggle('show');
+                });
+            });
+        </script>
+
+
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const letters = document.querySelectorAll('.make-goal__animate');
+                const colors = ['#FFFBDA', '#F2ADF3']; // Array of colors
+                let colorIndex = 0;
+            
+                function changeColors() {
+                    letters.forEach((letter, index) => {
+                        setTimeout(() => {
+                            letter.style.color = colors[colorIndex];
+                        }, index * 200);
+                    });
+            
+                    // Increment color index and loop back to 0 if at the end of the array
+                    colorIndex = (colorIndex + 1) % colors.length;
+                }
+            
+                // Start the loop
+                changeColors(); 
+                setInterval(changeColors, letters.length * 200 + 500); // Adjust the interval to the duration of all color changes plus a small delay
+            });
+            </script>
+
+
+            <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const hamburgerIcon = document.getElementById('hamburger-icon');
+                const mobileMenu = document.getElementById('mobile-menu');
+                hamburgerIcon.addEventListener('click', function () {
+                    mobileMenu.classList.toggle('show');
+                });
+            });
+        </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const letters = document.querySelectorAll('.make-goal3__animate');
+        letters.forEach((letter, index) => {
+            setTimeout(() => {
+                letter.style.opacity = '1';
+                letter.style.color = '#F2ADF3';
+            }, (index + 1) * 400);
+        });
+    });
+    </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const letters = document.querySelectorAll('.make-goal4__animate');
+        letters.forEach((letter, index) => {
+            setTimeout(() => {
+                letter.style.opacity = '1';
+                letter.style.color = '#F788CC';
+            }, (index + 1) * 400);
+        });
+    });
+    </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const letters = document.querySelectorAll('.make-goal5__animate');
+        letters.forEach((letter, index) => {
+            setTimeout(() => {
+                letter.style.opacity = '1';
+                letter.style.color = '#FC7309';
+            }, (index + 1) * 400);
+        });
+    });
+    </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const letters = document.querySelectorAll('.make-goal6__animate');
+        letters.forEach((letter, index) => {
+            setTimeout(() => {
+                letter.style.opacity = '1';
+                letter.style.color = '#816AD3';
+            }, (index + 1) * 400);
+        });
+    });
+    </script>
+
+
+
+
+
+
+</section>
+
+
+
+
+
+           
+
+                             
+                  <section class="Section2" data-block="Section2">
+                   <div class="pricing-plan">
+                            <svg class="pricing-plan-svg" viewBox="0 0 400 700">
+                                <rect x="0" y="0" width="400" height="700" rx="24" ry="24" fill="none" stroke="#F2ADF3" stroke-width="2" />
+                                <foreignObject x="20" y="20" width="400" height="700">
+                                    <div xmlns="http://www.w3.org/1999/xhtml">
+                                        <h2 style="color:#F2ADF3;">Tablo</h2> 
+                                         
+                                        </div>
+
+                                        <div class="price">
+                                    <h3 style="color:#F2ADF3;">$0</h3>    
+                                      <h4 style="color:#F2ADF3;">Month</h4> 
+                                        <h5>Per user/month</h5> 
+                                        </div>
+
+                                        <div class="spacer"></div>
+                                        <div class="price">
+
+                                            <div></div>
+                                            <br> 
+                                            <br>
+                                            <br>
+                                            <br>
+                                            <br><!-- Dodaje linię przerwy -->
+                                            <div></div>
+                                          
+                                           
+
+                                        <div class="point1">          
+                                        <img src="point.svg" alt="Point" class="svg-point inline">
+                                        <h6 class="inline">Unlimited cards</h6>
+                                        </div>
+
+                                        <div class="point2"> 
+                                        <img src="point.svg" alt="Point" class="svg-point inline">
+                                        <h6 class="inline">Up to 10 boards per Workspace</h6>
+                                    </div>
+
+                                    <div class="point3"> 
+                                        <img src="point.svg" alt="Point" class="svg-point inline">
+                                        <h6 class="inline">Unlimited storage (10MB/file)</h6>
+                                    </div>
+                                    <div class="point4"> 
+                                        <img src="point.svg" alt="Point" class="svg-point inline">
+                                        <h6 class="inline">10 Corrections Points</h6>
+                                     </div> 
+                                        </div>
+                                  
+                                  
+                                  <div class="auth-buttons">
+                                    <button style="color: #FFFBDA;
+                                    font-family: 'Gilroy';
+                                    font-size: 22px;
+                                    font-weight: 400;
+                                    background-color: #0C0E0D;
+                                    border: 1px solid #F2ADF3" class="join-button">Join us</button>
+                                </div>
+
+                                  
+                                </foreignObject>
+                            </svg>
+                        </div>
+                        
+                        <div class="pricing-plan2">
+                            <svg class="pricing-plan-svg" viewBox="0 0 400 700">
+                                <rect x="0" y="0" width="400" height="700" rx="24" ry="24" fill="none" stroke="#F788CC" stroke-width="2" />
+                                <foreignObject x="20" y="20" width="400" height="700">
+                                   
+                                    <div xmlns="http://www.w3.org/1999/xhtml">
+                                        <h2 style="color: #F788CC;">Tablo</h2> 
+                                        <h3 style="color: #F788CC;">$5</h3> 
+                                        </div>
+
+                                        <div class="price">
+                                          
+                                      <h4 style="color: #F788CC;">Month</h4> 
+                                        <h5>Per user/month</h5> 
+                                        </div>
+
+                                        <div class="spacer"></div>
+
+                                        <div class="price">
+
+                                            <div class="pricing-plans__control pricing-plans__control--users">
+                                                <span class="users-many">How many users?</span>
+                                      
+                                        <span class="number-input">
+                                          <button class="number-input__control number-input__control--minus user-many" data-disabled="true" data-counter-subtract="">-</button>
+                                      
+                                          <input type="text" class="users-many" value="1" min="1" max="20" data-counter-input="">
+                                      
+                                          <button class="number-input__control number-input__control--plus user-many" data-counter-add="">+</button>
+                                        </span>
+                                              </div>
+                                              &nbsp;&nbsp;&nbsp; <!-- Dodaje 3 spacje -->
+
+
+                                              <script>
+                                                document.addEventListener('DOMContentLoaded', function() {
+                                                    const minusButton = document.querySelector('[data-counter-subtract]');
+                                                    const plusButton = document.querySelector('[data-counter-add]');
+                                                    const inputField = document.querySelector('[data-counter-input]');
+                                        
+                                                    minusButton.addEventListener('click', function() {
+                                                        let currentValue = parseInt(inputField.value);
+                                                        if (currentValue > parseInt(inputField.min)) {
+                                                            inputField.value = currentValue - 1;
+                                                        }
+                                                        toggleButtonState();
+                                                    });
+                                        
+                                                    plusButton.addEventListener('click', function() {
+                                                        let currentValue = parseInt(inputField.value);
+                                                        if (currentValue < parseInt(inputField.max)) {
+                                                            inputField.value = currentValue + 1;
+                                                        }
+                                                        toggleButtonState();
+                                                    });
+                                        
+                                                    function toggleButtonState() {
+                                                        minusButton.disabled = parseInt(inputField.value) <= parseInt(inputField.min);
+                                                        plusButton.disabled = parseInt(inputField.value) >= parseInt(inputField.max);
+                                                    }
+                                        
+                                                    // Initialize button state on page load
+                                                    toggleButtonState();
+                                                });
+                                            </script>
+
+
+
+
+                                         
+
+                                        <div class="point1">          
+                                        <img src="point.svg" alt="Point" class="svg-point inline">
+                                        <h6 class="inline">Unlimited cards</h6>
+                                        </div>
+
+                                        <div class="point2"> 
+                                        <img src="point.svg" alt="Point" class="svg-point inline">
+                                        <h6 class="inline">Up to 10 boards per Workspace</h6>
+                                    </div>
+
+                                    <div class="point3"> 
+                                        <img src="point.svg" alt="Point" class="svg-point inline">
+                                        <h6 class="inline">Unlimited storage (10MB/file)</h6>
+                                    </div>
+                                    <div class="point4"> 
+                                        <img src="point.svg" alt="Point" class="svg-point inline">
+                                        <h6 class="inline">10 Corrections Points</h6>
+                                     </div> 
+                                        </div>
+                                  
+                                  
+                                        <div class="auth-buttons">
+                                            <button style="color: #FFFBDA;
+                                            font-family: 'Gilroy';
+                                            font-size: 22px;
+                                            font-weight: 300;
+                                          
+                                            background-color: #0C0E0D;
+                                            border: 1px solid #FC7309"class="join-button">Join us</button>
+                                        </div>
+                    
+                                </foreignObject>
+                            </svg>
+                        </div>
+                        <div class="pricing-plan3">
+                            <svg class="pricing-plan-svg" viewBox="0 0 400 700">
+                                <rect x="0" y="0" width="400" height="700" rx="24" ry="24" fill="none" stroke="#FC7309" stroke-width="2" />
+                                <foreignObject x="20" y="20" width="400" height="700">
+                                    
+                                    <div xmlns="http://www.w3.org/1999/xhtml">
+                                        <h2 style="color: #FC7309;">Tablo</h2> 
+                                        <h3 style="color: #FC7309;">$8</h3> 
+                                        </div>
+
+                                        <div class="price">
+                                          
+                                      <h4 style="color: #FC7309;">Month</h4> 
+                                        <h5>Per user/month</h5> 
+                                        </div>
+
+                                        <div class="spacer"></div>
+                                        <div class="price">
+
+                                            <div class="pricing-plans__control pricing-plans__control--users">
+                                                <span class="users-many">How many users?</span>
+                                      
+                                        <span class="number-input">
+                                          <button class="number-input__control number-input__control--minus user-many" data-disabled="true" data-counter-subtract="">-</button>
+                                      
+                                          <input type="text" class="users-many" value="1" min="1" max="20" data-counter-input="">
+                                      
+                                          <button class="number-input__control number-input__control--plus user-many" data-counter-add="">+</button>
+                                        </span>
+                                              </div>
+
+                                              &nbsp;&nbsp;&nbsp; <!-- Dodaje 3 spacje -->
+                                              <script>
+                                                document.addEventListener('DOMContentLoaded', function() {
+                                                    const minusButton = document.querySelector('[data-counter-subtract]');
+                                                    const plusButton = document.querySelector('[data-counter-add]');
+                                                    const inputField = document.querySelector('[data-counter-input]');
+                                        
+                                                    minusButton.addEventListener('click', function() {
+                                                        let currentValue = parseInt(inputField.value);
+                                                        if (currentValue > parseInt(inputField.min)) {
+                                                            inputField.value = currentValue - 1;
+                                                        }
+                                                        toggleButtonState();
+                                                    });
+                                        
+                                                    plusButton.addEventListener('click', function() {
+                                                        let currentValue = parseInt(inputField.value);
+                                                        if (currentValue < parseInt(inputField.max)) {
+                                                            inputField.value = currentValue + 1;
+                                                        }
+                                                        toggleButtonState();
+                                                    });
+                                        
+                                                    function toggleButtonState() {
+                                                        minusButton.disabled = parseInt(inputField.value) <= parseInt(inputField.min);
+                                                        plusButton.disabled = parseInt(inputField.value) >= parseInt(inputField.max);
+                                                    }
+                                        
+                                                    // Initialize button state on page load
+                                                    toggleButtonState();
+                                                });
+                                            </script>
+
+                                            <div class="spacer"></div>
+
+                                        <div class="point1">          
+                                        <img src="point.svg" alt="Point" class="svg-point inline">
+                                        <h6 class="inline">Unlimited cards</h6>
+                                        </div>
+
+                                        <div class="point2"> 
+                                        <img src="point.svg" alt="Point" class="svg-point inline">
+                                        <h6 class="inline">Up to 10 boards per Workspace</h6>
+                                    </div>
+
+                                    <div class="point3"> 
+                                        <img src="point.svg" alt="Point" class="svg-point inline">
+                                        <h6 class="inline">Unlimited storage (10MB/file)</h6>
+                                    </div>
+                                    <div class="point4"> 
+                                        <img src="point.svg" alt="Point" class="svg-point inline">
+                                        <h6 class="inline">10 Corrections Points</h6>
+                                     </div> 
+                                        </div>
+                                  
+                                  
+                                       <div class="auth-buttons">
+                            <button style="color: #FFFBDA;
+                            font-family: 'Gilroy';
+                            font-size: 22px;
+                            font-weight: 300;
+                         
+                            background-color: #0C0E0D;
+                            border: 1px solid #FC7309"class="join-button">Join us</button>
+                        </div>
+
+                                </foreignObject>
+                            </svg>
+                        </div>
+                        <div class="pricing-plan4">
+                            <svg class="pricing-plan-svg" viewBox="0 0 400 700">
+                                <rect x="0" y="0" width="400" height="700" rx="24" ry="24" fill="none" stroke="#816AD3" stroke-width="2" />
+                                <foreignObject x="20" y="20" width="400" height="700">
+                                    
+                                    <div xmlns="http://www.w3.org/1999/xhtml">
+                                        <h2 style="color: #977BFA;">Tablo</h2> 
+                                        <h3 style="color: #977BFA;">$15</h3> 
+                                        </div>
+
+                                        <div class="price">
+                                          
+                                      <h4 style="color: #977BFA;">Month</h4> 
+                                        <h5>Per user/month</h5> 
+                                        </div>
+
+                                        <div class="spacer"></div>
+                                        <div class="price">
+
+                                            <div class="pricing-plans__control pricing-plans__control--users">
+                                                <span class="users-many">How many users?</span>
+                                      
+                                        <span class="number-input">
+                                          <button class="number-input__control number-input__control--minus user-many" data-disabled="true" data-counter-subtract="">-</button>
+                                      
+                                          <input type="text" class="users-many" value="1" min="1" max="20" data-counter-input="">
+                                      
+                                          <button class="number-input__control number-input__control--plus user-many" data-counter-add="">+</button>
+                                        </span>
+                                              </div>
+
+                                              &nbsp;&nbsp;&nbsp; <!-- Dodaje 3 spacje -->
+                                              <script>
+                                                document.addEventListener('DOMContentLoaded', function() {
+                                                    const minusButton = document.querySelector('[data-counter-subtract]');
+                                                    const plusButton = document.querySelector('[data-counter-add]');
+                                                    const inputField = document.querySelector('[data-counter-input]');
+                                        
+                                                    minusButton.addEventListener('click', function() {
+                                                        let currentValue = parseInt(inputField.value);
+                                                        if (currentValue > parseInt(inputField.min)) {
+                                                            inputField.value = currentValue - 1;
+                                                        }
+                                                        toggleButtonState();
+                                                    });
+                                        
+                                                    plusButton.addEventListener('click', function() {
+                                                        let currentValue = parseInt(inputField.value);
+                                                        if (currentValue < parseInt(inputField.max)) {
+                                                            inputField.value = currentValue + 1;
+                                                        }
+                                                        toggleButtonState();
+                                                    });
+                                        
+                                                    function toggleButtonState() {
+                                                        minusButton.disabled = parseInt(inputField.value) <= parseInt(inputField.min);
+                                                        plusButton.disabled = parseInt(inputField.value) >= parseInt(inputField.max);
+                                                    }
+                                        
+                                                    // Initialize button state on page load
+                                                    toggleButtonState();
+                                                });
+                                            </script>
+
+
+
+                                        <div class="point1">          
+                                        <img src="point.svg" alt="Point" class="svg-point inline">
+                                        <h6 class="inline">Unlimited cards</h6>
+                                        </div>
+
+                                        <div class="point2"> 
+                                        <img src="point.svg" alt="Point" class="svg-point inline">
+                                        <h6 class="inline">Up to 10 boards per Workspace</h6>
+                                    </div>
+
+                                    <div class="point3"> 
+                                        <img src="point.svg" alt="Point" class="svg-point inline">
+                                        <h6 class="inline">Unlimited storage (10MB/file)</h6>
+                                    </div>
+                                    <div class="point4"> 
+                                        <img src="point.svg" alt="Point" class="svg-point inline">
+                                        <h6 class="inline">10 Corrections Points</h6>
+                                     </div> 
+                                        </div>
+                                  
+                                  
+                                        <div class="auth-buttons">
+                                            <button style="color: #FFFBDA;
+                                            font-family: 'Gilroy';
+                                            font-size: 22px;
+                                            font-weight: 400;
+                                            background-color: #0C0E0D;
+                                            border: 1px solid #977BFA"class="join-button">Join us</button>
+                                        </div>
+
+                                </foreignObject>
+                            </svg>
+                        </div>
+        </div>
+    </div>
+</section>
+<!-- Przycisk SVG -->
+
+<div class="next-section">
+    <button class="svg-button">
+        <img src="next-section.svg" alt="Next Section" class="svg-icon">
+    </button>
+</div>
+
+
+
+
+
+
+
+<section class="Section3a" data-block="Section3a">
+    <div class=""> </div>
+    <h1 id="choose1" class="choose1__heading-text heading-xl" aria-hidden="true">
+        <span class="choose1__animate">C</span>
+        <span class="choose1__animate">h</span>
+        <span class="choose1__animate">o</span>
+        <span class="choose1__animate">o</span>
+        <span class="choose1__animate">s</span>
+        <span class="choose1__animate">e</span>
+       
+      
+      
+    </h1>
+    <div class="sub-headings-container"></div>
+    <h2 id="choose2-heading" class="choose2__heading-text heading-xl" aria-hidden="true">
+        <span class="choose2__animate">&nbsp;</span>
+        <span class="choose2__animate">y</span>
+        <span class="choose2__animate">o</span>
+        <span class="choose2__animate">u</span>
+        <span class="choose2__animate">r</span>
+        
+        <span class="choose2__animate">&nbsp;</span>
+    </h2>
+  
+    <h3 id="choose3-heading" class="choose3__heading-text heading-xl" aria-hidden="true">
+        
+        <span class="choose3__animate">p</span>
+        <span class="choose3__animate">l</span>
+        <span class="choose3__animate">a</span>
+        <span class="choose3__animate">n</span>
+      
+      
+    </h3>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const letters = document.querySelectorAll('.choose1__animate');
+            const colors = ['#FFFBDA', '#F2ADF3']; // Array of colors
+            let colorIndex = 0;
+        
+            function changeColors() {
+                letters.forEach((letter, index) => {
+                    setTimeout(() => {
+                        letter.style.color = colors[colorIndex];
+                    }, index * 200);
+                });
+        
+                // Increment color index and loop back to 0 if at the end of the array
+                colorIndex = (colorIndex + 1) % colors.length;
+            }
+        
+            // Start the loop
+            changeColors(); 
+            setInterval(changeColors, letters.length * 200 + 500); // Adjust the interval to the duration of all color changes plus a small delay
+        });
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const letters = document.querySelectorAll('.choose2__animate');
+            const colors = ['#FFFBDA', '#F788CC']; // Array of colors
+            let colorIndex = 0;
+        
+            function changeColors() {
+                letters.forEach((letter, index) => {
+                    setTimeout(() => {
+                        letter.style.color = colors[colorIndex];
+                    }, index * 200);
+                });
+        
+                // Increment color index and loop back to 0 if at the end of the array
+                colorIndex = (colorIndex + 1) % colors.length;
+            }
+        
+            // Start the loop
+            changeColors(); 
+            setInterval(changeColors, letters.length * 200 + 500); // Adjust the interval to the duration of all color changes plus a small delay
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const letters = document.querySelectorAll('.choose3__animate');
+            const colors = ['#FFFBDA', '#FC7309']; // Array of colors
+            let colorIndex = 0;
+        
+            function changeColors() {
+                letters.forEach((letter, index) => {
+                    setTimeout(() => {
+                        letter.style.color = colors[colorIndex];
+                    }, index * 200);
+                });
+        
+                // Increment color index and loop back to 0 if at the end of the array
+                colorIndex = (colorIndex + 1) % colors.length;
+            }
+        
+            // Start the loop
+            changeColors(); 
+            setInterval(changeColors, letters.length * 200 + 500); // Adjust the interval to the duration of all color changes plus a small delay
+        });
+        </script>
+
+
+
+
+
+
+<section class="Section3" data-block="Section3">
+    <div class="plan">
+        <table class="features-table">
+            <tbody>
+                <tr class="features-table__row">
+                    <th class="features-table__header">
+                        
+                        
+                        <p></p>
+                    </th>
+                    <th class="features-table__header">
+                        
+                        <p style="color: #F788CC;">Plus</p>
+                        <div class="auth-buttons">
+                            <button style="color: #F788CC;
+                            font-family: 'Gilroy';
+                            font-size: 22px;
+                            font-weight: 300;
+                            color: #FFFBDA;
+                            background-color: #0C0E0D;
+                            border: 1px solid #F788CC"class="join-button">Join us</button>
+                        </div>
+                    </th>
+                    <th class="features-table__header">
+                     
+                        <p style="color: #FC7309;">Premium</p>
+                        <div class="auth-buttons">
+                            <button style="color: #F788CC;
+                            font-family: 'Gilroy';
+                            font-size: 22px;
+                            font-weight: 300;
+                            color: #FFFBDA;
+                            background-color: #0C0E0D;
+                            border: 1px solid #FC7309"class="join-button">Join us</button>
+                        </div>
+                    </th>
+                    <th class="features-table__header">
+                      
+                        <p style="color:#977BFA;"> Business</p>
+                       
+                        <div class="auth-buttons">
+                            <button style="color: #F788CC;
+                            font-family: 'Gilroy';
+                            font-size: 22px;
+                            font-weight: 300;
+                            color: #FFFBDA;
+                            background-color: #0C0E0D;
+                            border: 1px solid #816AD3"class="join-button">Join us</button>
+                        </div>
+                    </th>
+                </tr>
+
+
+
+
+
+
+                <tr class="features-table__row">
+                    <td class="label">
+                        Unlimited cards
+                    </td>
+                    <td class="label">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" fill="none" aria-label="Tick">
+                            <path fill="currentColor" fill-rule="evenodd" d="m8.401 17.66 15.6-15.6L22.587.647 8.4 14.833 1.414 7.847 0 9.26l8.4 8.4v-.001h.001Z" clip-rule="evenodd"></path>
+                        </svg>
+                        
+                    </td>
+                    <td class="label">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" fill="none" aria-label="Tick">
+                            <path fill="currentColor" fill-rule="evenodd" d="m8.401 17.66 15.6-15.6L22.587.647 8.4 14.833 1.414 7.847 0 9.26l8.4 8.4v-.001h.001Z" clip-rule="evenodd"></path>
+                        </svg>
+                        
+                    </td>
+                    <td class="label">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" fill="none" aria-label="Tick">
+                            <path fill="currentColor" fill-rule="evenodd" d="m8.401 17.66 15.6-15.6L22.587.647 8.4 14.833 1.414 7.847 0 9.26l8.4 8.4v-.001h.001Z" clip-rule="evenodd"></path>
+                        </svg>
+                        
+                    </td>
+                </tr>
+
+
+
+
+                <tr class="features-table__row">
+                    <td class="label">
+                        Boards per Workspace
+                    </td>
+                    <td class="label">
+                        50
+                    </td>
+                    <td class="label">
+                        100
+                    </td>
+                    <td class="label">
+                       Unlimited
+                    </td>
+                </tr>
+                <tr class="features-table__row">
+                    <td class="label">
+                        Unlimited storage 
+                    </td>
+                    <td class="label">
+                        10MB/file 
+                    </td>
+                    <td class="label">
+                       1GB/file
+                    </td>
+                    <td class="label">
+                        100GB
+                    </td>
+                </tr>
+
+                <tr class="features-table__row">
+                    <td class="label">
+                        Corrections Points 
+                    </td>
+                    <td class="label">
+                        10 
+                    </td>
+                    <td class="label">
+                        100
+                    </td>
+                    <td class="label">
+                        Unlimited
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+</body>
+</html>
+
+            
+
+
+
+<section class="Section4" data-block="Section4">
+    <div class="faq"> </div>
+    <h1 id="faq1" class="faq1__heading-text heading-xl" aria-hidden="true">
+        <span class="faq1__animate">F</span>
+        <span class="faq1__animate">r</span>
+        <span class="faq1__animate">e</span>
+        <span class="faq1__animate">q</span>
+        <span class="faq1__animate">u</span>
+        <span class="faq1__animate">e</span>
+        <span class="faq1__animate">n</span>
+        <span class="faq1__animate">t</span>
+        <span class="faq1__animate">l</span>
+        <span class="faq1__animate">y</span>
+      
+      
+    </h1>
+    <div class="sub-headings-container"></div>
+    <h2 id="faq2-heading" class="faq2__heading-text heading-xl" aria-hidden="true">
+        <span class="faq2__animate">&nbsp;</span>
+        <span class="faq2__animate">a</span>
+        <span class="faq2__animate">s</span>
+        <span class="faq2__animate">k</span>
+        <span class="faq2__animate">e</span>
+        <span class="faq2__animate">d</span>
+        <span class="faq2__animate">&nbsp;</span>
+    </h2>
+  
+    <h3 id="faq3-heading" class="faq3__heading-text heading-xl" aria-hidden="true">
+        
+        <span class="faq3__animate">q</span>
+        <span class="faq3__animate">u</span>
+        <span class="faq3__animate">e</span>
+        <span class="faq3__animate">s</span>
+        <span class="faq3__animate">t</span>
+        <span class="faq3__animate">i</span>
+        <span class="faq3__animate">o</span>
+        <span class="faq3__animate">n</span>
+        <span class="faq3__animate">s</span>
+      
+    </h3>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const letters = document.querySelectorAll('.faq1__animate');
+            const colors = ['#FFFBDA', '#F2ADF3']; // Array of colors
+            let colorIndex = 0;
+        
+            function changeColors() {
+                letters.forEach((letter, index) => {
+                    setTimeout(() => {
+                        letter.style.color = colors[colorIndex];
+                    }, index * 200);
+                });
+        
+                // Increment color index and loop back to 0 if at the end of the array
+                colorIndex = (colorIndex + 1) % colors.length;
+            }
+        
+            // Start the loop
+            changeColors(); 
+            setInterval(changeColors, letters.length * 200 + 500); // Adjust the interval to the duration of all color changes plus a small delay
+        });
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const letters = document.querySelectorAll('.faq2__animate');
+            const colors = ['#FFFBDA', '#F788CC']; // Array of colors
+            let colorIndex = 0;
+        
+            function changeColors() {
+                letters.forEach((letter, index) => {
+                    setTimeout(() => {
+                        letter.style.color = colors[colorIndex];
+                    }, index * 200);
+                });
+        
+                // Increment color index and loop back to 0 if at the end of the array
+                colorIndex = (colorIndex + 1) % colors.length;
+            }
+        
+            // Start the loop
+            changeColors(); 
+            setInterval(changeColors, letters.length * 200 + 500); // Adjust the interval to the duration of all color changes plus a small delay
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const letters = document.querySelectorAll('.faq3__animate');
+            const colors = ['#FFFBDA', '#FC7309']; // Array of colors
+            let colorIndex = 0;
+        
+            function changeColors() {
+                letters.forEach((letter, index) => {
+                    setTimeout(() => {
+                        letter.style.color = colors[colorIndex];
+                    }, index * 200);
+                });
+        
+                // Increment color index and loop back to 0 if at the end of the array
+                colorIndex = (colorIndex + 1) % colors.length;
+            }
+        
+            // Start the loop
+            changeColors(); 
+            setInterval(changeColors, letters.length * 200 + 500); // Adjust the interval to the duration of all color changes plus a small delay
+        });
+        </script>
+
+
+
+
+
+
+<section class="faq-section">
+    <div class="faq-item">
+        <button class="faq-question">
+            <span>Does Tablo offer a free trial of the Premium version?</span>
+            <span class="faq-icon">+</span>
+        </button>
+        <hr></hr>
+        <div class="faq-answer">
+            <p>Our return policy allows for returns within 30 days of purchase. Please make sure the items are in original condition.</p>
+        </div>
+    </div>
+    <div class="faq-item">
+        <button class="faq-question">
+            <span>Do you offer discounted plans?</span>
+            <span class="faq-icon">+</span>
+        </button>
+        <hr></hr>
+        <div class="faq-answer">
+            <p>You can track your order using the tracking number provided in your shipping confirmation email.</p>
+        </div>
+    </div>
+  
+    <div class="faq-item">
+        <button class="faq-question">
+            <span>What payment methods are available?</span>
+            <span class="faq-icon">+</span>
+        </button>
+        <hr></hr>
+        <div class="faq-answer">
+            <p>Yes, we offer international shipping to most countries. Shipping costs and delivery times may vary.</p>
+        </div>
+    </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        const questionButton = item.querySelector('.faq-question');
+        
+        questionButton.addEventListener('click', function() {
+            item.classList.toggle('active');
+            
+            // Close other FAQ items when one is opened
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                }
+            });
+        });
+    });
+});
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+               
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<img src="divider.svg" alt="Divider" class="svg-divider">
+
+<footer class="site-footer">
+    <div class="footer-content">
+        <header class="header">
+            <div class="left-section">
+                <div class="logo">Tablo</div>
+            </div>
+            <div class="auth-buttons">
+                <button class="login-button">Log in</button>
+                <button class="join-button">Join us</button>
+            </div>
+        </header>
+    
+       
+
+        <div class="footer">
+        <footer class="footer">
+            <div class="footer-section1-links1">
+                <h15>Tools</h15>
+                <ul class="footer-links-list">
+                    <li><a href="#workflow" class="footer-link" id="workflow">Workflow</a></li>
+                    <li><a href="#teamline" class="footer-link" id="teamline">Teamline</a></li>
+                    <li><a href="#pain-points" class="footer-link" id="pain-points">Pain points</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section2-links2">
+                <h16>Pricing</h16>
+                <ul class="footer-links-list">
+                    <li><a href="#monthl-plans" class="footer-link" id="monthl-plans">Monthly plans</a></li>
+                    <li><a href="#resources" class="footer-link" id="resources">Resources</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section3-links3">
+                <h17>Contact</h17>
+                <ul class="footer-links-list">
+                    <li><a href="#facebook" class="footer-link" id="facebook">Facebook</a></li>
+                    <li><a href="#instagram" class="footer-link" id="instagram">Instagram</a></li>
+                    <li><a href="#tweeter" class="footer-link" id="tweeter">Tweeter</a></li>
+                </ul>
+            </div>
+
+
+
+  
+        <div class="subscription-box">
+            <h18>Subscribe to the Tablo</h18>
+            <p>Newsletter to stay up to date with the lashes releases</p>
+            <form id="subscription-form" action="#" method="post">
+                <div class="input-with-button">
+                    <input type="email" name="email" placeholder="@ Email address" required>
+                    <button type="submit" class="svg-button">
+                        <img src="button-footer.svg" alt="button-footer" class="svg-icon">
+                    </button>
+                </div>
+            </form>
+      </div>
+    </div>
+</footer>
+</div>
+   
+    <div class="footer-bottom">
+        &copy; 2024 tablo.com | Designed by Patrycia
+    </div>
+</footer>
+
+</body>
+</html>
+
+
+                    
+                   
+                
+                   
+         
+        
