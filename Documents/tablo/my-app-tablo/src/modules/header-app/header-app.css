@@ -1,0 +1,158 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #0C0E0D;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-right: 20px;
+}
+
+.logo a {
+    color: #FFFBDA; /* Kolor tekstu linku */
+    text-decoration: none; /* Usunięcie podkreślenia */
+    font-family: 'Gilroy', sans-serif; /* Czcionka */
+    font-weight: 600; /* Grubość czcionki */
+    font-size: 42px; /* Rozmiar czcionki */
+}
+
+/* Stylizacja przy najechaniu */
+.logo a:hover {
+    color: #FC7309; /* Zmiana koloru na hover */
+    text-decoration: none; /* Dodanie podkreślenia na hover */
+}
+
+/* Stylizacja podczas aktywności (kliknięcia) */
+.logo a:active {
+    color: #816AD3; /* Zmiana koloru podczas kliknięcia */
+    text-decoration: none;
+}
+
+/* Stylizacja odwiedzonych linków */
+.logo a:visited {
+    color: #FFFBDA; /* Kolor po odwiedzeniu linku */
+    text-decoration: none;
+}
+
+.menu {
+    display: flex;
+    gap: 28px;
+}
+
+.menu a {
+    text-decoration: none;
+    font-family: 'Gilroy';
+    font-weight: normal;
+    color: #908F8F;
+    font-size: 20px;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.auth-buttons button {
+    padding: 8px 34px;
+    border-radius: 36px;
+    cursor: pointer;
+}
+
+.logout-button {
+    background-color: #0C0E0D;
+    font-family: 'Gilroy';
+    font-weight: normal;
+    color: #FFFBDA;
+    font-size: 16px;
+    border: 1px solid #F2ADF3;
+}
+
+
+
+.svg-divider {
+    width: 97%;
+    display: flex;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none;
+}
+
+.hamburger-icon {
+    font-size: 20px;
+    cursor: pointer;
+    color: #FFFBDA;
+    position: absolute;
+    right: 20px;
+}
+
+.hamburger-menu {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 120px;
+    left: 0;
+    background-color: #0C0E0D;
+    border: 1px solid #565656;
+    padding: 10px;
+}
+
+.mobile-menu a {
+    text-decoration: none;
+    font-family: 'Gilroy';
+    font-weight: normal;
+    color: #908F8F;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.mobile-menu button {
+    text-decoration: none;
+    font-family: 'Gilroy';
+    font-weight: normal;
+    margin: 3px 0;
+    padding: 10px 20px;
+    border-radius: 36px;
+    cursor: pointer;
+}
+
+.show {
+    display: flex;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .menu,
+    .auth-buttons {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .spacer {
+        display: none;
+    }
+
+    .svg-divider {
+        width: 100%;
+    }
+}

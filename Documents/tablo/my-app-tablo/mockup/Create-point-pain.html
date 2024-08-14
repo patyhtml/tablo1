@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Create-point-pain.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @font-face {
+            font-family: 'Gilroy';
+            src: url('Gilroy-Light') format('opentype');
+            font-weight: 300;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Gilroy';
+            src: url('Gilroy-Regular') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Gilroy';
+            src: url('Gilroy-SemiBold') format('opentype');
+            font-weight: 600;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="left-section">
+            <div class="logo">Tablo</div>
+            <nav class="menu">
+                <a href="#tools">Tools</a>
+                <a href="#pricing">Pricing</a>
+            </nav>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <img src="hamburger-icon.svg" alt="hamburger-icon" class="hamburger-icon" id="hamburger-icon">
+                <nav class="mobile-menu" id="mobile-menu">
+                
+                    <a href="#tools">Tools</a>
+                    <a href="#pricing">Pricing</a>
+                    <button class="login-button">Log in</button>
+                    <button class="join-button">Join us</button>
+                </nav>
+            </div>
+        </nav>
+        </div>
+        <div class="auth-buttons">
+            <button class="login-button">Log in</button>
+            <button class="join-button">Join us</button>
+        </div>
+    </header>
+
+    <img src="divider.svg" alt="Divider" class="svg-divider">
+
+    <div class="container">
+        <aside class="sidebar">
+            <ul>
+                <li><img src="icon-table.svg" alt="icon-table" class="custom-icon">Table</li>
+                <li><img src="icon-calendar.svg" alt="icon-calendar" class="custom-icon">Calendar</li>
+                <div class="spacer"></div>
+                <img src="line.svg" alt="line" class="svg-line">
+                
+                <li class="new-project-item">New Project<img src="add-new-project.svg" alt="add-new-project" class="custom-icon new-project-icon"></li>
+        <li><img src="icon-new-project.svg" alt="icon-new-project" class="custom-icon">Creative logo</li>
+                <li><img src="icon-new-project.svg" alt="icon-new-project" class="custom-icon">Creative logo</li>
+          
+            </ul>
+        </aside>
+
+        <div class="main-content">
+            <div class="chat-column">
+                <div class="chat-header">
+                    <h3>Create Point Pain</h3>
+                    <img src="pain-point.svg" alt="pain point" class="custom-image">
+                    <h4>Drag a point into the image</h4>
+                </div>
+                <div class="chat-content" id="chat-content">
+                    <!-- Comments will be dynamically added here -->
+                </div>
+            </div>
+            <div class="image-column">
+                <div class="image-container" id="image-container">
+                    <!-- Image will be displayed here -->
+                </div>
+                <div class="buttons">
+                    <button class="back-to-task">Back to task</button>
+                    <button class="save-as">Save as</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburgerIcon = document.getElementById('hamburger-icon');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            hamburgerIcon.addEventListener('click', function () {
+                mobileMenu.classList.toggle('show');
+            });
+
+            const imageUpload = document.getElementById('image-upload');
+            const imageContainer = document.getElementById('image-container');
+            const chatContent = document.getElementById('chat-content');
+
+            imageUpload.addEventListener('change', function (event) {
+                const file = event.target.files[0];
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const img = document.createElement('img');
+                    img.src = e.target.result;
+                    imageContainer.innerHTML = '';
+                    imageContainer.appendChild(img);
+                };
+                reader.readAsDataURL(file);
+            });
+
+            imageContainer.addEventListener('click', function (event) {
+                if (event.target.tagName === 'IMG') {
+                    const x = event.offsetX;
+                    const y = event.offsetY;
+                    const marker = document.createElement('div');
+                    marker.className = 'comment-marker';
+                    marker.style.left = `${x}px`;
+                    marker.style.top = `${y}px`;
+                    imageContainer.appendChild(marker);
+
+                    const comment = document.createElement('div');
+                    comment.className = 'comment';
+                    comment.innerHTML = `
+                        <div class="comment-header">
+                            <img src="avatar.svg" alt="Avatar">
+                            <div class="comment-details">
+                                <strong>John Doe</strong>
+                                <span>1:35 PM</span>
+                            </div>
+                        </div>
+                        <div class="comment-description">
+                            <p>Description</p>
+                        </div>
+                    `;
+                    chatContent.appendChild(comment);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

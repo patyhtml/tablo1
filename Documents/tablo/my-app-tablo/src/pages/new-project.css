@@ -1,0 +1,413 @@
+
+
+body {
+    background-color: #0C0E0D;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+
+.container-wrapper {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    height: 100vh;
+    
+}
+
+
+
+.npe-container {
+    width: 80%; /* Zajmuje resztę miejsca po prawej stronie */
+    padding: 0px;
+    background-color: #0C0E0D;
+    display: flex;
+    flex-direction: column;
+  
+    
+    
+}
+
+
+
+.column {
+   width: 100%;
+   height: 100vh;
+   padding-right: 20px;
+   border-right: 1px solid #565656;
+   
+
+}
+
+
+.field {
+    display: flex;
+    padding: none;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #565656;
+}
+
+.field span {
+    font-family: 'Gilroy';
+    font-weight: 100;
+    font-size: 14px;
+    padding: none;
+   
+}
+
+.field input, .field textarea, .field select {
+    width: 100%;
+  
+   
+    border: none;
+    background-color: #0C0E0D;
+    color: #B9B8B8;
+    font-family: 'Gilroy';
+    font-weight: 100;
+    font-size: 16px;
+    padding: 20px;
+}
+
+.field input:hover, .field textarea:hover, .field select:hover,
+.field input:focus, .field textarea:focus, .field select:focus {
+    border: 1px solid #F2ADF3; /* Kolor obramowania po najechaniu lub kliknięciu */
+    outline: none; /* Usunięcie domyślnego obramowania przeglądarki */
+    background-color: #1B1B1B; /* Opcjonalnie zmiana koloru tła po najechaniu lub kliknięciu */
+    
+}
+
+
+
+
+.date-field {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.field input[type="date"] {
+    width: 100%;
+    padding: 10px 40px 10px 10px; /* Adjust right padding for the icon */
+    border: none;
+    background-color: #0C0E0D;
+    color: #B9B8B8;
+    font-family: 'Gilroy';
+    font-weight: 300;
+    font-size: 16px;
+    -webkit-appearance: none; /* For Safari */
+    -moz-appearance: none; /* For Firefox */
+    appearance: none; /* For other browsers */
+    position: relative;
+}
+
+.field input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none; /* Hides the default calendar icon in WebKit browsers */
+}
+
+.field input[type="date"]:hover,
+.field input[type="date"]:focus {
+    border: 1px solid #F2ADF3;
+    outline: none;
+    background-color: #1B1B1B;
+}
+
+.calendar-button {
+    position: relative;
+    right: 10px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+.calendar {
+    width: 18px; /* Adjust as necessary */
+    height: 18px; /* Adjust as necessary */
+}
+
+
+
+
+.field textarea {
+    height: 130px;
+}
+
+.column-right .field {
+    justify-content: flex-start;
+}
+
+
+
+
+
+.column-right .field:nth-child(7) .image-upload {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.image-upload {
+    display: flex;
+    gap: 10px;
+}
+
+.image-placeholder {
+    width: 259px;
+    height: 149px;
+    background-color: #1B1B1B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #888;
+    border: 1px dashed #565656;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.back-button, .save-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 36px;
+    cursor: pointer;
+}
+
+.back-button {
+    background-color: #0C0E0D;
+    font-family: 'Gilroy';
+    font-weight: 300;
+    color: #FFFBDA;
+    font-size: 16px;
+    border: 1px solid #F2ADF3
+}
+
+.save-button {
+    background-color: #F788CC;
+    font-family: 'Gilroy';
+    font-weight: 500;
+    font-size: 16px;
+    color: #000000;
+}
+
+
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.image-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.image-placeholder {
+    min-width: 30%;
+    height: 20%px;
+    background-color: #1B1B1B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #888;
+    border: 1px dashed #565656;
+    box-sizing: border-box;
+}
+
+.carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-track {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    width: 40px; /* Adjust as necessary */
+    height: 40px; /* Adjust as necessary */
+    border-radius: 20px; /* Makes the button round */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.carousel-button img {
+    width: 50%;
+    height: 50%;
+    border-radius: 20px; /* Makes the SVG icon round */
+}
+
+.carousel-button.prev {
+    left: 0; /* Adjust as necessary */
+}
+
+.carousel-button.next {
+    right: 0; /* Adjust as necessary */
+}
+
+
+
+@media (max-width: 375px) {
+    .container {
+        display: flex;
+        width: 100%;
+    }
+    aside.sidebar {
+        width: 21%;
+        height: 100%;
+        background: #0C0E0D;
+        font-family: 'Gilroy';
+        font-weight: 300;
+        font-size: 16px;
+        color: #B9B8B8;
+        padding: 10px;
+        border-right: 1px solid #565656;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center items horizontally */
+    }
+    .sidebar ul {
+        list-style: none;
+        padding: 10px;
+        margin: 0;
+        width: 100%; /* Ensure ul takes full width */
+        display: flex;
+        flex-direction: column;
+        align-items: start; /* Center items horizontally */
+    }
+    .sidebar ul li {
+        display: flex;
+        flex-direction: column;
+        align-items: start; /* Center items horizontally */
+        justify-content: center;
+        padding: 10px 0;
+        width: 100%; /* Ensure li takes full width */
+        text-align: start; /* Center text */
+    }
+    .custom-icon,
+    .svg-add-new-project {
+        width: 18px;
+        height: 18px;
+        margin-bottom: 10px; /* Adjusted margin for better spacing */
+        cursor: pointer;
+    }
+    .spacer {
+        height: 20px;
+    }
+    .svg-line {
+        width: 100%; /* Adjust width if necessary */
+        margin: 20px 0; /* Added margin for better spacing */
+        
+    }
+    .new-project-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        padding-right: 0; /* Removed right padding */
+        
+    }
+    .sidebar ul li:hover {
+        color: #F2ADF3;
+    }
+}
+
+
+
+
+@media (max-width: 768px) {
+
+    
+        .container {
+            display: flex;
+            width: 100%;
+        }
+        aside.sidebar {
+            width: 21%;
+            height: 100%;
+            background: #0C0E0D;
+            font-family: 'Gilroy';
+            font-weight: 300;
+            font-size: 16px;
+            color: #B9B8B8;
+            padding: 10px;
+            border-right: 1px solid #565656;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center items horizontally */
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 10px;
+            margin: 0;
+            width: 100%; /* Ensure ul takes full width */
+            display: flex;
+            flex-direction: column;
+            align-items: start; /* Center items horizontally */
+        }
+        .sidebar ul li {
+            display: flex;
+            flex-direction: column;
+            align-items: start; /* Center items horizontally */
+            justify-content: center;
+            padding: 10px 0;
+            width: 100%; /* Ensure li takes full width */
+            text-align: start; /* Center text */
+        }
+        .custom-icon,
+        .svg-add-new-project {
+            width: 18px;
+            height: 18px;
+            margin-bottom: 10px; /* Adjusted margin for better spacing */
+            cursor: pointer;
+        }
+        .spacer {
+            height: 20px;
+        }
+        .svg-line {
+            width: 100%; /* Adjust width if necessary */
+            margin: 20px 0; /* Added margin for better spacing */
+            
+        }
+        .new-project-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+            padding-right: 0; /* Removed right padding */
+            
+        }
+        .sidebar ul li:hover {
+            color: #F2ADF3;
+        }
+    }

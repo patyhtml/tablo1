@@ -1,0 +1,256 @@
+.footer {
+    padding: 0px;
+    margin-left: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; 
+    align-items: start;
+  
+    
+ }
+ .footer-section1-links1 {
+   
+     font-family: 'Gilroy';
+     font-weight: 600;
+     font-size: 24px;
+     color: #F788CC;
+     margin: 30px;    
+ }
+ 
+ .footer-section2-links2 {
+     
+     font-family: 'Gilroy';
+     font-weight: 600;
+    
+     font-size: 24px;
+     color: #FC7309;
+     margin: 30px;
+     
+ }
+ 
+ .footer-section3-links3 {
+     font-family: 'Gilroy';
+     font-weight: 600;
+     font-size: 24px;
+     color: #816AD3;
+     margin: 30px;
+     
+     
+ }
+ 
+ 
+ .subscription-box {
+     font-family: 'Gilroy';
+     font-weight: 600;
+     font-size: 38px;
+     color: #F2ADF3;
+     margin: 30px;
+    
+ }
+ 
+ .subscription-box p {
+     font-size: 16px;
+     color: #666;
+     margin-bottom: 20px; 
+     font-family: 'Gilroy';
+     font-weight: 300;
+     font-size: 22px;
+     color: #B9B8B8;
+     display: inline-block;
+     vertical-align: baseline; /* Dostosowanie do środka linii */
+ }
+ 
+ .input-with-button {
+     position: relative;
+     width: 100%;
+     max-width: 400px; /* You can adjust this value */
+ }
+ 
+ .input-with-button input[type="email"] {
+     width: 100%;
+     padding: 10px 60px 10px 20px; /* Adjust padding to make space for the button */
+     border: 1px solid #707070;
+     background-color: transparent;
+     border-radius: 48px;
+     font-family: 'Gilroy';
+     font-weight: 300;
+     
+     color: #B9B8B8;
+     
+     margin: 0;
+     font-size: 21px;
+ }
+ 
+ .input-with-button .svg-button {
+     position: absolute;
+     left: 88%;
+     top: 55%;
+     transform: translateY(-50%);
+     background: none;
+     border: none;
+     cursor: pointer;
+ }
+ 
+ .input-with-button .svg-icon {
+     width: 26px;
+     height: auto;
+ }
+ 
+ 
+ .footer-links-list {
+     color: #B9B8B8;
+     padding: 0px;
+      margin: 0px;
+ 
+ 
+ }
+ .h15, .h16, .h17, {
+     margin-bottom: 20px;
+ }
+ 
+ 
+ .footer-links-list li {
+     list-style: none; /* Usuwa punkty listy */
+      margin-bottom: 10px;
+ }
+ 
+ 
+ .footer-link {
+     text-decoration: none; /* Usuwa podkreślenie */
+     color: #B9B8B8; /* Kolor linków */
+     transition: color 0.3s;
+    
+ }
+ 
+ .footer-link:hover {
+     color: #816AD3;
+ }
+ /* Specific styling for each link */
+ #workflow, #teamline, #pain-points,
+ #monthl-plans, #resources,
+ #facebook, #instagram, #tweeter {
+     font-family: 'Gilroy';
+     font-weight: 300;
+     font-size: 18px;
+   
+ }
+
+
+
+
+
+
+
+
+ /* Tablet view */
+@media (max-width: 768px) {
+    /* General styles for horizontal scrolling */
+
+    .footer {
+        flex-direction: column;
+        align-items: start;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 10px;
+       margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    .footer-section1-links1 {
+        font-family: 'Gilroy';
+        font-weight: 600;
+        font-size: 24px;
+        color: #F788CC;
+        margin: 15px;
+    }
+    .footer-section2-links2 {
+    
+        font-family: 'Gilroy';
+        font-weight: 600;
+       
+        font-size: 24px;
+        color: #FC7309;
+        margin: 15px;
+        
+    }
+    
+    .footer-section3-links3 {
+        font-family: 'Gilroy';
+        font-weight: 600;
+        font-size: 24px;
+        color: #816AD3;
+        margin: 15px;  
+    }
+  
+
+    .footer-section1, .footer-section2, .footer-section3 {
+      
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;  
+    }
+
+    .subscription-box {
+        width: 100%;
+        margin-top: 0;
+        text-align: center;
+    }
+}
+
+
+
+/* Mobile view */
+@media (max-width: 375px) {
+    /* General styles for horizontal scrolling */
+   
+   
+    .footer {
+        flex-direction: column;
+        align-items: start;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 10px;
+       margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    .footer-section1-links1 {
+        font-family: 'Gilroy';
+        font-weight: 600;
+        font-size: 24px;
+        color: #F788CC;
+        margin: 15px;
+    }
+    .footer-section2-links2 {
+    
+        font-family: 'Gilroy';
+        font-weight: 600;
+       
+        font-size: 24px;
+        color: #FC7309;
+        margin: 15px;
+        
+    }
+    
+    .footer-section3-links3 {
+        font-family: 'Gilroy';
+        font-weight: 600;
+        font-size: 24px;
+        color: #816AD3;
+        margin: 15px;
+        
+        
+    }
+  
+
+    .footer-section1, .footer-section2, .footer-section3 {
+      
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;  
+    }
+
+    .subscription-box {
+        width: 100%;
+        margin-top: 0;
+        text-align: center;
+    }
+}
