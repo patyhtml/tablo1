@@ -110,6 +110,45 @@
     background-color: #1B1B1B;
 }
 
+.priority-field {
+    color: #B9B8B8;
+    font-family: 'Gilroy';
+    font-weight: 200;
+    font-size: 16px;
+    padding: 10px;
+    margin-left: 10px;
+  
+   
+    
+}
+
+.priority-dropdown-clear {
+    color: #B9B8B8;
+    font-family: 'Gilroy';
+    font-weight: 200;
+    font-size: 16px;
+   
+}
+
+
+.priority-options {
+
+    color: #B9B8B8;
+    font-family: 'Gilroy';
+    font-weight: 200;
+    font-size: 16px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column; 
+}
+
+.priority-icon {
+margin-top: 10px;
+margin-right: 10px;
+  
+}
+
+
 .calendar-button {
     position: relative;
     right: 10px;
@@ -279,6 +318,8 @@
 .image-placeholder > input[type="file"] {
     display: none;
 }
+
+
 
 
 

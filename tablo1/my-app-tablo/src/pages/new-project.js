@@ -78,8 +78,9 @@ function NewProject() {
                         <div className="field">
                             <div className="priority-field">
                                 <div className={`priority-dropdown ${selectedPriority}`} onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
-                                    {priorities.find(p => p.value === selectedPriority).text}
                                     {React.createElement(priorities.find(p => p.value === selectedPriority).Icon)}
+                                    {priorities.find(p => p.value === selectedPriority).text}
+                                   
                                 </div>
                                 {isDropdownOpen && (
                                     <div className="priority-options">

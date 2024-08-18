@@ -9,7 +9,7 @@ function Payment() {
     return (
      
         
-        <body>
+        <>
      
             <Header />
             <div className={headerStyles.sidebar}>
@@ -43,7 +43,7 @@ function Payment() {
 <div className={footerStyles.footer}>
             </div>
         
-            </body>
+            </>
         
         
     )

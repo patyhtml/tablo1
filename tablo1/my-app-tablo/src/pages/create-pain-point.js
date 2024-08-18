@@ -14,12 +14,12 @@ function CreatePainPoint() {
 
     const handleDragStart = (event) => {
         console.log("Dragging started");
-        event.dataTransfer.setData("text/plain", event.target.id);
-        setDraggedItem({
-            id: Date.now(),
-            offsetX: event.nativeEvent.offsetX,
-            offsetY: event.nativeEvent.offsetY
-        });
+        // event.dataTransfer.setData("text/plain", event.target.id);
+        // setDraggedItem({
+        //     id: Date.now(),
+        //     offsetX: event.nativeEvent.offsetX,
+        //     offsetY: event.nativeEvent.offsetY
+        // });
     };
 
     const handleDrop = (event) => {
@@ -106,8 +106,9 @@ function CreatePainPoint() {
                             onDragOver={(e) => e.preventDefault()}
                             onDrop={handleDrop}
                         >
-                            {positions.map((position) => (
+                            {/* {positions.map((position) => (
                                 <PainPointSVG
+                                
                                     key={position.id}
                                     className="svg-pain-point"
                                     style={{
@@ -116,7 +117,7 @@ function CreatePainPoint() {
                                         top: `${position.y}px`,
                                     }}
                                 />
-                            ))}
+                            ))} */}
                         </div>
                         <div className="buttons">
                             <button className="back-to-task">Back to task</button>
@@ -130,4 +131,5 @@ function CreatePainPoint() {
 }
 
 export default CreatePainPoint;
+
 

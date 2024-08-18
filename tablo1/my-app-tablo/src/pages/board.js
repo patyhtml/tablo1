@@ -27,7 +27,7 @@ function Board() {
             titleColor: ''
         },
     ]
-    const [columnItems, setColumnItems] = useState(columns);
+    const [columnItems] = useState(columns);
     const [todoItems, setTodoItems] = useState([]);
    
 

@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { ReactComponent as IconTableSVG} from './../../assets/img/icon-table.svg'
 import { ReactComponent as CalendarSVG} from './../../assets/img/icon-calendar.svg'
 import { ReactComponent as LineSVG} from './../../assets/img/line.svg'
@@ -10,12 +10,14 @@ export const Sidebar = () => {
 
         <aside className="sidebar">
         <ul>
-        <li><IconTableSVG className="svg-icon-table"/>Table</li>
-        <li><IconNewProjectSVG className="svg-icon-new-project"/>Pain point</li>
+       
+        <li> <Link to="/board"> <IconTableSVG className="svg-icon-table" />Table</Link></li>
+        <li> <Link to="/createpainpoint"><IconNewProjectSVG className="svg-icon-new-project" />Pain point</Link></li>
             <li><CalendarSVG className="svg-calendar"/>Calendar</li>
             <div className="spacer"></div>
             <LineSVG className="svg-line"/>
-            <li>New Project<AddNewProjectSVG className="svg-add-new-project"/></li>
+            <li>
+            <Link to="/newproject"> New Project <AddNewProjectSVG className="svg-add-new-project" /> </Link></li>
             <li><IconNewProjectSVG className="svg-icon-new-project"/>Creative logo</li>
             <li><IconNewProjectSVG className="svg-icon-new-project"/>Creative logo</li>
         </ul>

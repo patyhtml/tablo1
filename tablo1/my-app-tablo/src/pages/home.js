@@ -156,7 +156,7 @@ function Home() {
   
   </section>
   
-  <section className="hom-Section2" data-block="Section2">
+  <section className="hom-Section2" data-block="Section2" id="Section2">
       <div className="tasks"> </div>
       <h8 id="tasks-heading" className="tasks__heading-text heading-xl" aria-hidden="true">
           <span className="tasks__animate">M</span>
