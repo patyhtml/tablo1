@@ -30,7 +30,7 @@ body {
     background-color: #151515;
     border-right: 1px solid #565656;
     border-bottom: 1px solid #565656;
-    position: relative;
+    
 }
 
 .cre-chat-header {
@@ -57,7 +57,7 @@ body {
     height: 40px;
     cursor: grab;
     /* position: absolute; */
-    transition: transform 0.2s ease;
+    
     
 }
 
@@ -95,14 +95,14 @@ body {
     margin-top: 10px;
     padding: 10px;
     box-sizing: border-box;
-    position: relative;
+  
 }
 
 .cre-image-column {
     width: 69%;
     height: 85vh;
     box-sizing: border-box;
-    position: relative;
+ 
 }
 
 .cre-image-container {

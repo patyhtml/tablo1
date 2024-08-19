@@ -54,7 +54,7 @@
     font-size: 20px;
 }
 
-.auth-buttons {
+.auth-button {
     display: flex;
     gap: 10px;
 }
@@ -65,12 +65,13 @@
     cursor: pointer;
 }
 
-.logout-button {
+.logout {
     background-color: #0C0E0D;
     font-family: 'Gilroy';
     font-weight: normal;
     color: #FFFBDA;
     font-size: 16px;
+    direction: none;
     border: 1px solid #F2ADF3;
    
 }
