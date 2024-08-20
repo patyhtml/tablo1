@@ -1,10 +1,3 @@
-body {
-    background-color: #0C0E0D;
-    height: 100vh;
-    margin: 0;
-    position: relative;
-}
-
 .boa-container-wrapper {
     display: flex;
     width: 100%;
@@ -12,13 +5,15 @@ body {
 }
 
 .sidebar {
-    width: 20%; /* Szerokość paska bocznego */
+    width: 20%;
+    /* Szerokość paska bocznego */
     background-color: #0C0E0D;
     border-right: 1px solid #565656;
 }
 
 .boa-container {
-    flex-grow: 1; /* Zajmuje resztę dostępnej przestrzeni */
+    flex-grow: 1;
+    /* Zajmuje resztę dostępnej przestrzeni */
     display: flex;
     flex-direction: column;
     background-color: #0C0E0D;
@@ -28,7 +23,8 @@ body {
     display: flex;
     flex-grow: 1;
     overflow-x: auto;
-    height: 100%; /* Pełna wysokość dostępnej przestrzeni */
+    height: 100%;
+    /* Pełna wysokość dostępnej przestrzeni */
 }
 
 .boa-list {
@@ -36,8 +32,10 @@ body {
     display: flex;
     flex-direction: column;
     background: #0C0E0D;
-    border-left: 1px solid #565656; /* Usunięcie odstępu między kolumnami */
-    height: 100%; /* Pełna wysokość dostępnej przestrzeni */
+    border-left: 1px solid #565656;
+    /* Usunięcie odstępu między kolumnami */
+    height: 100%;
+    /* Pełna wysokość dostępnej przestrzeni */
 }
 
 .boa-list:last-child {
@@ -52,11 +50,12 @@ body {
     background: #0C0E0D;
     padding: 15px;
 }
+
 .boa-tasks {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 .boa-list-header h3 {
@@ -67,7 +66,8 @@ gap: 20px;
     color: #B9B8B8;
 }
 
-.add-list, .more-options {
+.add-list,
+.more-options {
     font-family: 'Gilroy';
     font-weight: 300;
     font-size: 30px;

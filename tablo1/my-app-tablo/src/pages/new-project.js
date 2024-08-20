@@ -27,7 +27,7 @@ function NewProject() {
     ];
 
     const handleNext = () => {
-       
+
         const nextIndex = (currentIndex + 1) % images.length;
         setCurrentIndex(nextIndex);
     };
@@ -80,7 +80,7 @@ function NewProject() {
                                 <div className={`priority-dropdown ${selectedPriority}`} onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
                                     {React.createElement(priorities.find(p => p.value === selectedPriority).Icon)}
                                     {priorities.find(p => p.value === selectedPriority).text}
-                                   
+
                                 </div>
                                 {isDropdownOpen && (
                                     <div className="priority-options">
@@ -109,7 +109,7 @@ function NewProject() {
                                 <button className="carousel-button prev" onClick={handlePrev}>
                                     <CarouselButtonPrevSVG className="svg-carousel-button-prev" />
                                 </button>
-                                <div className="image-track" ref={trackRef} style={{'--active-slide':currentIndex}}> 
+                                <div className="image-track" ref={trackRef} style={{ '--active-slide': currentIndex }}>
                                     {images.map((image, index) => (
                                         <div key={index} className="image-placeholder" style={{ backgroundImage: image ? `url(${image})` : 'none' }}>
                                             {image ? null : (
@@ -122,7 +122,7 @@ function NewProject() {
                                 <button className="carousel-button next" onClick={handleNext}>
                                     <CarouselButtonNextSVG className="svg-carousel-button-next" />
                                 </button>
-                               
+
                             </div>
                         </div>
                         <div className="buttons">

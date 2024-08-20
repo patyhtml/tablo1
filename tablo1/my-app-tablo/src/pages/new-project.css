@@ -1,38 +1,29 @@
-
-
-
-
-
 .container-wrapper {
     display: flex;
     flex: 1;
     width: 100%;
     height: 100vh;
-    
+
 }
 
-
-
 .npe-container {
-    width: 78%; /* Zajmuje resztę miejsca po prawej stronie */
+    width: 78%;
+    /* Zajmuje resztę miejsca po prawej stronie */
     padding: 0px;
     background-color: #0C0E0D;
     display: flex;
     flex-direction: column;
-    
-  
-    
-    
+
 }
 
 
 
 .column {
-   width: 100%;
-   height: 100vh;
-   padding-right: 0px;
-   border-right: 1px solid #565656;
-   
+    width: 100%;
+    height: 100vh;
+    padding-right: 0px;
+    border-right: 1px solid #565656;
+
 
 }
 
@@ -50,13 +41,15 @@
     font-weight: 100;
     font-size: 14px;
     padding: none;
-   
+
 }
 
-.field input, .field textarea, .field select {
+.field input,
+.field textarea,
+.field select {
     width: 100%;
-  
-   
+
+
     border: none;
     background-color: #0C0E0D;
     color: #B9B8B8;
@@ -66,12 +59,19 @@
     padding: 20px;
 }
 
-.field input:hover, .field textarea:hover, .field select:hover,
-.field input:focus, .field textarea:focus, .field select:focus {
-    border: 1px solid #F2ADF3; /* Kolor obramowania po najechaniu lub kliknięciu */
-    outline: none; /* Usunięcie domyślnego obramowania przeglądarki */
-    background-color: #1B1B1B; /* Opcjonalnie zmiana koloru tła po najechaniu lub kliknięciu */
-    
+.field input:hover,
+.field textarea:hover,
+.field select:hover,
+.field input:focus,
+.field textarea:focus,
+.field select:focus {
+    border: 1px solid #F2ADF3;
+    /* Kolor obramowania po najechaniu lub kliknięciu */
+    outline: none;
+    /* Usunięcie domyślnego obramowania przeglądarki */
+    background-color: #1B1B1B;
+    /* Opcjonalnie zmiana koloru tła po najechaniu lub kliknięciu */
+
 }
 
 
@@ -86,21 +86,26 @@
 
 .field input[type="date"] {
     width: 100%;
-    padding: 10px 40px 10px 10px; /* Adjust right padding for the icon */
+    padding: 10px 40px 10px 10px;
+    /* Adjust right padding for the icon */
     border: none;
     background-color: #0C0E0D;
     color: #B9B8B8;
     font-family: 'Gilroy';
     font-weight: 200;
     font-size: 16px;
-    -webkit-appearance: none; /* For Safari */
-    -moz-appearance: none; /* For Firefox */
-    appearance: none; /* For other browsers */
+    -webkit-appearance: none;
+    /* For Safari */
+    -moz-appearance: none;
+    /* For Firefox */
+    appearance: none;
+    /* For other browsers */
     position: relative;
 }
 
 .field input[type="date"]::-webkit-calendar-picker-indicator {
-    display: none; /* Hides the default calendar icon in WebKit browsers */
+    display: none;
+    /* Hides the default calendar icon in WebKit browsers */
 }
 
 .field input[type="date"]:hover,
@@ -117,9 +122,9 @@
     font-size: 16px;
     padding: 10px;
     margin-left: 10px;
-  
-   
-    
+
+
+
 }
 
 .priority-dropdown-clear {
@@ -127,7 +132,7 @@
     font-family: 'Gilroy';
     font-weight: 200;
     font-size: 16px;
-   
+
 }
 
 
@@ -139,13 +144,19 @@
     font-size: 16px;
     padding: 0px;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
 }
 
 .priority-icon {
-margin-top: 10px;
-margin-right: 10px;
-  
+    margin-top: 10px;
+    margin-right: 10px;
+
+}
+
+.priority-dropdown {
+    display: flex;
+    gap: 5px;
+    align-items: center;
 }
 
 
@@ -161,11 +172,11 @@ margin-right: 10px;
 }
 
 .calendar {
-    width: 18px; /* Adjust as necessary */
-    height: 18px; /* Adjust as necessary */
+    width: 18px;
+    /* Adjust as necessary */
+    height: 18px;
+    /* Adjust as necessary */
 }
-
-
 
 
 .field textarea {
@@ -175,8 +186,6 @@ margin-right: 10px;
 .column-right .field {
     justify-content: flex-start;
 }
-
-
 
 
 
@@ -219,7 +228,8 @@ margin-right: 10px;
     margin-right: 20px;
 }
 
-.back-button, .save-button {
+.back-button,
+.save-button {
     padding: 10px 20px;
     border: none;
     border-radius: 36px;
@@ -253,15 +263,19 @@ margin-right: 10px;
 
 .image-track {
     display: flex;
-    width: calc(320px * 8); /* Zapewnia, że track ma wystarczającą szerokość */
+    width: calc(320px * 8);
+    /* Zapewnia, że track ma wystarczającą szerokość */
     transition: transform 0.5s ease;
-    min-height: 200px; /* Zapewnij minimalną wysokość, jeśli potrzebna */
+    min-height: 200px;
+    /* Zapewnij minimalną wysokość, jeśli potrzebna */
     transform: translateX(calc(var(--active-slide) * 320px * -1));
 }
 
 .image-placeholder {
-    width: 320px; /* Każdy kontener będzie miał szerokość 20% kontenera rodzica */
-    height: 200px; /* Ustaw wysokość, by kontenery miały jednolity rozmiar */
+    width: 320px;
+    /* Każdy kontener będzie miał szerokość 20% kontenera rodzica */
+    height: 200px;
+    /* Ustaw wysokość, by kontenery miały jednolity rozmiar */
     background-color: #1B1B1B;
     display: flex;
     align-items: center;
@@ -269,13 +283,15 @@ margin-right: 10px;
     font-size: 24px;
     color: #888;
     border: 1px dashed #565656;
-    margin-right: 10px; /* Dodaj odstęp pomiędzy kontenerami */
+    margin-right: 10px;
+    /* Dodaj odstęp pomiędzy kontenerami */
     box-sizing: border-box;
 }
 
 .carousel {
     overflow: hidden;
-    width: 100%; /* Ustawia szerokość na 100% zawierającego elementu */
+    width: 100%;
+    /* Ustawia szerokość na 100% zawierającego elementu */
 }
 
 .carousel-button {
@@ -286,23 +302,27 @@ margin-right: 10px;
     border: none;
     cursor: pointer;
     z-index: 1;
-    width: 40px; /* Adjust as necessary */
-    height: 40px; /* Adjust as necessary */
+    width: 40px;
+    /* Adjust as necessary */
+    height: 40px;
+    /* Adjust as necessary */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .carousel-button.prev {
-    left: 10px; /* Dostosuj położenie przycisku */
+    left: 10px;
+    /* Dostosuj położenie przycisku */
 }
 
 .carousel-button.next {
-    right: 10px; /* Dostosuj położenie przycisku */
+    right: 10px;
+    /* Dostosuj położenie przycisku */
 }
 
 /* Styl dla przycisków wewnątrz image-placeholder */
-.image-placeholder > button {
+.image-placeholder>button {
     background: none;
     font-family: 'Gilroy';
     font-weight: 300;
@@ -315,7 +335,7 @@ margin-right: 10px;
 }
 
 /* Ukryj domyślny input file i pokaż go tylko po kliknięciu + */
-.image-placeholder > input[type="file"] {
+.image-placeholder>input[type="file"] {
     display: none;
 }
 
@@ -328,6 +348,7 @@ margin-right: 10px;
         display: flex;
         width: 100%;
     }
+
     aside.sidebar {
         width: 21%;
         height: 100%;
@@ -340,49 +361,66 @@ margin-right: 10px;
         border-right: 1px solid #565656;
         display: flex;
         flex-direction: column;
-        align-items: center; /* Center items horizontally */
+        align-items: center;
+        /* Center items horizontally */
     }
+
     .sidebar ul {
         list-style: none;
         padding: 10px;
         margin: 0;
-        width: 100%; /* Ensure ul takes full width */
+        width: 100%;
+        /* Ensure ul takes full width */
         display: flex;
         flex-direction: column;
-        align-items: start; /* Center items horizontally */
+        align-items: start;
+        /* Center items horizontally */
     }
+
     .sidebar ul li {
         display: flex;
         flex-direction: column;
-        align-items: start; /* Center items horizontally */
+        align-items: start;
+        /* Center items horizontally */
         justify-content: center;
         padding: 10px 0;
-        width: 100%; /* Ensure li takes full width */
-        text-align: start; /* Center text */
+        width: 100%;
+        /* Ensure li takes full width */
+        text-align: start;
+        /* Center text */
     }
+
     .custom-icon,
     .svg-add-new-project {
         width: 18px;
         height: 18px;
-        margin-bottom: 10px; /* Adjusted margin for better spacing */
+        margin-bottom: 10px;
+        /* Adjusted margin for better spacing */
         cursor: pointer;
     }
+
     .spacer {
         height: 20px;
     }
+
     .svg-line {
-        width: 100%; /* Adjust width if necessary */
-        margin: 20px 0; /* Added margin for better spacing */
-        
+        width: 100%;
+        /* Adjust width if necessary */
+        margin: 20px 0;
+        /* Added margin for better spacing */
+
     }
+
     .new-project-item {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: start;
-        padding-right: 0; /* Removed right padding */
-        
+        padding-right: 0;
+        /* Removed right padding */
+
     }
+
     .sidebar ul li:hover {
         color: #F2ADF3;
     }
@@ -393,67 +431,85 @@ margin-right: 10px;
 
 @media (max-width: 768px) {
 
-    
-        .container {
-            display: flex;
-            width: 100%;
-        }
-        aside.sidebar {
-            width: 21%;
-            height: 100%;
-            background: #0C0E0D;
-            font-family: 'Gilroy';
-            font-weight: 300;
-            font-size: 16px;
-            color: #B9B8B8;
-            padding: 10px;
-            border-right: 1px solid #565656;
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* Center items horizontally */
-        }
-        .sidebar ul {
-            list-style: none;
-            padding: 10px;
-            margin: 0;
-            width: 100%; /* Ensure ul takes full width */
-            display: flex;
-            flex-direction: column;
-            align-items: start; /* Center items horizontally */
-        }
-        .sidebar ul li {
-            display: flex;
-            flex-direction: column;
-            align-items: start; /* Center items horizontally */
-            justify-content: center;
-            padding: 10px 0;
-            width: 100%; /* Ensure li takes full width */
-            text-align: start; /* Center text */
-        }
-        .custom-icon,
-        .svg-add-new-project {
-            width: 18px;
-            height: 18px;
-            margin-bottom: 10px; /* Adjusted margin for better spacing */
-            cursor: pointer;
-        }
-        .spacer {
-            height: 20px;
-        }
-        .svg-line {
-            width: 100%; /* Adjust width if necessary */
-            margin: 20px 0; /* Added margin for better spacing */
-            
-        }
-        .new-project-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: start;
-            padding-right: 0; /* Removed right padding */
-            
-        }
-        .sidebar ul li:hover {
-            color: #F2ADF3;
-        }
+
+    .container {
+        display: flex;
+        width: 100%;
     }
+
+    aside.sidebar {
+        width: 21%;
+        height: 100%;
+        background: #0C0E0D;
+        font-family: 'Gilroy';
+        font-weight: 300;
+        font-size: 16px;
+        color: #B9B8B8;
+        padding: 10px;
+        border-right: 1px solid #565656;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Center items horizontally */
+    }
+
+    .sidebar ul {
+        list-style: none;
+        padding: 10px;
+        margin: 0;
+        width: 100%;
+        /* Ensure ul takes full width */
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        /* Center items horizontally */
+    }
+
+    .sidebar ul li {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        /* Center items horizontally */
+        justify-content: center;
+        padding: 10px 0;
+        width: 100%;
+        /* Ensure li takes full width */
+        text-align: start;
+        /* Center text */
+    }
+
+    .custom-icon,
+    .svg-add-new-project {
+        width: 18px;
+        height: 18px;
+        margin-bottom: 10px;
+        /* Adjusted margin for better spacing */
+        cursor: pointer;
+    }
+
+    .spacer {
+        height: 20px;
+    }
+
+    .svg-line {
+        width: 100%;
+        /* Adjust width if necessary */
+        margin: 20px 0;
+        /* Added margin for better spacing */
+
+    }
+
+    .new-project-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        padding-right: 0;
+        /* Removed right padding */
+
+    }
+
+    .sidebar ul li:hover {
+        color: #F2ADF3;
+    }
+}

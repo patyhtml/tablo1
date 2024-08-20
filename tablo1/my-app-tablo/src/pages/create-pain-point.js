@@ -2,16 +2,15 @@ import React, { useState } from 'react';
 import './create-pain-point.css';
 import HeaderApp from '../modules/header-app/header-app';
 import Sidebar from '../modules/sidebar/sidebar';
-import styles from '../modules/sidebar/sidebar.css';
 import WindowChat from '../modules/window-chat/window-chat';
 import { ReactComponent as DividerSVG } from './../assets/img/divider.svg'
-import { ReactComponent as PainPointSVG} from './../assets/img/pain-point.svg'
+import { ReactComponent as PainPointSVG } from './../assets/img/pain-point.svg'
 
 function CreatePainPoint() {
     const [todoItems, setTodoItems] = useState([]);
     const [draggedItem, setDraggedItem] = useState(null);
     const [positions, setPositions] = useState([]);
-   
+
     const handleDragStart = (event) => {
         // console.log("Drag started:", event.target);
         setDraggedItem({
@@ -19,10 +18,10 @@ function CreatePainPoint() {
             offsetX: event.nativeEvent.offsetX,
             offsetY: event.nativeEvent.offsetY
         });
-        
+
 
     };
-   
+
 
     const handleDrop = (event) => {
         event.preventDefault();
@@ -49,29 +48,35 @@ function CreatePainPoint() {
     };
 
     return (
+
         <div className="cre-new-project-wrapper">
             <HeaderApp />
             <DividerSVG className="svg-divider" />
             <div className="container-wrapper">
                 <Sidebar />
-                <div className={styles.sidebar}></div>
+
                 <div className="container-wrapper">
                     <div className="cre-main-content">
                         <div className="cre-chat-column">
                             <div className="cre-chat-header">
-                            <div className="cre-chat-header2">
+                                <div className="cre-chat-header2">
                                     <h3>Create Point Pain</h3>
                                     <h4>Drag a point into the image</h4>
+                                </div >
+
+                                <div draggable="true"
+                                    onDragStart={handleDragStart}>
+                                    <PainPointSVG
+                                        className="svg-pain-point"
+
+                                    />
+
                                 </div>
-                                <PainPointSVG
-                                    className="svg-pain-point"
-                                    draggable="true"
-                                    onDragStart={handleDragStart}
-                                />
-                              
+
+
                             </div>
-                             
-                          
+
+
                             <div className="cre-chat-content" id="chat-content">
                                 {todoItems.map((todoItem, index) => (
                                     <WindowChat key={index} props={todoItem} />
