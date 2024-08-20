@@ -7,6 +7,44 @@
     font-size: 42px;
 }
 
+.foo-auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.foo-auth-buttons button {
+    padding: 8px 34px;
+    border-radius: 36px;
+    cursor: pointer;
+}
+
+.foo-login-button {
+    background-color: #0C0E0D;
+    font-family: 'Gilroy';
+    font-weight: normal;
+    color: #FFFBDA;
+    font-size: 16px;
+    border: 1px solid #F2ADF3;
+}
+
+.foo-login-button:hover {
+    background-color: #b268f4; /* Ciemniejszy odcień koloru tła przy najechaniu */
+    transform: scale(1.05); /* Delikatne powiększenie przycisku */
+}
+
+.foo-join-button {
+    background-color: #F2ADF3;
+    border: none;
+    font-family: 'Gilroy';
+    font-weight: 500;
+    color: #0C0E0D;
+    font-size: 16px;
+}
+
+.foo-join-button:hover {
+    background-color: #e96deb; /* Ciemniejszy odcień koloru tła przy najechaniu */
+    transform: scale(1.05); /* Delikatne powiększenie przycisku */
+}
 
 
 
@@ -20,35 +58,40 @@
   
     
  }
- .footer-section1-links1 {
-   
-     font-family: 'Gilroy';
-     font-weight: 600;
-     font-size: 24px;
-     color: #F788CC;
-     margin: 30px;    
+
+
+
+
+ .h15 a {
+    font-family: 'Gilroy';
+    font-weight: 600;
+    font-size: 24px;
+    text-decoration: none;
+    color: #F788CC;
+
  }
  
- .footer-section2-links2 {
+
+ .h16 a {
      
-     font-family: 'Gilroy';
-     font-weight: 600;
+    font-family: 'Gilroy';
+    font-weight: 600;
+    font-size: 24px;
+    text-decoration: none;
+    color: #FC7309;
+  
+
+}
+
+ .h17 a {
+    font-family: 'Gilroy';
+    font-weight: 600;
+    font-size: 24px;
+    text-decoration: none;
+    color: #816AD3;
     
-     font-size: 24px;
-     color: #FC7309;
-     margin: 30px;
-     
- }
- 
- .footer-section3-links3 {
-     font-family: 'Gilroy';
-     font-weight: 600;
-     font-size: 24px;
-     color: #816AD3;
-     margin: 30px;
-     
-     
- }
+
+}
  
  
  .subscription-box {
@@ -116,9 +159,7 @@
  
  
  }
- .h15, .h16, .h17, {
-     margin-bottom: 20px;
- }
+
  
  
  .footer-links-list li {

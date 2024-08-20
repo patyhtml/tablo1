@@ -40,9 +40,9 @@ export const Header = () => {
           <button className="join-button" onClick={handleJoinusClick}>Join us</button>
         </nav>
       </div>
-      <div className="auth-buttons">
-        <button className="login-button" onClick={handleLoginClick}>Log in</button>
-        <button className="join-button" onClick={handleJoinusClick}>Join us</button>
+      <div className="hed-auth-buttons">
+        <button className="hed-login-button" onClick={handleLoginClick}>Log in</button>
+        <button className="hed-join-button" onClick={handleJoinusClick}>Join us</button>
       </div>
     </header>
   );

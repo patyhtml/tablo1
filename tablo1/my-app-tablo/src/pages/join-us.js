@@ -1,10 +1,12 @@
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './join-us.css';
 import Header from './../modules/header/header';
 import headerStyles from '../modules/header/header.css';
 import Footer from './../modules/footer/footer';
 import footerStyles from '../modules/footer/footer.css';
 import { ReactComponent as DividerSVG } from '../assets/img/divider.svg';
-import { useState } from 'react';
+
 
 function JoinUs() {
     const [name, setName] = useState('');
@@ -13,6 +15,7 @@ function JoinUs() {
     const [confirmPassword, setConfirmPassword] = useState('');
     const [subscribe, setSubscribe] = useState(false);
     const [agree, setAgree] = useState(false);
+    const navigate = useNavigate();
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -47,7 +50,9 @@ function JoinUs() {
             console.error('Error:', error);
         });
     };
-
+    const handleCreateMyAccountClick = () => {
+        navigate('/');
+      };
     return (
       <div>
         <Header />
@@ -123,7 +128,7 @@ function JoinUs() {
                         </label>
                     </div> 
                     <div className="space">
-                        <button type="submit" className="create-account-button">Create my Account</button>
+                        <button type="submit" className="create-account-button" onClick={handleCreateMyAccountClick}>Create my Account</button>
                     </div>
                 </form>
             </div>

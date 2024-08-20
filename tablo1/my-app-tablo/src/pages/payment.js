@@ -1,16 +1,19 @@
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './payment.css';
 import Header from './../modules/header/header';
 import headerStyles from '../modules/header/header.css';
 import Footer from './../modules/footer/footer';
 import footerStyles from '../modules/footer/footer.css';
 import { ReactComponent as DividerSVG } from '../assets/img/divider.svg';
-import { useState } from 'react';
+
 
 function Payment() {
     const [cardNumber, setCardNumber] = useState('');
     const [expiryDate, setExpiryDate] = useState('');
     const [cvv, setCvv] = useState('');
     const [cardholderName, setCardholderName] = useState('');
+    const navigate = useNavigate();
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -44,7 +47,10 @@ function Payment() {
             console.error('Payment Error:', error);
         });
     };
-
+    const handleConfirmPayClick = () => {
+        navigate('/board');
+      };
+    
     return (
         <>
             <Header />
@@ -95,7 +101,7 @@ function Payment() {
                             onChange={(e) => setCardholderName(e.target.value)} 
                         />
                     </div>
-                    <button type="submit" className="submit">Confirm & Pay</button>
+                    <button type="submit" className="submit" onClick={handleConfirmPayClick}>Confirm & Pay</button>
                 </form>
             </div>
             <Footer />

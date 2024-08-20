@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './pricing.css';
 import Header from '../modules/header/header';
 import Footer from '../modules/footer/footer';
@@ -10,6 +11,7 @@ import { ReactComponent as NextSectionSVG } from './../assets/img/next-section.s
 
 function Pricing() {
     const [activeIndex, setActiveIndex] = useState(null);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const animateColors = (selector, colors) => {
@@ -112,6 +114,9 @@ function Pricing() {
     const toggleFaq = (index) => {
         setActiveIndex(activeIndex === index ? null : index);
     };
+    const handleJoinusClick = () => {
+        navigate('/joinus');
+      };
 
 
     return (
@@ -228,7 +233,7 @@ function Pricing() {
                             </div>
 
 
-
+                           
 
                             <div className="auth-buttons">
                                 <button
@@ -241,6 +246,7 @@ function Pricing() {
                                         border: '1px solid #F2ADF3'
                                     }}
                                     className="join-button"
+                                    onClick={handleJoinusClick}
                                 >
                                     Join us
                                 </button>
@@ -298,6 +304,7 @@ function Pricing() {
                                         border: '1px solid #F788CC'
                                     }}
                                     className="join-button"
+                                    onClick={handleJoinusClick}
                                 >
                                     Join us
                                 </button>
@@ -352,6 +359,7 @@ function Pricing() {
                                         border: '1px solid #FC7309'
                                     }}
                                     className="join-button"
+                                    onClick={handleJoinusClick}
                                 >
                                     Join us
                                 </button>
@@ -404,6 +412,7 @@ function Pricing() {
                                         border: '1px solid #977BFA'
                                     }}
                                     className="join-button"
+                                    onClick={handleJoinusClick}
                                 >
                                     Join us
                                 </button>
@@ -496,6 +505,7 @@ function Pricing() {
                                                 border: '1px solid #F788CC'
                                             }}
                                             className="join-button"
+                                            onClick={handleJoinusClick}
                                         >
                                             Join us
                                         </button>
@@ -516,6 +526,7 @@ function Pricing() {
                                                 border: '1px solid #FC7309'
                                             }}
                                             className="join-button"
+                                            onClick={handleJoinusClick}
                                         >
                                             Join us
                                         </button>
@@ -537,6 +548,7 @@ function Pricing() {
                                                 border: '1px solid #816AD3'
                                             }}
                                             className="join-button"
+                                            onClick={handleJoinusClick}
                                         >
                                             Join us
                                         </button>

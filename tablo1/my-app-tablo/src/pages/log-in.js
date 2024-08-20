@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './log-in.css';
 import Header from './../modules/header/header'
 import Footer from './../modules/footer/footer'
@@ -8,6 +9,7 @@ import { ReactComponent as DividerSVG } from '../assets/img/divider.svg';
 function LogIn() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -30,7 +32,9 @@ function LogIn() {
             console.error('Error:', error);
         });
     };
-
+    const handleLoginClick = () => {
+        navigate('/board');
+      };
     return (
         <div>
             <Header />
@@ -62,7 +66,7 @@ function LogIn() {
                             />
                         </div>
                         <div className="button-group">
-                            <button type="submit" className="log-login-button">Login</button>
+                            <button type="submit" className="log-login-button" onClick={handleLoginClick}>Login</button>
                             <button type="button" className="forgot-password">Forgot your password</button>
                         </div>
                     </form>
