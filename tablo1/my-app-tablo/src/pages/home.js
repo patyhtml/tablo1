@@ -68,6 +68,7 @@ function Home() {
         return () => intervals.forEach(clearInterval);
     }, []);
 
+ 
 
 
 
@@ -192,7 +193,7 @@ function Home() {
                 </div>
             </section>
 
-            <section className="hom-Section3" data-block="Section3">
+            <section className="hom-Section3" data-block="Section3" id="Section3">
                 <div className="calendar"> </div>
                 <h10 id="calendar-heading" className="calendar__heading-text heading-xl" aria-hidden="true">
                     <span className="calendar__animate">C</span>
@@ -243,7 +244,7 @@ function Home() {
 
                 </section>
 
-                <section className="hom-Section4" data-block="Section4">
+                <section className="hom-Section4" data-block="Section4" id="Section4">
                     <div className="correction"> </div>
                     <h13 id="correction" className="correction_heading-text heading-xl" aria-hidden="true">
                         <span className="correction__animate">C</span>

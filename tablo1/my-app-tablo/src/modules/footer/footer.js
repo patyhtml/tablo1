@@ -2,6 +2,9 @@
 import {ReactComponent as DividerSVG} from './../../assets/img/divider.svg'
 import {ReactComponent as ButtonFooterSVG} from './../../assets/img/button-footer.svg'
 import { Link, useNavigate } from 'react-router-dom';
+import { HashLink} from 'react-router-hash-link';
+
+
 export const Footer = () => {
 
     const navigate = useNavigate();
@@ -40,11 +43,16 @@ return (
             <div class="footer-section1-links1">
             <div className="h15"> <Link to="/">Tools</Link></div>
                 <ul class="footer-links-list">
-                    <li><a href="#workflow" class="footer-link" id="workflow">Workflow</a></li>
-                    <li><a href="#teamline" class="footer-link" id="teamline">Teamline</a></li>
-                    <li><a href="#pain-points" class="footer-link" id="pain-points">Pain points</a></li>
+
+ 
+
+                <div className="footer-link"> <HashLink to="/#Section2">Workflow</HashLink></div>
+                <div className="footer-link"> <HashLink to="/#Section3">Teamline</HashLink></div>
+                <div className="footer-link"> <HashLink to="/#Section4">Pain points</HashLink></div>
                 </ul>
             </div>
+
+
 
             <div class="footer-section2-links2">
             <div className="h16"> <Link to="/pricing">Pricing</Link></div>
@@ -57,9 +65,9 @@ return (
             <div class="footer-section3-links3">
             <div className="h17"> <Link to="/">Contact</Link></div>
                 <ul class="footer-links-list">
-                    <li><a href="#facebook" class="footer-link" id="facebook">Facebook</a></li>
-                    <li><a href="#instagram" class="footer-link" id="instagram">Instagram</a></li>
-                    <li><a href="#tweeter" class="footer-link" id="tweeter">Tweeter</a></li>
+                <div className="footer-link"> <Link to="/">Facebook</Link></div>
+                <div className="footer-link"> <Link to="/">Instagram</Link></div>
+                <div className="footer-link"> <Link to="/">Tweeter</Link></div>
                 </ul>
             </div>
 

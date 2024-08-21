@@ -167,15 +167,21 @@
       margin-bottom: 10px;
  }
  
+
+
  
- .footer-link {
+ .footer-link a {
      text-decoration: none; /* Usuwa podkreślenie */
+     font-size: 18px;
+     font-family: 'Gilroy';
+     font-weight: 300;
      color: #B9B8B8; /* Kolor linków */
      transition: color 0.3s;
     
  }
  
- .footer-link:hover {
+ .footer-link a:hover {
+    text-decoration: none; /* Usuwa podkreślenie */
      color: #816AD3;
  }
  /* Specific styling for each link */
