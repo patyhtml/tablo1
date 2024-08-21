@@ -45,18 +45,18 @@
 }
 
 
-.auth-buttons {
+.hed-auth-buttons {
     display: flex;
     gap: 10px;
 }
 
-.auth-buttons button {
+.hed-auth-buttons button {
     padding: 8px 34px;
     border-radius: 36px;
     cursor: pointer;
 }
 
-.login-button {
+.hed-login-button {
     background-color: #0C0E0D;
     font-family: 'Gilroy';
     font-weight: normal;
@@ -65,13 +65,23 @@
     border: 1px solid #F2ADF3;
 }
 
-.join-button {
+.hed-login-button:hover {
+    background-color: #b268f4; /* Ciemniejszy odcień koloru tła przy najechaniu */
+    transform: scale(1.05); /* Delikatne powiększenie przycisku */
+}
+
+.hed-join-button {
     background-color: #F2ADF3;
     border: none;
     font-family: 'Gilroy';
-    font-weight: normal;
+    font-weight: 500;
     color: #0C0E0D;
     font-size: 16px;
+}
+
+.hed-join-button:hover {
+    background-color: #e96deb; /* Ciemniejszy odcień koloru tła przy najechaniu */
+    transform: scale(1.05); /* Delikatne powiększenie przycisku */
 }
 
 /* Hamburger Menu */

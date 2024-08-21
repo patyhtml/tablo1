@@ -27,9 +27,9 @@ return (
             <div class="left-section">
             <div className="logo"> <Link to="/">Tablo</Link></div>
             </div>
-            <div class="auth-buttons">    
-          <button className="login-button" onClick={handleLoginClick}>Log in</button>
-          <button className="join-button" onClick={handleJoinusClick}>Join us</button>
+            <div class="foo-auth-buttons">    
+          <button className="foo-login-button" onClick={handleLoginClick}>Log in</button>
+          <button className="foo-join-button" onClick={handleJoinusClick}>Join us</button>
             </div>
         </header>
     
@@ -38,7 +38,7 @@ return (
         <div class="footer">
         <footer class="footer">
             <div class="footer-section1-links1">
-                <h15>Tools</h15>
+            <div className="h15"> <Link to="/">Tools</Link></div>
                 <ul class="footer-links-list">
                     <li><a href="#workflow" class="footer-link" id="workflow">Workflow</a></li>
                     <li><a href="#teamline" class="footer-link" id="teamline">Teamline</a></li>
@@ -47,7 +47,7 @@ return (
             </div>
 
             <div class="footer-section2-links2">
-                <h16>Pricing</h16>
+            <div className="h16"> <Link to="/pricing">Pricing</Link></div>
                 <ul class="footer-links-list">
                     <li><a href="#monthl-plans" class="footer-link" id="monthl-plans">Monthly plans</a></li>
                     <li><a href="#resources" class="footer-link" id="resources">Resources</a></li>
@@ -55,7 +55,7 @@ return (
             </div>
 
             <div class="footer-section3-links3">
-                <h17>Contact</h17>
+            <div className="h17"> <Link to="/">Contact</Link></div>
                 <ul class="footer-links-list">
                     <li><a href="#facebook" class="footer-link" id="facebook">Facebook</a></li>
                     <li><a href="#instagram" class="footer-link" id="instagram">Instagram</a></li>

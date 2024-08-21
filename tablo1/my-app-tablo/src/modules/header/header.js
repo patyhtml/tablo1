@@ -26,7 +26,7 @@ export const Header = () => {
       <div className="left-section">
         <div className="logo"> <Link to="/">Tablo</Link></div>
         <nav className="menu">
-          <a href="#tools">Tools</a>
+          <a href="#Section2">Tools</a>
           <Link to="/pricing" className="link">Pricing</Link>
         </nav>
         <div className="hamburger-menu" id="hamburger-menu" onClick={toggleMenu}>
@@ -40,9 +40,9 @@ export const Header = () => {
           <button className="join-button" onClick={handleJoinusClick}>Join us</button>
         </nav>
       </div>
-      <div className="auth-buttons">
-        <button className="login-button" onClick={handleLoginClick}>Log in</button>
-        <button className="join-button" onClick={handleJoinusClick}>Join us</button>
+      <div className="hed-auth-buttons">
+        <button className="hed-login-button" onClick={handleLoginClick}>Log in</button>
+        <button className="hed-join-button" onClick={handleJoinusClick}>Join us</button>
       </div>
     </header>
   );

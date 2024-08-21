@@ -20,7 +20,7 @@ export const WindowChat = ({ props }) => {
                     <ExpandButtonDefaultSVG className="svg-expand-button-default" />
                 </button>
             </div>
-            <p className={`win-project-description ${isExpanded ? 'expanded' : ''}`} id="project-description">
+            <p className={`win-project-description ${isExpanded ? 'expanded' : ''}`} id="project-description" contentEditable>
                 {props.description}
             </p>
         </div>
