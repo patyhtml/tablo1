@@ -1,12 +1,11 @@
 package com.tablo.tablo.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
-@Entity(name = "public.user")
+import java.util.List;
+
+@Entity(name = "public.users")
 @Getter
 @Setter
 @AllArgsConstructor
@@ -18,7 +17,18 @@ public class UserEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Long avatar_id;
-    private Long email;
-    private Long password;
-    private Long name;
+    private String email;
+    private String password;
+    private String name;
+
+    @OneToMany(mappedBy = "userId")
+    private List<BoardEntity> users_boards;
+    @OneToMany(mappedBy = "userId")
+    private List<BoardEntity> users_plans;
+    @OneToMany(mappedBy = "userId")
+    private List<BoardEntity> files;
+    @OneToMany(mappedBy = "userId")
+    private List<BoardEntity> points;
+    @OneToMany(mappedBy = "userId")
+    private List<BoardEntity> tasks;
 }

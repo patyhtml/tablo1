@@ -1,17 +1,11 @@
 package com.tablo.tablo.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.Data;
 
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
-
+@Data
 public class UserDto {
-    private String name;
+    private Long id;
     private String email;
     private String password;
+    private String name;
 }

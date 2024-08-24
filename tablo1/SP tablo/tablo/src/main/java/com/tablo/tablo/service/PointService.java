@@ -1,6 +1,5 @@
 package com.tablo.tablo.service;
 
-import com.tablo.tablo.dto.PointDto;
 import com.tablo.tablo.entity.PointEntity;
 import com.tablo.tablo.repository.PointRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,40 +11,34 @@ import java.util.Optional;
 @Service
 public class PointService {
 
-    private final PointRepository pointRepository;
-
     @Autowired
-    public PointService(PointRepository pointRepository) {
-        this.pointRepository = pointRepository;
-    }
-
-    public PointEntity createPoint(PointDto pointDto) {
-        PointEntity point = new PointEntity();
-        point.setProjectId(pointDto.getProjectId());
-        point.setComment(pointDto.getComment());
-        point.setXPosition(pointDto.getXPosition());
-        point.setYPosition(pointDto.getYPosition());
-        return pointRepository.save(point);
-    }
+    private PointRepository pointRepository;
 
     public List<PointEntity> getAllPoints() {
         return pointRepository.findAll();
     }
 
     public PointEntity getPointById(Long id) {
-        return pointRepository.findById(id).orElse(null);
+        Optional<PointEntity> point = pointRepository.findById(id);
+        return point.orElse(null);
     }
 
-    public PointEntity updatePoint(Long id, PointDto pointDto) {
-        Optional<PointEntity> optionalPoint = pointRepository.findById(id);
-        if (optionalPoint.isPresent()) {
-            PointEntity point = optionalPoint.get();
-            point.setComment(pointDto.getComment());
-            point.setXPosition(pointDto.getXPosition());
-            point.setYPosition(pointDto.getYPosition());
-            return pointRepository.save(point);
+    public PointEntity createPoint(PointEntity point) {
+        return pointRepository.save(point);
+    }
+
+    public PointEntity updatePoint(Long id, PointEntity pointDetails) {
+        Optional<PointEntity> existingPoint = pointRepository.findById(id);
+        if (existingPoint.isPresent()) {
+            PointEntity updatedPoint = existingPoint.get();
+            updatedPoint.setName(pointDetails.getName());
+            updatedPoint.setCordX(pointDetails.getCordX());
+            updatedPoint.setCordY(pointDetails.getCordY());
+            updatedPoint.setCreatedAt(pointDetails.getCreatedAt());
+            return pointRepository.save(updatedPoint);
+        } else {
+            return null;
         }
-        return null;
     }
 
     public void deletePoint(Long id) {

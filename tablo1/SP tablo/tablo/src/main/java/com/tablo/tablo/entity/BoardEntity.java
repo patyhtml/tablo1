@@ -16,6 +16,8 @@ public class BoardEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    @OneToMany(mappedBy = "board_id")
-    private List<BoardColumnEntity> columns;
+    @OneToMany(mappedBy = "boardId")
+    private List<BoardColumnEntity> boards_columns;
+    @OneToMany(mappedBy = "boardId")
+    private List<BoardColumnEntity> users_boards;
 }

@@ -1,13 +1,11 @@
 package com.tablo.tablo.entity;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Getter
@@ -27,5 +25,12 @@ public class PointEntity {
     private String name;
     private LocalDateTime createdAt;
     private Long fileId;
+
+    @OneToMany(mappedBy = "pointId")
+    private List<BoardColumnEntity> tasks;
+    @OneToMany(mappedBy = "pointId")
+    private List<BoardColumnEntity> users;
+    @OneToMany(mappedBy = "pointId")
+    private List<BoardColumnEntity> points_files;
 
 }

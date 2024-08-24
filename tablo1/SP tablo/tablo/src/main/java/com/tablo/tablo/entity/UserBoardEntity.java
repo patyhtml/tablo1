@@ -1,10 +1,7 @@
 package com.tablo.tablo.entity;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Entity(name = "public.users_boards")
@@ -17,9 +14,17 @@ public class UserBoardEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Long id;
-    private Long board_id;
-    private Long email;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private UserEntity user;
+
+
+    @ManyToOne
+    @JoinColumn(name = "board_id")
+    private BoardEntity board;
     private boolean isOwner;
     private boolean isInvited;
 

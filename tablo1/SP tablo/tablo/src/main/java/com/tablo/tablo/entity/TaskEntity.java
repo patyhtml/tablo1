@@ -25,10 +25,12 @@ public class TaskEntity {
     private LocalDateTime start;
     private LocalDateTime due;
 
-
-
     @OneToMany(mappedBy = "taskId")
     private List<PointEntity> board_columns;
     @OneToMany(mappedBy = "taskId")
     private BoardEntity users;
+    @OneToMany(mappedBy = "taskId")
+    private BoardEntity points;
+    @OneToMany(mappedBy = "taskId")
+    private BoardEntity tasks_files;
 }

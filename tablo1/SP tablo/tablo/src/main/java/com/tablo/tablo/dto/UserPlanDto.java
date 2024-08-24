@@ -4,13 +4,10 @@ import lombok.Data;
 import java.time.LocalDateTime;
 
 @Data
-public class TaskDto {
+public class UserPlanDto {
     private Long id;
-    private String name;
-    private String description;
-    private String priority;
+    private Long userId;
+    private Long planId;
     private LocalDateTime start;
     private LocalDateTime due;
-    private Long boardColumnId;
-    private Long userId;
 }

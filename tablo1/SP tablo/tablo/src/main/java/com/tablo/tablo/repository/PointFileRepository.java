@@ -1,10 +1,9 @@
 package com.tablo.tablo.repository;
 
-import com.tablo.tablo.entity.BoardEntity;
+import com.tablo.tablo.entity.PointFileEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface BoardRepository extends JpaRepository<BoardEntity, Long> {
-
+public interface PointFileRepository extends JpaRepository<PointFileEntity, Long> {
 }

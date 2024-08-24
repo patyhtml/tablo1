@@ -1,15 +1,12 @@
 package com.tablo.tablo.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.Data;
+import java.util.List;
 
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
+@Data
 public class BoardDto {
+    private Long id;
     private String name;
-    private String description;
+    private List<BoardColumnDto> boardColumns;  // Jeśli potrzebujesz zagnieżdżonych DTO
+    private List<UserBoardDto> userBoards;      // Jeśli potrzebujesz zagnieżdżonych DTO
 }

@@ -1,19 +1,16 @@
 package com.tablo.tablo.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.Data;
+import java.time.LocalDateTime;
 
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
-
+@Data
 public class PointDto {
-    private Long projectId;
-    private String comment;
-    private double xPosition; // Pozycja x na obrazie
-    private double yPosition; // Pozycja y na obrazie
+    private Long id;
+    private Long cordX;
+    private Long cordY;
+    private String name;
+    private LocalDateTime createdAt;
+    private Long taskId;
+    private Long userId;
+    private Long fileId;
 }
-

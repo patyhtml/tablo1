@@ -15,7 +15,9 @@ public class TaskFileEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long fileId;
+    private String fileId;
     @OneToMany(mappedBy = "filId")
     private List<PointEntity> task;
+    @OneToMany(mappedBy = "filId")
+    private List<PointEntity> files;
 }

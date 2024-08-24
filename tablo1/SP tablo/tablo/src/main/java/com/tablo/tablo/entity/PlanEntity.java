@@ -1,10 +1,9 @@
 package com.tablo.tablo.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
+
+import java.util.List;
 
 @Entity(name = "public.plans")
 @Getter
@@ -23,4 +22,7 @@ public class PlanEntity {
     private Long max_tasks;
     private Long max_points;
     private Long max_storage;
+
+    @OneToMany(mappedBy = "planId")
+    private List<BoardColumnEntity> users_plans;
 }
