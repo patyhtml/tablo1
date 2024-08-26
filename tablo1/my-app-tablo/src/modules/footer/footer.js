@@ -41,7 +41,7 @@ return (
         <div class="footer">
         <footer class="footer">
             <div class="footer-section1-links1">
-            <div className="h15"> <Link to="/">Tools</Link></div>
+            <div className="h15"> <HashLink to="/#Section2">Tools</HashLink></div>
                 <ul class="footer-links-list">
 
  
@@ -55,19 +55,20 @@ return (
 
 
             <div class="footer-section2-links2">
-            <div className="h16"> <Link to="/pricing">Pricing</Link></div>
+            <div className="h16"> <HashLink to="/pricing#pri-Section2">Pricing</HashLink></div>
                 <ul class="footer-links-list">
-                    <li><a href="#monthl-plans" class="footer-link" id="monthl-plans">Monthly plans</a></li>
-                    <li><a href="#resources" class="footer-link" id="resources">Resources</a></li>
+                <div className="footer-link"> <HashLink to="/pricing#pri-Section2">Monthly plans</HashLink></div>
+                <div className="footer-link"> <HashLink to="/pricing#pri-Section3">Resources</HashLink></div>
+               
                 </ul>
             </div>
 
             <div class="footer-section3-links3">
             <div className="h17"> <Link to="/">Contact</Link></div>
                 <ul class="footer-links-list">
-                <div className="footer-link"> <Link to="/">Facebook</Link></div>
-                <div className="footer-link"> <Link to="/">Instagram</Link></div>
-                <div className="footer-link"> <Link to="/">Tweeter</Link></div>
+                <div className="footer-link"> <Link to="https://www.facebook.com/">Facebook</Link></div>
+                <div className="footer-link"> <Link to="https://www.instagram.com/">Instagram</Link></div>
+                <div className="footer-link"> <Link to="https://x.com/tweeter">Tweeter</Link></div>
                 </ul>
             </div>
 

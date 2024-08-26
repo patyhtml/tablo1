@@ -187,7 +187,7 @@ function Pricing() {
 
 
 
-            <section className="pri-Section2" data-block="Section2">
+            <section className="pri-Section2" data-block="Section2" id="pri-Section2">
                 <div className="pricing-plan">
                     <svg className="pricing-plan-svg" viewBox="0 0 400 700" >
                         <rect x="0" y="0" width="400" height="700" rx="24" ry="24" fill="none" stroke="#F2ADF3" stroke-width="2" />
@@ -481,7 +481,7 @@ function Pricing() {
 
 
 
-            <section class="pri-Section3" data-block="Section3">
+            <section class="pri-Section3" data-block="Section3" id="pri-Section3">
                 <div class="plan">
                     <table class="features-table">
                         <tbody>

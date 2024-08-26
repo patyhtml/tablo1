@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { HashLink} from 'react-router-hash-link';
 import { ReactComponent as HamburgerIconSVG } from './../../assets/img/hamburger-icon.svg';
 import './header.css';
 
@@ -26,7 +27,8 @@ export const Header = () => {
       <div className="left-section">
         <div className="logo"> <Link to="/">Tablo</Link></div>
         <nav className="menu">
-          <a href="#Section2">Tools</a>
+         
+          <div className="a"> <HashLink to="/#Section2">Tools</HashLink></div>
           <Link to="/pricing" className="link">Pricing</Link>
         </nav>
         <div className="hamburger-menu" id="hamburger-menu" onClick={toggleMenu}>

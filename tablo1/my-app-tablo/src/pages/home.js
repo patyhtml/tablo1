@@ -68,7 +68,17 @@ function Home() {
         return () => intervals.forEach(clearInterval);
     }, []);
 
- 
+   
+    const scrollToNextSection = () => {
+        const nextSection = document.getElementById('Section2');
+        if (nextSection) {
+            const topOfElement = nextSection.offsetTop;
+            window.scrollTo({
+                top: topOfElement,
+                behavior: 'smooth'
+            });
+        }
+    };
 
 
 
@@ -146,7 +156,7 @@ function Home() {
 
 
                 <div className="next-section">
-                    <button className="svg-button">
+                    <button className="svg-button" onClick={scrollToNextSection}>
                         <NextSectionSVG className="svg-next-section" />
                     </button>
                 </div>
