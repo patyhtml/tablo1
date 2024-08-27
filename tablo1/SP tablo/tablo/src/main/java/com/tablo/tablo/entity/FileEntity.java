@@ -21,7 +21,4 @@ public class FileEntity {
     private String path;
     @OneToMany(mappedBy = "filId")
     private List<PointEntity> points;
-    @OneToMany(mappedBy = "filId")
-    private List<PointEntity> tasks_files;
-
 }

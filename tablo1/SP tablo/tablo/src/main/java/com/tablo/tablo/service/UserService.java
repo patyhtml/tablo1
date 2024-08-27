@@ -1,11 +1,11 @@
 package com.tablo.tablo.service;
 
+import com.tablo.tablo.dto.UserDto;
 import com.tablo.tablo.entity.UserEntity;
 import com.tablo.tablo.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -14,17 +14,20 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    public List<UserEntity> getAllUsers() {
-        return userRepository.findAll();
-    }
 
     public UserEntity getUserById(Long id) {
         Optional<UserEntity> user = userRepository.findById(id);
         return user.orElse(null);
     }
 
-    public UserEntity createUser(UserEntity user) {
-        return userRepository.save(user);
+    public UserEntity createUser(UserDto user) {
+        UserEntity entity = UserEntity.builder()
+                .name(user.getName())
+                .password(user.getPassword())
+                .email(user.getEmail())
+                .build();
+        userRepository.saveAndFlush(entity);
+        return entity;
     }
 
     public UserEntity updateUser(Long id, UserEntity userDetails) {
@@ -34,7 +37,7 @@ public class UserService {
             updatedUser.setEmail(userDetails.getEmail());
             updatedUser.setPassword(userDetails.getPassword());
             updatedUser.setName(userDetails.getName());
-            return userRepository.save(updatedUser);
+            return userRepository.saveAndFlush(updatedUser);
         } else {
             return null;
         }

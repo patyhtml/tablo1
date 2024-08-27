@@ -1,6 +1,7 @@
 package com.tablo.tablo.entity;
 
 
+import com.tablo.tablo.type.BoardRoleEnum;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -14,19 +15,10 @@ public class UserBoardEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private Long id;
-
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    private UserEntity user;
-
-
-    @ManyToOne
-    @JoinColumn(name = "board_id")
-    private BoardEntity board;
-    private boolean isOwner;
-    private boolean isInvited;
+    private Long boardId;
+    private Long userId;
+    private BoardRoleEnum role;
 
 }
 

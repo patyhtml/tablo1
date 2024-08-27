@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Entity(name = "public.users_plans")
 @Getter
@@ -16,14 +15,14 @@ import java.util.List;
 public class UserPlanEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private Long userId;
-    private Long planId;
     private LocalDateTime start;
     private LocalDateTime due;
 
-    @OneToMany(mappedBy = "user_planId")
-    private List<BoardEntity> users;
-    @OneToMany(mappedBy = "plans")
-    private List<BoardEntity> plans;
+
+    @ManyToOne
+    @JoinColumn(name = "plan_id", referencedColumnName = "id")
+    private PlanEntity plan;
 
 }

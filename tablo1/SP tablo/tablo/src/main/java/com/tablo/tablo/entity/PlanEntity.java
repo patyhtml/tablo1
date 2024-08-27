@@ -1,9 +1,10 @@
 package com.tablo.tablo.entity;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.*;
-
-import java.util.List;
 
 @Entity(name = "public.plans")
 @Getter
@@ -17,12 +18,10 @@ public class PlanEntity {
     private Long id;
     private String name;
     private Long price;
-    private Long max_users;
-    private Long max_boards;
-    private Long max_tasks;
-    private Long max_points;
-    private Long max_storage;
+    private Long maxUsers;
+    private Long maxBoards;
+    private Long maxTasks;
+    private Long maxPoints;
+    private Long maxStorage;
 
-    @OneToMany(mappedBy = "planId")
-    private List<BoardColumnEntity> users_plans;
 }

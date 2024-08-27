@@ -20,7 +20,5 @@ public class BoardColumnEntity {
     private String name;
 
     @OneToMany(mappedBy = "board_columnId")
-    private List<BoardColumnEntity> boards;
-    @OneToMany(mappedBy = "board_columnId")
-    private List<BoardColumnEntity> tasks;
+    private List<TaskEntity> tasks;
 }

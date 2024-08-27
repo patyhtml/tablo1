@@ -16,19 +16,14 @@ public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long avatar_id;
+    private Long avatarId;
     private String email;
     private String password;
     private String name;
 
     @OneToMany(mappedBy = "userId")
-    private List<BoardEntity> users_boards;
+    private List<UserBoardEntity> userBoards;
     @OneToMany(mappedBy = "userId")
-    private List<BoardEntity> users_plans;
-    @OneToMany(mappedBy = "userId")
-    private List<BoardEntity> files;
-    @OneToMany(mappedBy = "userId")
-    private List<BoardEntity> points;
-    @OneToMany(mappedBy = "userId")
-    private List<BoardEntity> tasks;
+    private List<UserPlanEntity> userPlans;
+
 }
