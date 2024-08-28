@@ -1,11 +1,13 @@
 package com.tablo.tablo.dto;
 
+import lombok.Builder;
 import lombok.Data;
 
 @Data
+@Builder
 public class BoardColumnDto {
     private Long id;
     private String name;
-    private Long boardId;  // Może być potrzebny, jeśli chcesz mieć referencję do tablicy
-    private List<TaskDto> tasks;  // Jeśli potrzebujesz zagnieżdżonych DTO
+    private Long boardId;
+    private List<TaskDto> tasks;
 }

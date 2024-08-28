@@ -1,6 +1,8 @@
 package com.tablo.tablo.service;
 
+import com.tablo.tablo.dto.UserPlanDto;
 import com.tablo.tablo.entity.UserPlanEntity;
+import com.tablo.tablo.repository.PlanRepositoryMock;
 import com.tablo.tablo.repository.UserPlanRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,6 +15,8 @@ public class UserPlanService {
 
     @Autowired
     private UserPlanRepository userPlanRepository;
+    @Autowired
+    private PlanRepositoryMock planRepositoryMock;
 
     public List<UserPlanEntity> getAllUserPlans() {
         return userPlanRepository.findAll();
@@ -23,23 +27,14 @@ public class UserPlanService {
         return userPlan.orElse(null);
     }
 
-    public UserPlanEntity createUserPlan(UserPlanEntity userPlan) {
-        return userPlanRepository.save(userPlan);
+    public UserPlanEntity createUserPlan(UserPlanDto userPlan) {
+        UserPlanEntity userPlanEntity = UserPlanEntity.builder()
+                .plan(this.planRepositoryMock.findById(userPlan.getPlanId().intValue()))
+                .userId(userPlan.getUserId())
+                .start(userPlan.getStart())
+                .due(userPlan.getStart().plusMonths(1))
+                .build();
+        return userPlanRepository.saveAndFlush(userPlanEntity);
     }
 
-    public UserPlanEntity updateUserPlan(Long id, UserPlanEntity userPlanDetails) {
-        Optional<UserPlanEntity> existingUserPlan = userPlanRepository.findById(id);
-        if (existingUserPlan.isPresent()) {
-            UserPlanEntity updatedUserPlan = existingUserPlan.get();
-            updatedUserPlan.setStart(userPlanDetails.getStart());
-            updatedUserPlan.setDue(userPlanDetails.getDue());
-            return userPlanRepository.save(updatedUserPlan);
-        } else {
-            return null;
-        }
-    }
-
-    public void deleteUserPlan(Long id) {
-        userPlanRepository.deleteById(id);
-    }
 }

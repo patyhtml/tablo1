@@ -1,5 +1,6 @@
 package com.tablo.tablo.controller;
 
+import com.tablo.tablo.dto.BoardDto;
 import com.tablo.tablo.entity.BoardEntity;
 import com.tablo.tablo.service.BoardService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,9 +16,9 @@ public class BoardController {
     @Autowired
     private BoardService boardService;
 
-    @GetMapping
-    public ResponseEntity<List<BoardEntity>> getAllBoards() {
-        return ResponseEntity.ok(boardService.getAllBoards());
+    @GetMapping("/get-all/{userId}")
+    public ResponseEntity<List<BoardDto>> getUserBoards(@PathVariable Long userId) {
+        return ResponseEntity.ok(boardService.getUserBoards(userId));
     }
 
     @GetMapping("/{id}")

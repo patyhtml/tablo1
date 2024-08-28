@@ -17,7 +17,7 @@ public class BoardEntity {
     private Long id;
     private String name;
     @OneToMany(mappedBy = "boardId")
-    private List<BoardColumnEntity> boards_columns;
+    private List<BoardColumnEntity> boardsColumns;
     @OneToMany(mappedBy = "boardId")
-    private List<UserBoardEntity> users_boards;
+    private List<UserBoardEntity> usersBoards;
 }

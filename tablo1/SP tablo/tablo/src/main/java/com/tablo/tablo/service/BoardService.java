@@ -1,10 +1,14 @@
 package com.tablo.tablo.service;
 
+import com.tablo.tablo.dto.BoardColumnDto;
+import com.tablo.tablo.dto.BoardDto;
+import com.tablo.tablo.entity.BoardColumnEntity;
 import com.tablo.tablo.entity.BoardEntity;
 import com.tablo.tablo.repository.BoardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -14,8 +18,27 @@ public class BoardService {
     @Autowired
     private BoardRepository boardRepository;
 
-    public List<BoardEntity> getAllBoards() {
-        return boardRepository.findAll();
+    public List<BoardDto> getUserBoards(Long userId) {
+        List<BoardEntity> boardEntity = boardRepository.findAllByUserId(userId);
+        List<BoardDto> dtos = new ArrayList<>();
+        for(BoardEntity e : boardEntity){
+            List<BoardColumnDto> columnDtos = new ArrayList<>();
+            for(BoardColumnEntity columnEntity : e.getBoardsColumns()){
+                BoardColumnDto boardColumnDto = BoardColumnDto.builder()
+                        .id(columnEntity.getId())
+                        .name(columnEntity.getName())
+                        .build();
+                columnDtos.add(boardColumnDto);
+            }
+            BoardDto dto = BoardDto.builder()
+                    .id(e.getId())
+                    .name(e.getName())
+                    .boardColumns(columnDtos)
+                    .build();
+
+
+        }
+
     }
 
     public BoardEntity getBoardById(Long id) {
@@ -32,7 +55,7 @@ public class BoardService {
         if (board.isPresent()) {
             BoardEntity updatedBoard = board.get();
             updatedBoard.setName(boardDetails.getName());
-            // Aktualizuj inne pola w razie potrzeby
+
             return boardRepository.save(updatedBoard);
         } else {
             return null;
