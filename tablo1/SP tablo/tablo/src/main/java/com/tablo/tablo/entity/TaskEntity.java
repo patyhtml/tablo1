@@ -24,4 +24,7 @@ public class TaskEntity {
     private LocalDateTime start;
     private LocalDateTime due;
 
+    @ManyToOne
+    @JoinColumn(name = "board_column_id")
+    private BoardColumnEntity boardColumn;
 }

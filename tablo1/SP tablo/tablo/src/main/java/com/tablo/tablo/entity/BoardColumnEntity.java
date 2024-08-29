@@ -21,4 +21,8 @@ public class BoardColumnEntity {
 
     @OneToMany(mappedBy = "board_columnId")
     private List<TaskEntity> tasks;
+
+    @ManyToOne
+    @JoinColumn(name = "board_id")
+    private BoardEntity board;
 }

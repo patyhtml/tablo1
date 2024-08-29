@@ -1,5 +1,6 @@
 package com.tablo.tablo.controller;
 
+import com.tablo.tablo.dto.TaskDto;
 import com.tablo.tablo.entity.TaskEntity;
 import com.tablo.tablo.service.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,9 +16,9 @@ public class TaskController {
     @Autowired
     private TaskService taskService;
 
-    @GetMapping
-    public ResponseEntity<List<TaskEntity>> getAllTasks() {
-        return ResponseEntity.ok(taskService.getAllTasks());
+    @GetMapping("/get-all/{board_columnId}")
+    public ResponseEntity<List<TaskDto>> getTasksByBoardColumn(@PathVariable Long boardColumnId) {
+       return ResponseEntity.ok(taskService.getTasksByBoardColumn(boardColumnId));
     }
 
     @GetMapping("/{id}")
@@ -26,7 +27,7 @@ public class TaskController {
     }
 
     @PostMapping
-    public ResponseEntity<TaskEntity> createTask(@RequestBody TaskEntity task) {
+    public ResponseEntity<TaskEntity> createTask(@RequestBody TaskDto task) {
         return ResponseEntity.ok(taskService.createTask(task));
     }
 
