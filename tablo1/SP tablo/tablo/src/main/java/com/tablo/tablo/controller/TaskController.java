@@ -16,7 +16,7 @@ public class TaskController {
     @Autowired
     private TaskService taskService;
 
-    @GetMapping("/get-all/{board_columnId}")
+    @GetMapping("/get-all/{boardColumnId}")
     public ResponseEntity<List<TaskDto>> getTasksByBoardColumn(@PathVariable Long boardColumnId) {
        return ResponseEntity.ok(taskService.getTasksByBoardColumn(boardColumnId));
     }

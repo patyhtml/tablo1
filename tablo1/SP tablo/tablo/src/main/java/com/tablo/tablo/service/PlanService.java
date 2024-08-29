@@ -23,9 +23,20 @@ public class PlanService {
         return plan.orElse(null);
     }
 
-    public PlanEntity createPlan(PlanEntity plan) {
-        return planRepository.save(plan);
+    public PlanEntity createPlan(PlanEntity planDetails) {
+        PlanEntity newPlan = PlanEntity.builder()
+                .name(planDetails.getName())
+                .price(planDetails.getPrice())
+                .maxUsers(planDetails.getMaxUsers())
+                .maxBoards(planDetails.getMaxBoards())
+                .maxTasks(planDetails.getMaxTasks())
+                .maxPoints(planDetails.getMaxPoints())
+                .maxStorage(planDetails.getMaxStorage())
+                .build();
+
+        return planRepository.save(newPlan);
     }
+
 
     public PlanEntity updatePlan(Long id, PlanEntity planDetails) {
         Optional<PlanEntity> plan = planRepository.findById(id);

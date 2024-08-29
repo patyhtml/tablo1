@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity(name = "public.task")
 @Getter
@@ -27,4 +28,10 @@ public class TaskEntity {
     @ManyToOne
     @JoinColumn(name = "board_column_id")
     private BoardColumnEntity boardColumn;
+
+    public BoardColumnEntity[] getBoardColumns() {
+    }
+
+    public void setFiles(List<FileEntity> files) {
+    }
 }

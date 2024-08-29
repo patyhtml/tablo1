@@ -1,10 +1,6 @@
 package com.tablo.tablo.entity;
 
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDateTime;
@@ -25,6 +21,15 @@ public class PointEntity {
     private Long cordY;
     private String name;
     private LocalDateTime createdAt;
-    private Long fileId;
+
+
+    @ManyToOne
+    @JoinColumn(name = "task_id", nullable = false)
+    private TaskEntity task;
+
+
+    @ManyToOne
+    @JoinColumn(name = "file_id", nullable = false)
+    private FileEntity file;
 
 }

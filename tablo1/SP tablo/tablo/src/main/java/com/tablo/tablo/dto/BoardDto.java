@@ -10,4 +10,5 @@ public class BoardDto {
     private Long id;
     private String name;
     private List<BoardColumnDto> boardColumns;
+    private List<TaskDto> tasks;
 }

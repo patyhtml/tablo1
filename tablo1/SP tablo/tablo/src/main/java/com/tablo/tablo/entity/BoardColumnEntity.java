@@ -25,4 +25,7 @@ public class BoardColumnEntity {
     @ManyToOne
     @JoinColumn(name = "board_id")
     private BoardEntity board;
+
+    public BoardEntity[] getBoards() {
+    }
 }

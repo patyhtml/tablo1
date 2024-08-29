@@ -6,8 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @RestController
 @RequestMapping("/api/tasks-files")
 public class TaskFileController {
@@ -15,14 +13,10 @@ public class TaskFileController {
     @Autowired
     private TaskFileService taskFileService;
 
-    @GetMapping
-    public ResponseEntity<List<TaskFileEntity>> getAllTaskFiles() {
-        return ResponseEntity.ok(taskFileService.getAllTaskFiles());
-    }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<TaskFileEntity> getTaskFileById(@PathVariable Long id) {
-        return ResponseEntity.ok(taskFileService.getTaskFileById(id));
+    @GetMapping("/get-all/{taskFileId}")
+    public ResponseEntity<TaskFileEntity> getTaskFileById(@PathVariable Long taskFileId) {
+        return ResponseEntity.ok(taskFileService.getTaskFileById(taskFileId));
     }
 
     @PostMapping

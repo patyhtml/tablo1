@@ -1,9 +1,12 @@
 package com.tablo.tablo.dto;
 
+import lombok.Builder;
 import lombok.Data;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Data
+@Builder
 public class PointDto {
     private Long id;
     private Long cordX;
@@ -13,4 +16,6 @@ public class PointDto {
     private Long taskId;
     private Long userId;
     private Long fileId;
+    private List<TaskDto> tasks;
+    private List<FileDto> files;
 }

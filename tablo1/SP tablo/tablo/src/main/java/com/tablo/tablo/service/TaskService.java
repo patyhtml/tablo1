@@ -4,17 +4,17 @@ import com.tablo.tablo.dto.BoardColumnDto;
 import com.tablo.tablo.dto.BoardDto;
 import com.tablo.tablo.dto.TaskDto;
 import com.tablo.tablo.entity.BoardColumnEntity;
-import com.tablo.tablo.entity.TaskEntity;
-import com.tablo.tablo.entity.FileEntity;
 import com.tablo.tablo.entity.BoardEntity;
+import com.tablo.tablo.entity.FileEntity;
+import com.tablo.tablo.entity.TaskEntity;
 import com.tablo.tablo.repository.TaskRepository;
-import com.tablo.tablo.repository.TaskFileRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class TaskService {
@@ -22,8 +22,47 @@ public class TaskService {
     @Autowired
     private TaskRepository taskRepository;
 
-    public List<TaskEntity> getAllTasks() {
-        return taskRepository.findAll();
+
+    public List<TaskDto> getTasksByBoardColumn(Long boardColumnId) {
+        List<TaskEntity> taskEntities = taskRepository.findAllByBoardColumnId(boardColumnId);
+        List<TaskDto> taskDtos = new ArrayList<>();
+
+        for (TaskEntity taskEntity : taskEntities) {
+            List<BoardColumnDto> columnDtos = new ArrayList<>();
+
+            for (BoardColumnEntity columnEntity : taskEntity.getBoardColumns()) {
+                List<BoardDto> boardDtos = new ArrayList<>();
+
+                for (BoardEntity boardEntity : columnEntity.getBoards()) {
+                    BoardDto boardDto = BoardDto.builder()
+                            .id(boardEntity.getId())
+                            .name(boardEntity.getName())
+                            .build();
+                    boardDtos.add(boardDto);
+                }
+
+                BoardColumnDto columnDto = BoardColumnDto.builder()
+                        .id(columnEntity.getId())
+                        .name(columnEntity.getName())
+                        .boards(boardDtos)
+                        .build();
+                columnDtos.add(columnDto);
+            }
+
+            TaskDto taskDto = TaskDto.builder()
+                    .id(taskEntity.getId())
+                    .name(taskEntity.getName())
+                    .description(taskEntity.getDescription())
+                    .priority(taskEntity.getPriority())
+                    .start(taskEntity.getStart())
+                    .due(taskEntity.getDue())
+                    .boardColumns(columnDtos)
+                    .build();
+
+            taskDtos.add(taskDto);
+        }
+
+        return taskDtos;
     }
 
     public TaskEntity getTaskById(Long id) {
@@ -82,45 +121,5 @@ public class TaskService {
         taskRepository.deleteById(id);
     }
 
-    public List<TaskDto> getTasksByBoardColumn(Long boardColumnId) {
-        List<TaskEntity> taskEntities = taskRepository.findAllByBoardColumnId(boardColumnId);
-        List<TaskDto> taskDtos = new ArrayList<>();
 
-        for (TaskEntity taskEntity : taskEntities) {
-            List<BoardColumnDto> columnDtos = new ArrayList<>();
-
-            for (BoardColumnEntity columnEntity : taskEntity.getBoardColumns()) {
-                List<BoardDto> boardDtos = new ArrayList<>();
-
-                for (BoardEntity boardEntity : columnEntity.getBoards()) {
-                    BoardDto boardDto = BoardDto.builder()
-                            .id(boardEntity.getId())
-                            .name(boardEntity.getName())
-                            .build();
-                    boardDtos.add(boardDto);
-                }
-
-                BoardColumnDto columnDto = BoardColumnDto.builder()
-                        .id(columnEntity.getId())
-                        .name(columnEntity.getName())
-                        .boards(boardDtos)
-                        .build();
-                columnDtos.add(columnDto);
-            }
-
-            TaskDto taskDto = TaskDto.builder()
-                    .id(taskEntity.getId())
-                    .name(taskEntity.getName())
-                    .description(taskEntity.getDescription())
-                    .priority(taskEntity.getPriority())
-                    .start(taskEntity.getStart())
-                    .due(taskEntity.getDue())
-                    .boardColumns(columnDtos)
-                    .build();
-
-            taskDtos.add(taskDto);
-        }
-
-        return taskDtos;
-    }
 }

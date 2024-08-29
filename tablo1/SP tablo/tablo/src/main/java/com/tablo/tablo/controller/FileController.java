@@ -1,5 +1,6 @@
 package com.tablo.tablo.controller;
 
+import com.tablo.tablo.dto.FileDto;
 import com.tablo.tablo.entity.FileEntity;
 import com.tablo.tablo.service.FileService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,9 +16,10 @@ public class FileController {
     @Autowired
     private FileService fileService;
 
-    @GetMapping
-    public ResponseEntity<List<FileEntity>> getAllFiles() {
-        return ResponseEntity.ok(fileService.getAllFiles());
+
+    @GetMapping("/get-all/{taskId}")
+    public ResponseEntity<List<FileDto>> getFilesByTasks(@PathVariable Long taskId) {
+        return ResponseEntity.ok(fileService.getFilesByTask(taskId));
     }
 
     @GetMapping("/{id}")

@@ -16,9 +16,20 @@ public class UserBoardEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long boardId;
-    private Long userId;
+    @ManyToOne
+    @JoinColumn(name = "board_id")
+    private BoardEntity board;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private UserEntity user;
+
+    @Enumerated(EnumType.STRING)
     private BoardRoleEnum role;
+
+    private boolean isOwner;
+    private boolean isInvited;
+
 
 }
 

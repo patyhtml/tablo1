@@ -2,7 +2,9 @@ package com.tablo.tablo.dto;
 
 import lombok.Builder;
 import lombok.Data;
+
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Data
 @Builder
@@ -15,4 +17,9 @@ public class TaskDto {
     private LocalDateTime due;
     private Long boardColumnId;
     private Long userId;
+    private List<FileDto> files;
+    private List<BoardColumnDto> boardColumns;
+    private List<BoardDto> boards;
+
+
 }

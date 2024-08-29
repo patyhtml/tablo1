@@ -20,4 +20,7 @@ public class BoardEntity {
     private List<BoardColumnEntity> boardsColumns;
     @OneToMany(mappedBy = "boardId")
     private List<UserBoardEntity> usersBoards;
+
+
+
 }

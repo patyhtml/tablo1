@@ -6,8 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @RestController
 @RequestMapping("/api/users-boards")
 public class UserBoardController {
@@ -15,14 +13,11 @@ public class UserBoardController {
     @Autowired
     private UserBoardService userBoardService;
 
-    @GetMapping
-    public ResponseEntity<List<UserBoardEntity>> getAllUserBoards() {
-        return ResponseEntity.ok(userBoardService.getAllUserBoards());
-    }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<UserBoardEntity> getUserBoardById(@PathVariable Long id) {
-        return ResponseEntity.ok(userBoardService.getUserBoardById(id));
+
+    @GetMapping("/get-all/{userBoardId}")
+    public ResponseEntity<UserBoardEntity> getUserBoardById(@PathVariable Long userBoardId) {
+        return ResponseEntity.ok(userBoardService.getUserBoardById(userBoardId));
     }
 
     @PostMapping

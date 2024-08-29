@@ -23,8 +23,14 @@ public class UserBoardService {
         return userBoard.orElse(null);
     }
 
-    public UserBoardEntity createUserBoard(UserBoardEntity userBoard) {
-        return userBoardRepository.save(userBoard);
+    public UserBoardEntity createUserBoard(UserBoardEntity userBoardDetails) {
+        UserBoardEntity userBoardEntity = UserBoardEntity.builder()
+                .user(userBoardDetails.getUser())
+                .board(userBoardDetails.getBoard())
+                .isOwner(userBoardDetails.isOwner())
+                .isInvited(userBoardDetails.isInvited())
+                .build();
+        return userBoardRepository.saveAndFlush(userBoardEntity);
     }
 
     public UserBoardEntity updateUserBoard(Long id, UserBoardEntity userBoardDetails) {
