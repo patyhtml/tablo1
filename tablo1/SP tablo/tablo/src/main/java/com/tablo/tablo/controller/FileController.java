@@ -1,7 +1,6 @@
 package com.tablo.tablo.controller;
 
 import com.tablo.tablo.dto.FileDto;
-import com.tablo.tablo.entity.FileEntity;
 import com.tablo.tablo.service.FileService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -17,29 +16,45 @@ public class FileController {
     private FileService fileService;
 
 
-    @GetMapping("/get-all/{taskId}")
-    public ResponseEntity<List<FileDto>> getFilesByTasks(@PathVariable Long taskId) {
-        return ResponseEntity.ok(fileService.getFilesByTask(taskId));
+    // Pobierz wszystkie pliki
+    @GetMapping
+    public ResponseEntity<List<FileDto>> getAllFiles() {
+        List<FileDto> files = fileService.getAllFiles();
+        return ResponseEntity.ok(files);
     }
 
+    // Pobierz plik po ID
     @GetMapping("/{id}")
-    public ResponseEntity<FileEntity> getFileById(@PathVariable Long id) {
-        return ResponseEntity.ok(fileService.getFileById(id));
+    public ResponseEntity<FileDto> getFileById(@PathVariable Long id) {
+        FileDto file = fileService.getFileById(id);
+        return ResponseEntity.ok(file);
     }
 
+    // Stwórz nowy plik
     @PostMapping
-    public ResponseEntity<FileEntity> createFile(@RequestBody FileEntity file) {
-        return ResponseEntity.ok(fileService.createFile(file));
+    public ResponseEntity<FileDto> createFile(@RequestBody FileDto fileDto) {
+        FileDto createdFile = fileService.createFile(fileDto);
+        return ResponseEntity.ok(createdFile);
     }
 
+    // Zaktualizuj plik po ID
     @PutMapping("/{id}")
-    public ResponseEntity<FileEntity> updateFile(@PathVariable Long id, @RequestBody FileEntity fileDetails) {
-        return ResponseEntity.ok(fileService.updateFile(id, fileDetails));
+    public ResponseEntity<FileDto> updateFile(@PathVariable Long id, @RequestBody FileDto fileDto) {
+        FileDto updatedFile = fileService.updateFile(id, fileDto);
+        return ResponseEntity.ok(updatedFile);
     }
 
+    // Usuń plik po ID
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteFile(@PathVariable Long id) {
         fileService.deleteFile(id);
         return ResponseEntity.noContent().build();
+    }
+
+    // Pobierz wszystkie pliki związane z konkretnym zadaniem (Task)
+    @GetMapping("/task/{taskId}")
+    public ResponseEntity<List<FileDto>> getFilesByTask(@PathVariable Long taskId) {
+        List<FileDto> files = fileService.getFilesByTask(taskId);
+        return ResponseEntity.ok(files);
     }
 }

@@ -4,10 +4,7 @@ import com.tablo.tablo.dto.UserPlanDto;
 import com.tablo.tablo.service.UserPlanService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/users-plans")
@@ -22,5 +19,11 @@ public class UserPlanController {
         this.userPlanService.createUserPlan(userPlan);
         return ResponseEntity.noContent().build();
     }
+    @GetMapping("/{userId}/user-plan")
+    public ResponseEntity<UserPlanDto> getUserPlan(@PathVariable Long userId) {
+        UserPlanDto userPlan = userPlanService.getUserPlan(userId);
+        return ResponseEntity.ok(userPlan);
+    }
 
+    //przydałoby się stworzyć endpoint do pobierania aktualnego planu użytkownika i jego statystyk (zużycie)
 }

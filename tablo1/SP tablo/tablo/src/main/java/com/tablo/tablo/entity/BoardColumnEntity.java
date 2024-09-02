@@ -26,6 +26,8 @@ public class BoardColumnEntity {
     @JoinColumn(name = "board_id")
     private BoardEntity board;
 
-    public BoardEntity[] getBoards() {
-    }
+//    public BoardEntity[] getBoards() {
+//    }
+
+    //Całklowicie do usunięcia, nie w tę stronę, nie pobieramy tablic z poziomu kolumny, jedna kolumna nie może należeć do wielu tablic.
 }

@@ -9,6 +9,6 @@ import java.util.List;
 public class BoardColumnDto {
     private Long id;
     private String name;
-    private Long boardId;
+
     private List<TaskDto> tasks;
 }

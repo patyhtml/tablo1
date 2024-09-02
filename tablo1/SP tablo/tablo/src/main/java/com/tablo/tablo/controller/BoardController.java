@@ -16,26 +16,35 @@ public class BoardController {
     @Autowired
     private BoardService boardService;
 
+    // Pobieranie wszystkich tablic użytkownika
     @GetMapping("/get-all/{userId}")
     public ResponseEntity<List<BoardDto>> getUserBoards(@PathVariable Long userId) {
-        return ResponseEntity.ok(boardService.getUserBoards(userId));
+        List<BoardDto> userBoards = boardService.getUserBoards(userId);
+        return ResponseEntity.ok(userBoards);
     }
 
+    // Pobieranie tablicy po ID
     @GetMapping("/{id}")
     public ResponseEntity<BoardEntity> getBoardById(@PathVariable Long id) {
-        return ResponseEntity.ok(boardService.getBoardById(id));
+        BoardEntity board = boardService.getBoardById(id);
+        return ResponseEntity.ok(board);
     }
 
+    // Tworzenie nowej tablicy
     @PostMapping
-    public ResponseEntity<BoardEntity> createBoard(@RequestBody BoardEntity board) {
-        return ResponseEntity.ok(boardService.createBoard(board));
+    public ResponseEntity<BoardDto> createBoard(@RequestBody BoardDto boardDto) {
+        BoardDto createdBoard = boardService.createBoard(boardDto);
+        return ResponseEntity.ok(createdBoard);
     }
 
+    // Aktualizowanie istniejącej tablicy
     @PutMapping("/{id}")
-    public ResponseEntity<BoardEntity> updateBoard(@PathVariable Long id, @RequestBody BoardEntity boardDetails) {
-        return ResponseEntity.ok(boardService.updateBoard(id, boardDetails));
+    public ResponseEntity<BoardDto> updateBoard(@PathVariable Long id, @RequestBody BoardEntity boardDto) {
+        BoardDto updatedBoard = boardService.updateBoard(id, boardDto);
+        return ResponseEntity.ok(updatedBoard);
     }
 
+    // Usuwanie tablicy
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteBoard(@PathVariable Long id) {
         boardService.deleteBoard(id);

@@ -15,9 +15,9 @@ public class UserController {
     private UserService userService;
 
 
-    @GetMapping("/get-all/{userId}")
-    public ResponseEntity<UserEntity> getUserById(@PathVariable Long userId) {
-        return ResponseEntity.ok(userService.getUserById(userId));
+    @GetMapping("/{userId}") // zwracamy DTO, a nie Entity, ścieżka zmieniona na samo ID
+    public ResponseEntity<UserDto> getUser(@PathVariable Long userId) {
+        return ResponseEntity.ok(userService.getUser(userId));
     }
 
     @PostMapping
@@ -26,9 +26,10 @@ public class UserController {
         return ResponseEntity.noContent().build();
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<UserEntity> updateUser(@PathVariable Long id, @RequestBody UserEntity userDetails) {
-        return ResponseEntity.ok(userService.updateUser(id, userDetails));
+    @PutMapping("/{id}") // zwracamy DTO nie Entity, analogicznie jak w endpontcie wyżej pomijamy obsługę wyjątków i nic nie zwracamy
+    public ResponseEntity<?> updateUser(@PathVariable Long id, @RequestBody UserEntity userDetails) {
+        this.userService.updateUser(id, userDetails);
+        return ResponseEntity.noContent().build();
     }
 
     @DeleteMapping("/{id}")

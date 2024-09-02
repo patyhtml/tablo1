@@ -1,6 +1,7 @@
 package com.tablo.tablo.service;
 
 import com.tablo.tablo.entity.BoardColumnEntity;
+import com.tablo.tablo.repository.BoardColumnRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,7 +12,7 @@ import java.util.Optional;
 public class BoardColumnService {
 
     @Autowired
-    private BoardColumnRepository boardColumnRepository;
+    private BoardColumnRepository boardColumnRepository; // import
 
     public List<BoardColumnEntity> getAllBoardColumns() {
         return boardColumnRepository.findAll();

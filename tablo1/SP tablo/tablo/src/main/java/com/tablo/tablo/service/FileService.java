@@ -31,18 +31,18 @@ public class FileService {
     }
 
 
-    public FileEntity getFileById(Long id) {
+    public FileDto getFileById(Long id) {
         Optional<FileEntity> file = fileRepository.findById(id);
         return file.orElse(null);
     }
 
 
-    public FileEntity createFile(FileEntity file) {
+    public FileDto createFile(FileDto file) {
         return fileRepository.save(file);
     }
 
 
-    public FileEntity updateFile(Long id, FileEntity fileDetails) {
+    public FileDto updateFile(Long id, FileDto fileDetails) {
         Optional<FileEntity> existingFile = fileRepository.findById(id);
         if (existingFile.isPresent()) {
             FileEntity updatedFile = existingFile.get();
@@ -57,5 +57,13 @@ public class FileService {
 
     public void deleteFile(Long id) {
         fileRepository.deleteById(id);
+    }
+
+    public List<FileDto> getAllFiles() {
+        return allFiles;
+    }
+
+    public void setAllFiles(List<FileDto> allFiles) {
+        this.allFiles = allFiles;
     }
 }

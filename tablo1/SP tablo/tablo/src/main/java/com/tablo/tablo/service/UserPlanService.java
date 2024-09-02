@@ -27,14 +27,26 @@ public class UserPlanService {
         return userPlan.orElse(null);
     }
 
-    public UserPlanEntity createUserPlan(UserPlanDto userPlan) {
+    public void createUserPlan(UserPlanDto userPlan) { //nic nie zwracamy więc zmieniamy typ metody na void i usuwamy return
         UserPlanEntity userPlanEntity = UserPlanEntity.builder()
                 .plan(this.planRepositoryMock.findById(userPlan.getPlanId().intValue()))
                 .userId(userPlan.getUserId())
                 .start(userPlan.getStart())
                 .due(userPlan.getStart().plusMonths(1))
                 .build();
-        return userPlanRepository.saveAndFlush(userPlanEntity);
     }
+    public UserPlanDto getUserPlan(Long userId) {
+        Optional<UserPlanEntity> userPlanEntity = userPlanRepository.findByUserId(userId);
 
+        if (userPlanEntity.isPresent()) {
+            UserPlanEntity plan = userPlanEntity.get();
+            return UserPlanDto.builder()
+                    .userId(plan.getUserId())
+                    .planId(plan.getPlan().getId())
+                    .start(plan.getStart())
+                    .build();
+        } else {
+            return null;
+        }
+    }
 }
