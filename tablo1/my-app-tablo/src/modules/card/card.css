@@ -14,6 +14,7 @@
 
 .image-container {
     width: 100%;
+    position: relative;
     transition: height 0.3s ease;
     height: 45%;
     overflow: hidden;
@@ -31,6 +32,27 @@
     height: 100%;
     object-fit: cover;
 }
+.photo-upload-button {
+    position:absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #151515;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    
+}
+
+.photo-upload-button:hover {
+    background-color: rgb(23, 23, 23); /* Zwiększa przezroczystość na hover */
+}
+
+.svg-photo-add {
+    width: 48px;
+    height: 48px;
+    fill: #a618e3; /* Kolor ikony */
+}
 
 .project-info {
     width: 100%;
@@ -40,6 +62,7 @@
     align-items: center;
     gap: 5px;
     margin-top: 15px;
+    margin-bottom: 5px;
     transition: margin-top 0.3s ease;
 }
 
@@ -50,15 +73,21 @@
 .project-title {
     margin: 0;
     font-size: 20px;
-    padding-top: 10px;
+    text-align: left;
+   
 }
 
-.project-tag {
+
+.project-tag-input {
     background-color: #753476;
     color: #FFFFFF;
+    width:fit-content;
     padding: 8px 16px;
     border-radius: 16px;
-    font-size: 10px;
+    font-size: 12px;
+    border: none;
+    outline: none;
+    direction: ltr; /* Wymusza kierunek tekstu od lewej do prawej */
 }
 
 .expand-button {
@@ -68,6 +97,39 @@
     cursor: pointer;
     font-size: 18px;
 }
+
+
+
+.project-title-input {
+    width: 100%;
+    font-family: 'Gilroy';
+    font-weight: 300;
+    line-height: 1.6;
+    font-size: 18px;
+    color:#B9B8B8;
+    background-color: #151515;
+    font-size: 1.5em;
+    border: none;
+    outline: none;
+    text-align: left; /* Tekst wyrównany do lewej */
+    direction: ltr; /* Wymusza kierunek tekstu od lewej do prawej */
+}
+
+.project-description-textarea {
+    width: 100%;
+    margin-top: 3px;
+    font-family: 'Gilroy';
+    font-weight: 300;
+    line-height: 1.6;
+    font-size: 16px;
+    color:#B9B8B8;
+    background-color: #151515;
+    border: none;
+    outline: none;
+    text-align: left; /* Tekst wyrównany do lewej */
+    direction: ltr; /* Wymusza kierunek tekstu od lewej do prawej */
+}
+
 
 .project-description {
     font-family: 'Gilroy';
@@ -82,6 +144,10 @@
     justify-content: center;
     flex-wrap: nowrap;
     gap: 12px;
+}
+
+.priority-icon-card{
+    margin-top: none;
 }
 
 .detail-item {

@@ -38,7 +38,7 @@ aside.sidebar {
 .svg-add-new-project {
     width: 24px;
     height: 24px;
-    margin-left: 40px;
+   
     fill: currentColor; /* Sprawdzić, czy kolor jest poprawny */
 }
 
@@ -53,6 +53,11 @@ aside.sidebar {
 
 .sidebar ul li:hover {
     color: #F2ADF3;
+}
+
+li a.active {
+    color: #F2ADF3; /* Kolor dla aktywnego linku */
+    
 }
 
 .custom-icon {
