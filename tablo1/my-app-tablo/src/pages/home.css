@@ -10,22 +10,24 @@ body {
 
 }
 
-.background-pattern {
-    position: absolute;
-    top: 0;
+.background-pattern1 {
+    position: fixed;
+    
+    top: 0px;
     left: 0;
     width: 100%;
-    height: 100%;
-    background-image: url('/public/assets/img/path.svg');
+    height: 100vh;
+    background-image: url('/public/assets/img/path.svg'); /* upewnij się, że ścieżka do obrazka jest prawidłowa */
     background-size: cover;
     background-position: center;
-    background-repeat: repeat;
-    animation: fadeInOut 15s infinite;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Tło nie przewija się wraz z resztą treści */
+    animation: fadeInOut 8s infinite;
     z-index: -1;
 }
 
 @keyframes fadeInOut {
-    0% {
+    50% {
         opacity: 0;
     }
 

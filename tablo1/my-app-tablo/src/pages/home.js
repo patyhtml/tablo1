@@ -17,6 +17,8 @@ import { ReactComponent as CalendarImageSVG } from './../assets/img/calendar-ima
 import { ReactComponent as CorrectionPointImageSVG } from './../assets/img/correction-point-image.svg'
 import { ReactComponent as CorrectionPointImage2SVG } from './../assets/img/correction-point-image2.svg'
 import { ReactComponent as CorrectionPointImage3SVG } from './../assets/img/correction-point-image3.svg'
+import BackgroundPattern from './../assets/img/path.svg';
+
 
 
 
@@ -85,7 +87,8 @@ function Home() {
     return (
 
         <div className="tablo">
-            <div className="background-pattern"></div>
+            <div className="background-pattern1" style={{ backgroundImage: `url(${BackgroundPattern})` }}></div>
+
 
 
             <Header />
