@@ -35,3 +35,6 @@ yarn.lock
 # Tsbuild cache
 tsconfig.tsbuildinfo
 
+# Other
+tablo.mwb.bak
+
