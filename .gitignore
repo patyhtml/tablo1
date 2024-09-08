@@ -1,14 +1,11 @@
 # Dependencies
-/node_modules
-/.pnp
-.pnp.js
+node_modules
 
 # Testing
-/coverage
+coverage
 
 # Production
-/build
-/cypress/screenshots
+build
 
 # Misc
 .DS_Store
