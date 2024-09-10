@@ -1,4 +1,5 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useState } from 'react';
 import './sidebar.css';
 
 import { ReactComponent as IconTableSVG } from './../../assets/img/icon-table.svg';
@@ -8,6 +9,34 @@ import { ReactComponent as IconNewProjectSVG } from './../../assets/img/icon-new
 
 export const Sidebar = () => {
     const location = useLocation(); // Hook do pobrania aktualnej ścieżki
+    const navigate = useNavigate(); // Hook do przekierowania użytkownika
+    const [boards, setBoards] = useState([]); // Tablica do przechowywania boardów
+    const [isEditing, setIsEditing] = useState(null); // Trzyma ID boardu, który jest edytowany
+    const [editBoardName, setEditBoardName] = useState(''); // Trzyma zmienioną nazwę boardu
+
+    const handleAddBoard = () => {
+        const newBoard = {
+            id: boards.length + 1,
+            name: 'New Board'
+        };
+        setBoards([...boards, newBoard]); // Dodaje nowy board do tablicy
+        
+        // Przekierowuje użytkownika na stronę board
+        navigate('/board');
+    };
+
+    const handleEditBoardName = (id) => {
+        setIsEditing(id); // Ustawia tryb edycji dla wybranego boardu
+        const boardToEdit = boards.find(board => board.id === id);
+        setEditBoardName(boardToEdit.name); // Ustawia nazwę, która jest edytowana
+    };
+
+    const handleSaveBoardName = (id) => {
+        setBoards(boards.map(board =>
+            board.id === id ? { ...board, name: editBoardName } : board
+        ));
+        setIsEditing(null); // Zamyka tryb edycji
+    };
 
     return (
         <aside className="sidebar">
@@ -43,19 +72,42 @@ export const Sidebar = () => {
                 <li className="spacer"></li>
                 <LineSVG className="svg-line" />
 
+                {/* Kliknięcie w ten element spowoduje dodanie nowego boardu */}
                 <li>
-                    <Link
-                        to="/board"
-                        className={location.pathname === '/board' ? 'active' : ''}
-                    >
+                    <button onClick={handleAddBoard} className="svg-add-new-project-button">
                         <AddNewProjectSVG className="svg-add-new-project" />
                         New Tablo
-                    </Link>
+                    </button>
                 </li>
-                <li>
-                    <IconNewProjectSVG className="svg-icon-new-project" />
-                    Creative logo
-                </li>
+
+                {/* Lista wszystkich dodanych boardów */}
+                {boards.map((board) => (
+                    <li key={board.id}>
+                        <IconNewProjectSVG className="svg-icon-new-project" />
+                        {isEditing === board.id ? (
+                            <input
+                                type="text"
+                                value={editBoardName}
+                                onChange={(e) => setEditBoardName(e.target.value)}
+                                onBlur={() => handleSaveBoardName(board.id)} // Zapisz po opuszczeniu pola
+                                onKeyDown={(e) => {
+                                    if (e.key === 'Enter') {
+                                        handleSaveBoardName(board.id);
+                                    }
+                                }}
+                                autoFocus
+                            />
+                        ) : (
+                            <Link
+                                to="/board"
+                                onClick={() => handleEditBoardName(board.id)} // Edycja nazwy po kliknięciu
+                                className={location.pathname === '/board' ? 'active' : ''}
+                            >
+                                {board.name}
+                            </Link>
+                        )}
+                    </li>
+                ))}
             </ul>
         </aside>
     );

@@ -6,6 +6,8 @@ import Card from '../modules/card/card';
 import { ReactComponent as DividerSVG } from './../assets/img/divider.svg'
 
 
+
+
 function Board() {
 
     const columns = [
@@ -28,6 +30,8 @@ function Board() {
     ]
     const [columnItems] = useState(columns);
     const [todoItems, setTodoItems] = useState([]);
+
+
 
 
 
@@ -79,11 +83,13 @@ function Board() {
                                                 todoItem.columnId === index && <Card props={todoItem} />
                                             )
                                         })}
+                                        
                                     </div>
                                 </div>
                             )
                         })}
                     </main>
+                    
                 </div>
             </div>
 
