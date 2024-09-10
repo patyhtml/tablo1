@@ -1,5 +1,6 @@
 const express = require('express');
 // const pool = require('./config/db');  // Import połączenia do bazy danych PostgreSQL
+const boardController = require('./controllers/boardController');
 const multer = require('multer');  // Import Multer do obsługi plików
 const fileController = require('./controllers/fileController');  // Import kontrolera do plików
 const cors = require('cors');
@@ -22,24 +23,52 @@ app.get('/', (req, res) => {
 //     }
 // });
 
+
+app.get('/api/boards', boardController.getUserBoards); // Pobieranie listy boards user
+app.post('/api/boards', boardController.createBoard); // Dodawanie board for user
+app.get('/api/boards/:boardId', boardController.getBoardById); // detal board
+app.post('/api/boards/:boardId', boardController.updateBoard); // zapis edycji board
+app.delete('/api/boards/:boardId', boardController.deleteBoard); // kasuje detal board
+
 // Konfiguracja Multer do zapisywania plików w folderze 'uploads/'
 const upload = multer({ dest: 'uploads/' });  // Folder, gdzie będą zapisywane pliki
-
-// Trasa do uploadu plików z użyciem Multer
-app.post('/api/files/upload', upload.single('file'), fileController.uploadFile);
-
-// Trasa do pobierania plików po ID
-app.get('/api/files/:id', fileController.getFileById);
-
-app.get('/api/boards');//lista boards user
-app.post('/api/boards'); // Dodawanie board for user
-app.get('/api/boards/:boardId');// detal board
-app.post('/api/boards/:boardId');// zapis edycji board
-app.delete('/api/boards/:boardId');// kasuje detal board
+app.post('/api/files/upload', upload.single('file'), fileController.uploadFile); // Trasa do uploadu plików z użyciem Multer
+app.get('/api/files/:id', fileController.getFileById); // Trasa do pobierania plików po ID
 
 
+app.get('/api/points', pointController.getAllPoints); // Pobieranie wszystkich punktów
+app.post('/api/points', pointController.createPoint); // Tworzenie nowego punktu
+app.get('/api/points/:pointId', pointController.getPointById); // Pobieranie punktu po ID
+app.delete('/api/points/:pointId', pointController.deletePoint); // Usuwanie punktu
+
+app.get('/api/tasks', taskController.getAllTasks); //lista tasks user
+app.post('/api/tasks', taskController.createTask); // Dodawanie tasks for user
+app.get('/api/tasks/:taskId', taskController.getTaskById); // detal tas
+app.post('/api/tasks/:taskId', taskController.updateTask); // zapis edycji task
+app.delete('/api/tasks/:taskId', taskController.deleteTask);// kasuje detal taska
 
 
+app.post('/api/files', upload.single('file'), taskFileController.uploadFile); // Trasa do przesyłania pliku
+app.get('/api/files/:fileId', taskFileController.getFileById); // Trasa do pobierania pliku po ID
+app.delete('/api/files/:fileId', taskFileController.deleteFile); // Trasa do usuwania pliku po ID
+
+app.get('/api/userBoards', userBoardController.getAllUserBoards); // Pobieranie listy wszystkich UserBoard
+app.post('/api/userBoards', userBoardController.createUserBoard); // Tworzenie nowego UserBoard
+app.get('/api/userBoards/:userBoardId', userBoardController.getUserBoardById); // Pobieranie UserBoard po ID
+app.delete('/api/userBoards/:userBoardId', userBoardController.deleteUserBoard); // Usuwanie UserBoard
+
+
+app.get('/api/users', userController.getAllUsers); // Pobieranie wszystkich użytkowników
+app.post('/api/users', userController.createUser); // Tworzenie nowego użytkownika
+app.get('/api/users/:userId', userController.getUserById); // Pobieranie użytkownika po ID
+app.put('/api/users/:userId', userController.updateUser); // Aktualizacja użytkownika
+app.delete('/api/users/:userId', userController.deleteUser); // Usuwanie użytkownika
+
+
+app.get('/api/userPlans', userPlanController.getAllUserPlans); // Pobieranie wszystkich UserPlan
+app.post('/api/userPlans', userPlanController.createUserPlan); // Tworzenie nowego UserPlan
+app.get('/api/userPlans/:userPlanId', userPlanController.getUserPlanById); // Pobieranie UserPlan po ID
+app.delete('/api/userPlans/:userPlanId', userPlanController.deleteUserPlan); // Usuwanie UserPlan
 
 
 
