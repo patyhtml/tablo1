@@ -4,11 +4,27 @@ import HeaderApp from '../modules/header-app/header-app';
 import Sidebar from '../modules/sidebar/sidebar';
 import Card from '../modules/card/card';
 import { ReactComponent as DividerSVG } from './../assets/img/divider.svg'
+import { ApiService } from '../services/apiService';
+import { boardlist } from '../services/apiRouteService';
 
 
 
 
 function Board() {
+ApiService.get(boardlist)
+.then(response=>response.json())
+.then(response=>{
+    console.log(response)
+})
+ApiService.post(boardlist)
+.then(response=>response.json())
+.then(response=>{
+    console.log(response)
+})
+
+
+
+
 
     const columns = [
         {

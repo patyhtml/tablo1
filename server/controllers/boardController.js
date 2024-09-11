@@ -1,15 +1,16 @@
-boardController: // controllers/boardController.js
+// controllers/boardController.js
 const boardService = require('../services/boardService');
 
 
 // Pobieranie tablic użytkownika
 exports.getUserBoards = async (req, res) => {
     try {
-        const userId = req.user.id;  // Załóżmy, że userId jest dostępne z tokena lub sesji
+        const userId = 0;  // Załóżmy, że userId jest dostępne z tokena lub sesji
         const boards = await boardService.getUserBoards(userId);
         res.status(200).json(boards);
     } catch (error) {
-        res.status(500).send('Błąd serwera');
+        console.log(error);
+        res.status(500).send('bladserwera');
     }
 };
 

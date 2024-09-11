@@ -1,0 +1,1 @@
+export const boardlist='/api/boards'

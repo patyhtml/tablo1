@@ -4,7 +4,7 @@ const Board = require('../models/boardModel');
 // Znajdowanie tablic według `userId`
 exports.findByUserId = async (userId) => {
     return await Board.findAll({
-        where: { userId }
+        // where: { userId }
     });
 };
 

@@ -15,4 +15,3 @@ exports.create = async (pointData) => {
 exports.findById = async (pointId) => {
     return await Point.findByPk(pointId);
 };
-s

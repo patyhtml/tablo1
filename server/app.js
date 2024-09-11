@@ -1,10 +1,17 @@
 const express = require('express');
 // const pool = require('./config/db');  // Import połączenia do bazy danych PostgreSQL
-const boardController = require('./controllers/boardController');
 const multer = require('multer');  // Import Multer do obsługi plików
-const fileController = require('./controllers/fileController');  // Import kontrolera do plików
 const cors = require('cors');
 const app = express();
+const boardController = require('./controllers/boardController');
+const fileController = require('./controllers/fileController');  // Import kontrolera do plików
+const taskController = require('./controllers/taskController');
+const pointController = require('./controllers/pointController');
+const taskFileController = require('./controllers/taskFileController');
+const userBoardController = require('./controllers/userBoardController');
+
+const userController = require('./controllers/userController');
+const userPlanController = require('./controllers/userPlanController');
 
 // Middleware do parsowania JSON (jeśli potrzebne do przetwarzania danych z żądań POST)
 app.use(express.json());
