@@ -6,7 +6,8 @@ import headerStyles from '../modules/header/header.css';
 import Footer from './../modules/footer/footer';
 import footerStyles from '../modules/footer/footer.css';
 import { ReactComponent as DividerSVG } from '../assets/img/divider.svg';
-
+import { ApiService } from '../services/apiService';
+import { userlist } from '../services/apiRouteService';
 
 function JoinUs() {
     const [name, setName] = useState('');
@@ -17,42 +18,41 @@ function JoinUs() {
     const [agree, setAgree] = useState(false);
     const navigate = useNavigate();
 
-    const handleSubmit = (event) => {
+    const handleCreateMyAccountClick = (event) => {
         event.preventDefault();
         
-        // Sprawdzenie czy hasła są zgodne
+        // Sprawdzenie, czy hasła są zgodne
         if (password !== confirmPassword) {
             alert("Passwords do not match!");
             return;
         }
-
-        // Tutaj możesz dodać logikę, aby wysłać dane do backendu
-        // Przykład: fetch lub axios
-        fetch('/api/join', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ 
-                name, 
-                email, 
-                password, 
-                subscribe, 
-                agree 
-            }),
+        
+        // Przesyłanie danych do API
+        ApiService.post(userlist, {
+            name,
+            email,
+            password,
+            subscribe,
+            agree
         })
-        .then(response => response.json())
+        .then(response => {
+            if (response.ok) {
+                return response.json();
+            } else {
+                throw new Error("Błąd tworzenia użytkownika");
+            }
+        })
         .then(data => {
-            // Obsługa odpowiedzi z backendu
             console.log('Success:', data);
+            // Przekierowanie do strony głównej
+            navigate('/');
         })
         .catch((error) => {
             console.error('Error:', error);
+            alert('Wystąpił błąd przy tworzeniu konta.');
         });
     };
-    const handleCreateMyAccountClick = () => {
-        navigate('/');
-      };
+
     return (
       <div>
         <Header />
@@ -61,7 +61,7 @@ function JoinUs() {
       
         <div className="joi-container">
             <div className="joi-form-container">
-                <form id="join-form" onSubmit={handleSubmit}>
+                <form id="join-form" onSubmit={handleCreateMyAccountClick}>
                     <div className="form-group">
                         <h1>Sign Up</h1>
                         <label htmlFor="name">Name</label>
@@ -128,7 +128,7 @@ function JoinUs() {
                         </label>
                     </div> 
                     <div className="space">
-                        <button type="submit" className="create-account-button" onClick={handleCreateMyAccountClick}>Create my Account</button>
+                        <button type="submit" className="create-account-button">Create my Account</button>
                     </div>
                 </form>
             </div>

@@ -11,8 +11,56 @@ import { ReactComponent as SetPriorityRed3SVG } from './../assets/img/set-priori
 import { ReactComponent as SetPriorityGreen1SVG } from './../assets/img/set-priority-green1.svg';
 import { ReactComponent as SetPriorityYellow2SVG } from './../assets/img/set-priority-yellow2.svg';
 import { ReactComponent as SetPriorityClear4SVG } from './../assets/img/set-priority-clear4.svg';
+import { ApiService } from '../services/apiService';
+import { taskfilelist } from '../services/apiRouteService';
+import { tasklist } from '../services/apiRouteService';
+
 
 function NewProject() {
+
+    ApiService.get(tasklist)
+    .then(response=>response.json())
+    .then(response=>{
+        console.log(response)
+    })
+    ApiService.post(tasklist)
+    .then(response=>response.json())
+    .then(response=>{
+        console.log(response)
+    })
+
+    ApiService.put(tasklist)
+    .then(response=>response.json())
+    .then(response=>{
+        console.log(response)
+    })
+
+    ApiService.delete(tasklist)
+    .then(response=>response.json())
+    .then(response=>{
+        console.log(response)
+    })
+
+
+
+    ApiService.get(taskfilelist)
+    .then(response=>response.json())
+    .then(response=>{
+        console.log(response)
+    })
+    ApiService.post(taskfilelist)
+    .then(response=>response.json())
+    .then(response=>{
+        console.log(response)
+    })
+    ApiService.delete(taskfilelist)
+    .then(response=>response.json())
+    .then(response=>{
+        console.log(response)
+    })
+
+
+
     const [currentIndex, setCurrentIndex] = useState(0);
     const [images, setImages] = useState(Array(8).fill(null)); // Inicjalizacja z 8 pustymi miejscami
     const [selectedPriority, setSelectedPriority] = useState('clear');

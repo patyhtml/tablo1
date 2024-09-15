@@ -9,7 +9,6 @@ const taskController = require('./controllers/taskController');
 const pointController = require('./controllers/pointController');
 const taskFileController = require('./controllers/taskFileController');
 const userBoardController = require('./controllers/userBoardController');
-
 const userController = require('./controllers/userController');
 const userPlanController = require('./controllers/userPlanController');
 

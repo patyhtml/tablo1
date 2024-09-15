@@ -6,11 +6,16 @@ import Card from '../modules/card/card';
 import { ReactComponent as DividerSVG } from './../assets/img/divider.svg'
 import { ApiService } from '../services/apiService';
 import { boardlist } from '../services/apiRouteService';
+import { board } from '../services/apiRouteService';
+import { userboardlist } from '../services/apiRouteService';
+
 
 
 
 
 function Board() {
+
+    
 ApiService.get(boardlist)
 .then(response=>response.json())
 .then(response=>{
@@ -21,6 +26,49 @@ ApiService.post(boardlist)
 .then(response=>{
     console.log(response)
 })
+ApiService.get(board)
+.then(response=>response.json())
+.then(response=>{
+    console.log(response)
+})
+
+ApiService.post(board)
+.then(response=>response.json())
+.then(response=>{
+    console.log(response)
+})
+
+ApiService.delete(board)
+.then(response=>response.json())
+.then(response=>{
+    console.log(response)
+})
+
+ApiService.get(userboardlist)
+.then(response=>response.json())
+.then(response=>{
+    console.log(response)
+})
+ApiService.post(userboardlist)
+.then(response=>response.json())
+.then(response=>{
+    console.log(response)
+})
+
+ApiService.put(userboardlist)
+.then(response=>response.json())
+.then(response=>{
+    console.log(response)
+})
+
+ApiService.delete(userboardlist)
+.then(response=>response.json())
+.then(response=>{
+    console.log(response)
+})
+
+
+
 
 
 

@@ -4,6 +4,8 @@ import './log-in.css';
 import Header from './../modules/header/header'
 import Footer from './../modules/footer/footer'
 import { ReactComponent as DividerSVG } from '../assets/img/divider.svg';
+import { ApiService } from '../services/apiService'; 
+import { userlist } from '../services/apiRouteService';
 
 
 function LogIn() {
@@ -14,23 +16,25 @@ function LogIn() {
     const handleSubmit = (event) => {
         event.preventDefault();
         
-        // Tutaj możesz dodać logikę, aby wysłać dane do backendu
-        // Przykład: fetch lub axios
-        fetch('/api/login', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ email, password }),
+        ApiService.post(userlist, {
+            email,
+            password
         })
         .then(response => response.json())
         .then(data => {
-            // Obsługa odpowiedzi z backendu
             console.log('Success:', data);
+            if (data) {
+                // Tutaj możesz obsłużyć sukces, np. zapisać token lub przekierować
+                navigate('/board');
+            } else {
+                throw new Error('Błąd logowania');
+            }
         })
-        .catch((error) => {
+        .catch(error => {
             console.error('Error:', error);
+            alert('Wystąpił błąd przy logowaniu.');
         });
+        
     };
     const handleLoginClick = () => {
         navigate('/board');

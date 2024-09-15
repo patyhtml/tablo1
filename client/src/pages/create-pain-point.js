@@ -5,8 +5,30 @@ import Sidebar from '../modules/sidebar/sidebar';
 import WindowChat from '../modules/window-chat/window-chat';
 import { ReactComponent as DividerSVG } from './../assets/img/divider.svg'
 import { ReactComponent as PainPointSVG } from './../assets/img/pain-point.svg'
+import { ApiService } from '../services/apiService';
+import { pointlist } from '../services/apiRouteService';
+
+
 
 function CreatePainPoint() {
+      
+        ApiService.get(pointlist)
+        .then(response=>response.json())
+        .then(response=>{
+            console.log(response)
+        })
+        ApiService.post(pointlist)
+        .then(response=>response.json())
+        .then(response=>{
+            console.log(response)
+        })
+        
+        ApiService.delete(pointlist)
+        .then(response=>response.json())
+        .then(response=>{
+            console.log(response)
+        })
+    
     const [todoItems, setTodoItems] = useState([]);
     const [draggedItem, setDraggedItem] = useState(null);
     const [positions, setPositions] = useState([]);
