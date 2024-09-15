@@ -7,6 +7,10 @@ const Board = sequelize.define('Board', {
     name: {
         type: DataTypes.STRING,
         allowNull: false,
+    },
+    titleColor: {
+        type: DataTypes.STRING,
+        allowNull: false,
     }
 }, {
     timestamps: false,  // Jeśli nie używasz kolumn `createdAt` i `updatedAt`

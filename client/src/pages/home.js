@@ -101,7 +101,7 @@ function Home() {
                     <span className="make-goal__animate">a</span>
                     <span className="make-goal__animate">k</span>
                     <span className="make-goal__animate">e</span>
-                    <span class="make-goal__animate">&nbsp;</span>
+                    <span className="make-goal__animate">&nbsp;</span>
                     <span className="make-goal__animate">a</span>
                     <span className="make-goal__animate">&nbsp;</span>
                     <span className="make-goal__animate">g</span>
@@ -188,7 +188,7 @@ function Home() {
                     <span className="tasks__animate">e</span>
                 </h8>
 
-                <h9 id="tasks2-heading" class="tasks2__heading-text heading-xl" aria-hidden="true">
+                <h9 id="tasks2-heading" className="tasks2__heading-text heading-xl" aria-hidden="true">
                     <span className="tasks2__animate">Lists and cards are the building blocks of organizing work on a board. Grow from there with task assignments,
                         timelines, productivity metrics, calendars, and more.</span>
                 </h9>
@@ -244,15 +244,15 @@ function Home() {
 
                 <section className="Section4image" data-block="Section4">
                     <div className="correction-point-image">
-                        <CorrectionPointImageSVG class="svg-correction-point-image" />
+                        <CorrectionPointImageSVG className="svg-correction-point-image" />
                     </div>
 
                     <div className="correction-point-image2">
-                        <CorrectionPointImage2SVG class="svg-correction-point-image2" />
+                        <CorrectionPointImage2SVG className="svg-correction-point-image2" />
                     </div>
 
                     <div className="correction-point-image3">
-                        <CorrectionPointImage3SVG class="svg-correction-point-image3" />
+                        <CorrectionPointImage3SVG className="svg-correction-point-image3" />
                     </div>
 
                 </section>
@@ -278,7 +278,7 @@ function Home() {
                         <span className="correction__animate">t</span>
                     </h13>
                     <h14 id="correction-point2" className="correction-point2__heading-text heading-xl" aria-hidden="true">
-                        <span class="correction-point2__animate">Do not exchange e-mails to express your opinion about
+                        <span className="correction-point2__animate">Do not exchange e-mails to express your opinion about
                             the project. Simply add correction points to the project
                             in an easy way so that the entire team can immediately
                             see what to improve to achieve the goal.</span>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './create-pain-point.css';
 import HeaderApp from '../modules/header-app/header-app';
 import Sidebar from '../modules/sidebar/sidebar';
@@ -12,26 +12,10 @@ import { pointlist } from '../services/apiRouteService';
 
 function CreatePainPoint() {
       
-        ApiService.get(pointlist)
-        .then(response=>response.json())
-        .then(response=>{
-            console.log(response)
-        })
-        ApiService.post(pointlist)
-        .then(response=>response.json())
-        .then(response=>{
-            console.log(response)
-        })
-        
-        ApiService.delete(pointlist)
-        .then(response=>response.json())
-        .then(response=>{
-            console.log(response)
-        })
-    
+       
     const [todoItems, setTodoItems] = useState([]);
     const [draggedItem, setDraggedItem] = useState(null);
-    const [positions, setPositions] = useState([]);
+   
 
     const handleDragStart = (event) => {
         // console.log("Drag started:", event.target);
@@ -41,6 +25,7 @@ function CreatePainPoint() {
             offsetY: event.nativeEvent.offsetY
         });
 
+        
 
     };
 
@@ -63,11 +48,28 @@ function CreatePainPoint() {
             description: `Write a description of ... ${todoItems.length}`
         };
 
-        setPositions([...positions, newItem]);
+      
         setTodoItems([...todoItems, newItem]);
         setDraggedItem(null);
         // console.log("New item added:", newItem);
     };
+
+    const handleSaveAs = () => {
+        ApiService.post(pointlist, todoItems)
+            .then(response => response.text())
+            .then(response => {
+                console.log(response)
+            })
+       .catch(error=>console.log(error))
+    }
+
+    useEffect(() => {
+        ApiService.get(pointlist)
+        .then(response=>response.json())
+        .then(response=>{
+            console.log(response)
+        })
+    }, [])
 
     return (
 
@@ -112,7 +114,7 @@ function CreatePainPoint() {
                                 onDragOver={(e) => e.preventDefault()}
                                 onDrop={handleDrop}
                             >
-                                {positions.map((position, index) => (
+                                {todoItems.map((position, index) => (
                                     <PainPointSVG
                                         key={position.id}
                                         className="svg-pain-point"
@@ -126,7 +128,7 @@ function CreatePainPoint() {
                             </div>
                             <div className="buttons">
                                 <button className="back-to-task">Back to task</button>
-                                <button className="save-as">Save as</button>
+                                <button className="save-as" onClick={handleSaveAs}>Save as</button>
                             </div>
                         </div>
                     </div>

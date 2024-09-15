@@ -22,15 +22,15 @@ export const Footer = () => {
 return (
 
 <div>
-<DividerSVG class="svg-divider"/>
+<DividerSVG className="svg-divider"/>
 
-<footer class="site-footer">
-    <div class="footer-content">
-        <header class="header">
-            <div class="left-section">
+<footer className="site-footer">
+    <div className="footer-content">
+        <header className="header">
+            <div className="left-section">
             <div className="logo"> <Link to="/">Tablo</Link></div>
             </div>
-            <div class="foo-auth-buttons">    
+            <div className="foo-auth-buttons">    
           <button className="foo-login-button" onClick={handleLoginClick}>Log in</button>
           <button className="foo-join-button" onClick={handleJoinusClick}>Join us</button>
             </div>
@@ -38,11 +38,11 @@ return (
     
        
 
-        <div class="footer">
-        <footer class="footer">
-            <div class="footer-section1-links1">
+        <div className="footer">
+        <footer className="footer">
+            <div className="footer-section1-links1">
             <div className="h15"> <HashLink to="/#Section2">Tools</HashLink></div>
-                <ul class="footer-links-list">
+                <ul className="footer-links-list">
 
  
 
@@ -54,18 +54,18 @@ return (
 
 
 
-            <div class="footer-section2-links2">
+            <div className="footer-section2-links2">
             <div className="h16"> <HashLink to="/pricing#pri-Section2">Pricing</HashLink></div>
-                <ul class="footer-links-list">
+                <ul className="footer-links-list">
                 <div className="footer-link"> <HashLink to="/pricing#pri-Section2">Monthly plans</HashLink></div>
                 <div className="footer-link"> <HashLink to="/pricing#pri-Section3">Resources</HashLink></div>
                
                 </ul>
             </div>
 
-            <div class="footer-section3-links3">
+            <div className="footer-section3-links3">
             <div className="h17"> <Link to="/">Contact</Link></div>
-                <ul class="footer-links-list">
+                <ul className="footer-links-list">
                 <div className="footer-link"> <Link to="https://www.facebook.com/">Facebook</Link></div>
                 <div className="footer-link"> <Link to="https://www.instagram.com/">Instagram</Link></div>
                 <div className="footer-link"> <Link to="https://x.com/tweeter">Tweeter</Link></div>
@@ -75,13 +75,13 @@ return (
 
 
   
-        <div class="subscription-box">
+        <div className="subscription-box">
             <h18>Subscribe to the Tablo</h18>
             <p>Newsletter to stay up to date with the lashes releases</p>
             <form id="subscription-form" action="#" method="post">
-                <div class="input-with-button">
+                <div className="input-with-button">
                     <input type="email" name="email" placeholder="@ Email address" required=""/>
-                    <button type="submit" class="svg-button">
+                    <button type="submit" className="svg-button">
                         <ButtonFooterSVG className="svg-icon"/>
                     </button>
                 </div>

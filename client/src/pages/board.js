@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './board.css';
 import HeaderApp from '../modules/header-app/header-app';
 import Sidebar from '../modules/sidebar/sidebar';
@@ -15,88 +15,10 @@ import { userboardlist } from '../services/apiRouteService';
 
 function Board() {
 
-    
-ApiService.get(boardlist)
-.then(response=>response.json())
-.then(response=>{
-    console.log(response)
-})
-ApiService.post(boardlist)
-.then(response=>response.json())
-.then(response=>{
-    console.log(response)
-})
-ApiService.get(board)
-.then(response=>response.json())
-.then(response=>{
-    console.log(response)
-})
-
-ApiService.post(board)
-.then(response=>response.json())
-.then(response=>{
-    console.log(response)
-})
-
-ApiService.delete(board)
-.then(response=>response.json())
-.then(response=>{
-    console.log(response)
-})
-
-ApiService.get(userboardlist)
-.then(response=>response.json())
-.then(response=>{
-    console.log(response)
-})
-ApiService.post(userboardlist)
-.then(response=>response.json())
-.then(response=>{
-    console.log(response)
-})
-
-ApiService.put(userboardlist)
-.then(response=>response.json())
-.then(response=>{
-    console.log(response)
-})
-
-ApiService.delete(userboardlist)
-.then(response=>response.json())
-.then(response=>{
-    console.log(response)
-})
-
-
-
-
-
-
-
-
-    const columns = [
-        {
-            name: 'To do',
-            titleColor: '#F788CC'
-        },
-        {
-            name: 'Doing',
-            titleColor: '#FC7309'
-        },
-        {
-            name: 'Done',
-            titleColor: '#816AD3'
-        },
-        {
-            name: 'Add section',
-            titleColor: ''
-        },
-    ]
-    const [columnItems] = useState(columns);
+    const [columnItems, setColumnItems] = useState([{
+        name:'Add Section'
+    }]);
     const [todoItems, setTodoItems] = useState([]);
-
-
-
 
 
     function addTodoListItem(id) {
@@ -109,7 +31,18 @@ ApiService.delete(userboardlist)
             }]
         })
     }
-
+    useEffect(() => {
+        ApiService.get(boardlist)
+            .then(response => response.json())
+            .then(response => {
+                console.log(response)
+                setColumnItems(prev => {
+                    console.log(prev)
+                    const lastItem = prev.pop()
+                    return [...prev, ...response, lastItem]
+                })
+            })
+    }, [])
 
 
 
@@ -135,7 +68,7 @@ ApiService.delete(userboardlist)
                     <main className="boa-board-content">
                         {columnItems && columnItems.map((columnItem, index) => {
                             return (
-                                <div className="boa-list" >
+                                <div className="boa-list" key={index}>
                                     <div className="boa-list-header">
                                         <h3 style={{ color: columnItem.titleColor }}>{columnItem.name}</h3>
                                         <button className="add-list" onClick={_ => addTodoListItem(index)}>+</button>

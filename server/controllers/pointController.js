@@ -7,7 +7,7 @@ exports.getAllPoints = async (req, res) => {
         const points = await pointService.getAllPoints();
         res.status(200).json(points);
     } catch (error) {
-        res.status(500).send('Błąd serwera przy pobieraniu punktów');
+        res.status(500).send(error);
     }
 };
 
@@ -15,10 +15,10 @@ exports.getAllPoints = async (req, res) => {
 exports.createPoint = async (req, res) => {
     const pointData = req.body;
     try {
-        const newPoint = await pointService.createPoint(pointData);
+        const newPoint = await pointService.createPoints(pointData);
         res.status(201).json(newPoint);
     } catch (error) {
-        res.status(500).send('Błąd tworzenia punktu');
+        res.status(500).send(error);
     }
 };
 

@@ -10,6 +10,10 @@ exports.getAllPoints = async () => {
 exports.createPoint = async (pointData) => {
     return await pointRepository.create(pointData);
 };
+// Tworzenie nowych punktow
+exports.createPoints = async (pointData) => {
+    return await pointModel.bulkCreate(pointData);
+};
 
 // Pobieranie punktu po ID
 exports.getPointById = async (pointId) => {

@@ -195,7 +195,7 @@ function Pricing() {
                             <div xmlns="http://www.w3.org/1999/xhtml">
                                 <h2 style={{ color: '#F2ADF3' }}>Tablo</h2>
                             </div>
-                            <div class="price">
+                            <div className="price">
                                 <h3 style={{ color: '#F2ADF3' }}>$0</h3>
                                 <h4 style={{ color: '#F2ADF3' }}>Month</h4>
                                 <h5>Per user/month</h5>
@@ -213,23 +213,23 @@ function Pricing() {
                             <br />
                             <div></div>
 
-                            <div class="point1">
+                            <div className="point1">
                                 <PointSVG className="svg-point" />
-                                <h6 class="inline">Unlimited cards</h6>
+                                <h6 className="inline">Unlimited cards</h6>
                             </div>
 
-                            <div class="point2">
+                            <div className="point2">
                                 <PointSVG className="svg-point" />
-                                <h6 class="inline">Up to 10 boards per Workspace</h6>
+                                <h6 className="inline">Up to 10 boards per Workspace</h6>
                             </div>
 
-                            <div class="point3">
+                            <div className="point3">
                                 <PointSVG className="svg-point" />
-                                <h6 class="inline">Unlimited storage (10MB/file)</h6>
+                                <h6 className="inline">Unlimited storage (10MB/file)</h6>
                             </div>
-                            <div class="point4">
+                            <div className="point4">
                                 <PointSVG className="svg-point" />
-                                <h6 class="inline">10 Corrections Points</h6>
+                                <h6 className="inline">10 Corrections Points</h6>
                             </div>
 
 
@@ -272,23 +272,23 @@ function Pricing() {
 
                                 <div style={{ paddingBottom: '40px' }}> </div>
 
-                                <div class="point1">
+                                <div className="point1">
                                     <PointSVG className="svg-point" />
-                                    <h6 class="inline">Unlimited cards</h6>
+                                    <h6 className="inline">Unlimited cards</h6>
                                 </div>
 
-                                <div class="point2">
+                                <div className="point2">
                                     <PointSVG className="svg-point" />
-                                    <h6 class="inline">Up to 10 boards per Workspace</h6>
+                                    <h6 className="inline">Up to 10 boards per Workspace</h6>
                                 </div>
 
-                                <div class="point3">
+                                <div className="point3">
                                     <PointSVG className="svg-point" />
-                                    <h6 class="inline">Unlimited storage (10MB/file)</h6>
+                                    <h6 className="inline">Unlimited storage (10MB/file)</h6>
                                 </div>
-                                <div class="point4">
+                                <div className="point4">
                                     <       PointSVG className="svg-point" />
-                                    <h6 class="inline">10 Corrections Points</h6>
+                                    <h6 className="inline">10 Corrections Points</h6>
                                 </div>
                             </div>
 
@@ -313,8 +313,8 @@ function Pricing() {
                         </foreignObject>
                     </svg>
                 </div>
-                <div class="pricing-plan3">
-                    <svg class="pricing-plan-svg" viewBox="0 0 400 700">
+                <div className="pricing-plan3">
+                    <svg className="pricing-plan-svg" viewBox="0 0 400 700">
                         <rect x="0" y="0" width="400" height="700" rx="24" ry="24" fill="none" stroke="#FC7309" stroke-width="2" />
                         <foreignObject x="20" y="20" width="360" height="700">
 
@@ -327,23 +327,23 @@ function Pricing() {
 
                                 <div style={{ paddingBottom: '40px' }}> </div>
 
-                                <div class="point1">
+                                <div className="point1">
                                     <PointSVG className="svg-point" />
-                                    <h6 class="inline">Unlimited cards</h6>
+                                    <h6 className="inline">Unlimited cards</h6>
                                 </div>
 
-                                <div class="point2">
+                                <div className="point2">
                                     <PointSVG className="svg-point" />
-                                    <h6 class="inline">Up to 10 boards per Workspace</h6>
+                                    <h6 className="inline">Up to 10 boards per Workspace</h6>
                                 </div>
 
-                                <div class="point3">
+                                <div className="point3">
                                     <PointSVG className="svg-point" />
-                                    <h6 class="inline">Unlimited storage (10MB/file)</h6>
+                                    <h6 className="inline">Unlimited storage (10MB/file)</h6>
                                 </div>
-                                <div class="point4">
+                                <div className="point4">
                                     <PointSVG className="svg-point" />
-                                    <h6 class="inline">10 Corrections Points</h6>
+                                    <h6 className="inline">10 Corrections Points</h6>
                                 </div>
                             </div>
 
@@ -367,8 +367,8 @@ function Pricing() {
                         </foreignObject>
                     </svg>
                 </div>
-                <div class="pricing-plan4">
-                    <svg class="pricing-plan-svg" viewBox="0 0 400 700">
+                <div className="pricing-plan4">
+                    <svg className="pricing-plan-svg" viewBox="0 0 400 700">
                         <rect x="0" y="0" width="400" height="700" rx="24" ry="24" fill="none" stroke="#816AD3" stroke-width="2" />
                         <foreignObject x="20" y="20" width="360" height="700">
 
@@ -380,23 +380,23 @@ function Pricing() {
 
                                 <div style={{ paddingBottom: '40px' }}> </div>
 
-                                <div class="point1">
+                                <div className="point1">
                                     <PointSVG className="svg-point" />
-                                    <h6 class="inline">Unlimited cards</h6>
+                                    <h6 className="inline">Unlimited cards</h6>
                                 </div>
 
-                                <div class="point2">
+                                <div className="point2">
                                     <PointSVG className="svg-point" />
-                                    <h6 class="inline">Up to 10 boards per Workspace</h6>
+                                    <h6 className="inline">Up to 10 boards per Workspace</h6>
                                 </div>
 
-                                <div class="point3">
+                                <div className="point3">
                                     <PointSVG className="svg-point" />
-                                    <h6 class="inline">Unlimited storage (10MB/file)</h6>
+                                    <h6 className="inline">Unlimited storage (10MB/file)</h6>
                                 </div>
-                                <div class="point4">
+                                <div className="point4">
                                     <PointSVG className="svg-point" />
-                                    <h6 class="inline">10 Corrections Points</h6>
+                                    <h6 className="inline">10 Corrections Points</h6>
                                 </div>
                             </div>
 
@@ -427,8 +427,8 @@ function Pricing() {
             </section>
 
 
-            <div class="next-section">
-                <button class="svg-button">
+            <div className="next-section">
+                <button className="svg-button">
                     <NextSectionSVG className="svg.next-section" />
                 </button>
             </div>
@@ -440,7 +440,7 @@ function Pricing() {
 
 
             <section className="pri-Section3a" data-block="Section3a">
-                <h1 id="choose1" class="choose1__heading-text heading-xl" aria-hidden="true">
+                <h1 id="choose1" className="choose1__heading-text heading-xl" aria-hidden="true">
                     <span className="choose1__animate">C</span>
                     <span className="choose1__animate">h</span>
                     <span className="choose1__animate">o</span>
@@ -459,7 +459,7 @@ function Pricing() {
                     <span className="choose2__animate">u</span>
                     <span className="choose2__animate">r</span>
 
-                    <span class="choose2__animate">&nbsp;</span>
+                    <span className="choose2__animate">&nbsp;</span>
                 </h2>
 
                 <h3 id="choose3-heading" className="choose3__heading-text heading-xl" aria-hidden="true">
@@ -481,17 +481,17 @@ function Pricing() {
 
 
 
-            <section class="pri-Section3" data-block="Section3" id="pri-Section3">
-                <div class="plan">
-                    <table class="features-table">
+            <section className="pri-Section3" data-block="Section3" id="pri-Section3">
+                <div className="plan">
+                    <table className="features-table">
                         <tbody>
-                            <tr class="features-table__row">
-                                <th class="features-table__header">
+                            <tr className="features-table__row">
+                                <th className="features-table__header">
 
 
                                     <p></p>
                                 </th>
-                                <th class="features-table__header">
+                                <th className="features-table__header">
 
                                     <p style={{ color: '#F788CC' }}>Plus</p>
                                     <div className="auth-buttons">
@@ -512,7 +512,7 @@ function Pricing() {
                                     </div>
 
                                 </th>
-                                <th class="features-table__header">
+                                <th className="features-table__header">
 
                                     <p style={{ color: '#FC7309' }}>Premium</p>
                                     <div className="auth-buttons">
@@ -532,7 +532,7 @@ function Pricing() {
                                         </button>
                                     </div>
                                 </th>
-                                <th class="features-table__header">
+                                <th className="features-table__header">
 
                                     <p style={{ color: '#977BFA' }}>Business</p>
 
@@ -561,23 +561,23 @@ function Pricing() {
 
 
 
-                            <tr class="features-table__row">
-                                <td class="label">
+                            <tr className="features-table__row">
+                                <td className="label">
                                     Unlimited cards
                                 </td>
-                                <td class="label">
+                                <td className="label">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" fill="none" aria-label="Tick">
                                         <path fill="currentColor" fill-rule="evenodd" d="m8.401 17.66 15.6-15.6L22.587.647 8.4 14.833 1.414 7.847 0 9.26l8.4 8.4v-.001h.001Z" clip-rule="evenodd"></path>
                                     </svg>
 
                                 </td>
-                                <td class="label">
+                                <td className="label">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" fill="none" aria-label="Tick">
                                         <path fill="currentColor" fill-rule="evenodd" d="m8.401 17.66 15.6-15.6L22.587.647 8.4 14.833 1.414 7.847 0 9.26l8.4 8.4v-.001h.001Z" clip-rule="evenodd"></path>
                                     </svg>
 
                                 </td>
-                                <td class="label">
+                                <td className="label">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" fill="none" aria-label="Tick">
                                         <path fill="currentColor" fill-rule="evenodd" d="m8.401 17.66 15.6-15.6L22.587.647 8.4 14.833 1.414 7.847 0 9.26l8.4 8.4v-.001h.001Z" clip-rule="evenodd"></path>
                                     </svg>
@@ -585,46 +585,46 @@ function Pricing() {
                                 </td>
                             </tr>
 
-                            <tr class="features-table__row">
-                                <td class="label">
+                            <tr className="features-table__row">
+                                <td className="label">
                                     Boards per Workspace
                                 </td>
-                                <td class="label">
+                                <td className="label">
                                     50
                                 </td>
-                                <td class="label">
+                                <td className="label">
                                     100
                                 </td>
-                                <td class="label">
+                                <td className="label">
                                     Unlimited
                                 </td>
                             </tr>
-                            <tr class="features-table__row">
-                                <td class="label">
+                            <tr className="features-table__row">
+                                <td className="label">
                                     Unlimited storage
                                 </td>
-                                <td class="label">
+                                <td className="label">
                                     10MB/file
                                 </td>
-                                <td class="label">
+                                <td className="label">
                                     1GB/file
                                 </td>
-                                <td class="label">
+                                <td className="label">
                                     100GB
                                 </td>
                             </tr>
 
-                            <tr class="features-table__row">
-                                <td class="label">
+                            <tr className="features-table__row">
+                                <td className="label">
                                     Corrections Points
                                 </td>
-                                <td class="label">
+                                <td className="label">
                                     10
                                 </td>
-                                <td class="label">
+                                <td className="label">
                                     100
                                 </td>
-                                <td class="label">
+                                <td className="label">
                                     Unlimited
                                 </td>
                             </tr>
@@ -639,44 +639,44 @@ function Pricing() {
 
 
 
-            <section class="pri-Section4" data-block="Section4">
-                <div class="faq"> </div>
-                <h1 id="faq1" class="faq1__heading-text heading-xl" aria-hidden="true">
-                    <span class="faq1__animate">F</span>
-                    <span class="faq1__animate">r</span>
-                    <span class="faq1__animate">e</span>
-                    <span class="faq1__animate">q</span>
-                    <span class="faq1__animate">u</span>
-                    <span class="faq1__animate">e</span>
-                    <span class="faq1__animate">n</span>
-                    <span class="faq1__animate">t</span>
-                    <span class="faq1__animate">l</span>
-                    <span class="faq1__animate">y</span>
+            <section className="pri-Section4" data-block="Section4">
+                <div className="faq"> </div>
+                <h1 id="faq1" className="faq1__heading-text heading-xl" aria-hidden="true">
+                    <span className="faq1__animate">F</span>
+                    <span className="faq1__animate">r</span>
+                    <span className="faq1__animate">e</span>
+                    <span className="faq1__animate">q</span>
+                    <span className="faq1__animate">u</span>
+                    <span className="faq1__animate">e</span>
+                    <span className="faq1__animate">n</span>
+                    <span className="faq1__animate">t</span>
+                    <span className="faq1__animate">l</span>
+                    <span className="faq1__animate">y</span>
 
 
                 </h1>
-                <div class="sub-headings-container"></div>
-                <h2 id="faq2-heading" class="faq2__heading-text heading-xl" aria-hidden="true">
-                    <span class="faq2__animate">&nbsp;</span>
-                    <span class="faq2__animate">a</span>
-                    <span class="faq2__animate">s</span>
-                    <span class="faq2__animate">k</span>
-                    <span class="faq2__animate">e</span>
-                    <span class="faq2__animate">d</span>
-                    <span class="faq2__animate">&nbsp;</span>
+                <div className="sub-headings-container"></div>
+                <h2 id="faq2-heading" className="faq2__heading-text heading-xl" aria-hidden="true">
+                    <span className="faq2__animate">&nbsp;</span>
+                    <span className="faq2__animate">a</span>
+                    <span className="faq2__animate">s</span>
+                    <span className="faq2__animate">k</span>
+                    <span className="faq2__animate">e</span>
+                    <span className="faq2__animate">d</span>
+                    <span className="faq2__animate">&nbsp;</span>
                 </h2>
 
-                <h3 id="faq3-heading" class="faq3__heading-text heading-xl" aria-hidden="true">
+                <h3 id="faq3-heading" className="faq3__heading-text heading-xl" aria-hidden="true">
 
-                    <span class="faq3__animate">q</span>
-                    <span class="faq3__animate">u</span>
-                    <span class="faq3__animate">e</span>
-                    <span class="faq3__animate">s</span>
-                    <span class="faq3__animate">t</span>
-                    <span class="faq3__animate">i</span>
-                    <span class="faq3__animate">o</span>
-                    <span class="faq3__animate">n</span>
-                    <span class="faq3__animate">s</span>
+                    <span className="faq3__animate">q</span>
+                    <span className="faq3__animate">u</span>
+                    <span className="faq3__animate">e</span>
+                    <span className="faq3__animate">s</span>
+                    <span className="faq3__animate">t</span>
+                    <span className="faq3__animate">i</span>
+                    <span className="faq3__animate">o</span>
+                    <span className="faq3__animate">n</span>
+                    <span className="faq3__animate">s</span>
 
                 </h3>
             </section>
