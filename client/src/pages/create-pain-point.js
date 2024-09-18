@@ -55,8 +55,10 @@ function CreatePainPoint() {
     };
 
     const handleSaveAs = () => {
-        ApiService.post(pointlist, todoItems)
-            .then(response => response.text())
+        ApiService.post(pointlist, {
+            points:todoItems,
+            taskId:1
+        })
             .then(response => {
                 console.log(response)
             })
@@ -65,9 +67,9 @@ function CreatePainPoint() {
 
     useEffect(() => {
         ApiService.get(pointlist)
-        .then(response=>response.json())
         .then(response=>{
             console.log(response)
+            setTodoItems([...todoItems, ...response]);
         })
     }, [])
 
@@ -116,7 +118,7 @@ function CreatePainPoint() {
                             >
                                 {todoItems.map((position, index) => (
                                     <PainPointSVG
-                                        key={position.id}
+                                        key={index}
                                         className="svg-pain-point"
                                         style={{
                                             position: 'absolute',

@@ -3,32 +3,56 @@ const taskRepository = require('../repositories/taskRepository');
 
 // Pobieranie wszystkich zadań
 exports.getAllTasks = async () => {
-    return await taskRepository.findAll();
+    try {
+        return await taskRepository.findAll();
+    } catch (error) {
+        throw new Error('Błąd podczas pobierania zadań: ' + error.message);
+    }
 };
 
 // Tworzenie nowego zadania
 exports.createTask = async (taskData) => {
-    return await taskRepository.create(taskData);
+    try {
+        return await taskRepository.create(taskData);
+    } catch (error) {
+        throw new Error('Błąd podczas tworzenia zadania: ' + error.message);
+    }
 };
 
 // Pobieranie zadania po ID
 exports.getTaskById = async (taskId) => {
-    return await taskRepository.findById(taskId);
+    try {
+        return await taskRepository.findByPk(taskId);  // zmieniono na findByPk dla Sequelize
+    } catch (error) {
+        throw new Error('Błąd podczas pobierania zadania: ' + error.message);
+    }
 };
 
 // Aktualizacja zadania
 exports.updateTask = async (taskId, taskData) => {
-    const task = await taskRepository.findById(taskId);
-    if (task) {
-        return await task.update(taskData);
+    try {
+        const task = await taskRepository.findByPk(taskId);
+        if (task) {
+            return await task.update(taskData);  // Sprawdź, czy metoda update jest dostępna
+        } else {
+            throw new Error('Zadanie o podanym ID nie istnieje');
+        }
+    } catch (error) {
+        throw new Error('Błąd podczas aktualizacji zadania: ' + error.message);
     }
-    return null;
 };
 
 // Usuwanie zadania
 exports.deleteTask = async (taskId) => {
-    const task = await taskRepository.findById(taskId);
-    if (task) {
-        await task.destroy();
+    try {
+        const task = await taskRepository.findByPk(taskId);
+        if (task) {
+            await task.destroy();
+            return { message: 'Zadanie zostało pomyślnie usunięte' };
+        } else {
+            throw new Error('Zadanie o podanym ID nie istnieje');
+        }
+    } catch (error) {
+        throw new Error('Błąd podczas usuwania zadania: ' + error.message);
     }
 };

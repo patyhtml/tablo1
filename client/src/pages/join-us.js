@@ -35,13 +35,7 @@ function JoinUs() {
             subscribe,
             agree
         })
-        .then(response => {
-            if (response.ok) {
-                return response.json();
-            } else {
-                throw new Error("Błąd tworzenia użytkownika");
-            }
-        })
+      
         .then(data => {
             console.log('Success:', data);
             // Przekierowanie do strony głównej

@@ -5,9 +5,15 @@ import { ReactComponent as ExpandButtonDefaultSVG } from './../../assets/img/exp
 
 export const WindowChat = ({ props }) => {
     const [isExpanded, setIsExpanded] = useState(false);
+    const [description, setDescription] = useState(props.description ?? '');
 
     const toggleExpand = () => {
         setIsExpanded(!isExpanded);
+    };
+
+    // Funkcja do aktualizacji opisu
+    const handleDescriptionChange = (event) => {
+        setDescription(event.target.value);
     };
 
     return (
@@ -20,9 +26,13 @@ export const WindowChat = ({ props }) => {
                     <ExpandButtonDefaultSVG className="svg-expand-button-default" />
                 </button>
             </div>
-            <p className={`win-project-description ${isExpanded ? 'expanded' : ''}`} id="project-description" contentEditable>
-                {props.description}
-            </p>
+            {/* Zastąpienie contentEditable na textarea */}
+            <textarea
+                className={`win-project-description ${isExpanded ? 'expanded' : ''}`}
+                id="project-description"
+                value={description}
+                onChange={handleDescriptionChange}
+            />
         </div>
     );
 };

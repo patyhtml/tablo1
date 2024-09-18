@@ -14,7 +14,15 @@ import Payment from './pages/payment';
 
 
 
+
 export default function App() {
+  // Stan na przechowanie zapisanych projektów
+  const [tasks, setTasks] = React.useState([]);
+
+  // Funkcja do obsługi zapisu projektu z NewProject
+  const handleSaveTask = (newTask) => {
+    setTasks(prevTasks => [...prevTasks, newTask]); // Dodaj nowy projekt do listy
+  };
   return (
     <Router>
         <Routes>

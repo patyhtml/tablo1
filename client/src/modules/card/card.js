@@ -21,9 +21,9 @@ export const Card = ({ props }) => {
     const [selectedImage, setSelectedImage] = useState(null); // Stan do przechowywania wybranego zdjęcia
 
     // Stany do zarządzania tytułem, opisem i tagiem
-    const [title, setTitle] = useState(props.title);
+    const [title, setTitle] = useState(props.projectName);
     const [description, setDescription] = useState(props.description);
-    const [tag, setTag] = useState("Development"); // Edytowalny tag
+    const [tag, setTag] = useState(props.tag); // Edytowalny tag
 
     const calendarRef = useRef(null);
     const priorityRef = useRef(null);

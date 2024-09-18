@@ -1,4 +1,3 @@
-// repositories/taskRepository.js
 const Task = require('../models/taskModel');
 
 // Pobieranie wszystkich zadań

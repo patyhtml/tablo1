@@ -10,6 +10,14 @@ const Point = sequelize.define('Point', {
     cord_y: {
         type: DataTypes.DOUBLE,
         allowNull: false,
+    },
+    title: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
+    description: {
+        type: DataTypes.STRING,
+        allowNull: true,
     }
 }, {
     timestamps: false  // Automatyczne kolumny `createdAt` i `updatedAt`

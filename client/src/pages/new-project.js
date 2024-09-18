@@ -1,4 +1,3 @@
-
 import React, { useState, useRef } from 'react';
 import './new-project.css';
 import HeaderApp from '../modules/header-app/header-app';
@@ -12,60 +11,25 @@ import { ReactComponent as SetPriorityGreen1SVG } from './../assets/img/set-prio
 import { ReactComponent as SetPriorityYellow2SVG } from './../assets/img/set-priority-yellow2.svg';
 import { ReactComponent as SetPriorityClear4SVG } from './../assets/img/set-priority-clear4.svg';
 import { ApiService } from '../services/apiService';
-import { taskfilelist } from '../services/apiRouteService';
-import { tasklist } from '../services/apiRouteService';
+import { useNavigate } from 'react-router-dom';
+import { boardlist } from '../services/apiRouteService';
 
-
-function NewProject() {
-
-    ApiService.get(tasklist)
-    .then(response=>response.json())
-    .then(response=>{
-        console.log(response)
-    })
-    ApiService.post(tasklist)
-    .then(response=>response.json())
-    .then(response=>{
-        console.log(response)
-    })
-
-    ApiService.put(tasklist)
-    .then(response=>response.json())
-    .then(response=>{
-        console.log(response)
-    })
-
-    ApiService.delete(tasklist)
-    .then(response=>response.json())
-    .then(response=>{
-        console.log(response)
-    })
-
-
-
-    ApiService.get(taskfilelist)
-    .then(response=>response.json())
-    .then(response=>{
-        console.log(response)
-    })
-    ApiService.post(taskfilelist)
-    .then(response=>response.json())
-    .then(response=>{
-        console.log(response)
-    })
-    ApiService.delete(taskfilelist)
-    .then(response=>response.json())
-    .then(response=>{
-        console.log(response)
-    })
-
-
+function NewProject({ onSave }) {
+    // Definicja stanu dla poszczególnych pól formularza
+    const [projectName, setProjectName] = useState(''); // Nazwa projektu
+    const [description, setDescription] = useState(''); // Opis projektu
+    const [email, setEmail] = useState(''); // E-mail
+    const [tag, setTag] = useState(''); // Tag
+    const [priority, setPriorityValue] = useState('clear'); // Priorytet
+    const [startDate, setStartDate] = useState(''); // Data rozpoczęcia
+    const [dueDate, setDueDate] = useState(''); // Data zakończenia
 
     const [currentIndex, setCurrentIndex] = useState(0);
     const [images, setImages] = useState(Array(8).fill(null)); // Inicjalizacja z 8 pustymi miejscami
-    const [selectedPriority, setSelectedPriority] = useState('clear');
-    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false); // Stan dla rozwijanego menu priorytetów
     const trackRef = useRef(null);
+
+    const navigate = useNavigate(); // Hook do nawigacji
 
     const priorities = [
         { value: 'high', Icon: SetPriorityRed3SVG, text: 'High' },
@@ -75,17 +39,19 @@ function NewProject() {
     ];
 
     const handleNext = () => {
-
+        // Obsługa następnego obrazka w karuzeli
         const nextIndex = (currentIndex + 1) % images.length;
         setCurrentIndex(nextIndex);
     };
 
     const handlePrev = () => {
+        // Obsługa poprzedniego obrazka w karuzeli
         const prevIndex = (currentIndex - 1 + images.length) % images.length;
         setCurrentIndex(prevIndex);
     };
 
     const handleFileSelect = (index) => (event) => {
+        // Obsługa wyboru pliku obrazka
         const file = event.target.files[0];
         if (!file) return;
 
@@ -99,8 +65,47 @@ function NewProject() {
     };
 
     const handleSelect = (value) => {
-        setSelectedPriority(value);
+        // Ustawienie wybranego priorytetu
+        setPriorityValue(value);
         setIsDropdownOpen(false);
+    };
+
+    const handleSaveAs = async () => {
+        // Walidacja pól
+        if (!projectName) {
+            alert('Please enter the project name.');
+            return;
+        }
+
+
+        const response = await ApiService.get(boardlist)
+        const board_column_id = response[0].id
+
+
+
+        const newProjectData = {
+            board_column_id,
+            projectName,
+            description,
+            email,
+            tag,
+            priority,
+            startDate: startDate ? new Date(startDate).toISOString() : null,
+            dueDate: dueDate ? new Date(dueDate).toISOString() : null,
+        };
+
+        console.log('Wysyłane dane:', newProjectData);
+
+        ApiService.post('/api/tasks', newProjectData)
+            .then(data => {
+                console.log('Project saved:', data);
+                // Po zapisaniu, przekieruj do boarda
+                navigate('/board');
+            })
+            .catch(error => {
+                console.error('Error saving project:', error.message);
+                alert(`Error saving project: ${error.message}`);
+            });
     };
 
     return (
@@ -112,30 +117,60 @@ function NewProject() {
                 <main className="npe-container">
                     <div className="column column-right">
                         <div className="field">
-                            <input type="text" placeholder="Name Project" />
+                            {/* Pole nazwy projektu powiązane ze stanem */}
+                            <input
+                                type="text"
+                                placeholder="Name Project"
+                                value={projectName}
+                                onChange={(e) => setProjectName(e.target.value)}
+                            />
                         </div>
                         <div className="field">
-                            <textarea placeholder="Description"></textarea>
+                            {/* Pole opisu projektu powiązane ze stanem */}
+                            <textarea
+                                placeholder="Description"
+                                value={description}
+                                onChange={(e) => setDescription(e.target.value)}
+                            ></textarea>
                         </div>
                         <div className="field">
-                            <input type="text" placeholder="E-mail, comma separated" />
+                            {/* Pole e-mail powiązane ze stanem */}
+                            <input
+                                type="text"
+                                placeholder="E-mail, comma separated"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                            />
                         </div>
                         <div className="field">
-                            <input type="text" placeholder="Tag" />
+                            {/* Pole tagu powiązane ze stanem */}
+                            <input
+                                type="text"
+                                placeholder="Tag"
+                                value={tag}
+                                onChange={(e) => setTag(e.target.value)}
+                            />
                         </div>
                         <div className="field">
                             <div className="priority-field">
-                                <div className={`priority-dropdown ${selectedPriority}`} onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
-                                    {React.createElement(priorities.find(p => p.value === selectedPriority).Icon)}
-                                    {priorities.find(p => p.value === selectedPriority).text}
-
+                                {/* Pole wyboru priorytetu */}
+                                <div
+                                    className={`priority-dropdown ${priority}`}
+                                    onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                                >
+                                    {React.createElement(priorities.find(p => p.value === priority).Icon)}
+                                    {priorities.find(p => p.value === priority).text}
                                 </div>
                                 {isDropdownOpen && (
                                     <div className="priority-options">
-                                        {priorities.map(priority => (
-                                            <div key={priority.value} className="priority-option" onClick={() => handleSelect(priority.value)}>
-                                                {React.createElement(priority.Icon, { className: "priority-icon" })}
-                                                {priority.text}
+                                        {priorities.map(pri => (
+                                            <div
+                                                key={pri.value}
+                                                className="priority-option"
+                                                onClick={() => handleSelect(pri.value)}
+                                            >
+                                                {React.createElement(pri.Icon, { className: "priority-icon" })}
+                                                {pri.text}
                                             </div>
                                         ))}
                                     </div>
@@ -143,12 +178,34 @@ function NewProject() {
                             </div>
                         </div>
                         <div className="field date-field">
-                            <input type="date" id="start-date" placeholder="Start date" />
-                            <button className="calendar-button" type="button" onClick={() => document.getElementById('start-date').showPicker()}>
+                            {/* Pole daty rozpoczęcia powiązane ze stanem */}
+                            <input
+                                type="date"
+                                id="start-date"
+                                placeholder="Start date"
+                                value={startDate}
+                                onChange={(e) => setStartDate(e.target.value)}
+                            />
+                            <button
+                                className="calendar-button"
+                                type="button"
+                                onClick={() => document.getElementById('start-date').showPicker()}
+                            >
                                 <CalendarSVG className="svg-calendar" />
                             </button>
-                            <input type="date" id="due-date" placeholder="Due date" />
-                            <button className="calendar-button" type="button" onClick={() => document.getElementById('due-date').showPicker()}>
+                            {/* Pole daty zakończenia powiązane ze stanem */}
+                            <input
+                                type="date"
+                                id="due-date"
+                                placeholder="Due date"
+                                value={dueDate}
+                                onChange={(e) => setDueDate(e.target.value)}
+                            />
+                            <button
+                                className="calendar-button"
+                                type="button"
+                                onClick={() => document.getElementById('due-date').showPicker()}
+                            >
                                 <CalendarSVG className="svg-calendar" />
                             </button>
                         </div>
@@ -170,12 +227,11 @@ function NewProject() {
                                 <button className="carousel-button next" onClick={handleNext}>
                                     <CarouselButtonNextSVG className="svg-carousel-button-next" />
                                 </button>
-
                             </div>
                         </div>
                         <div className="buttons">
                             <button className="back-button">Back to task</button>
-                            <button className="save-button">Save as</button>
+                            <button className="save-as" onClick={handleSaveAs}>Save as</button>
                         </div>
                     </div>
                 </main>
@@ -185,4 +241,3 @@ function NewProject() {
 }
 
 export default NewProject;
-

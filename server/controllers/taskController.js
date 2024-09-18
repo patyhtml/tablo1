@@ -1,5 +1,6 @@
 // controllers/taskController.js
 const taskService = require('../services/taskService');
+const Task = require('../models/taskModel'); // Import modelu Task
 
 // Pobieranie wszystkich zadań
 exports.getAllTasks = async (req, res) => {
@@ -7,18 +8,24 @@ exports.getAllTasks = async (req, res) => {
         const tasks = await taskService.getAllTasks();
         res.status(200).json(tasks);
     } catch (error) {
-        res.status(500).send('Błąd serwera');
+        console.error("Błąd pobierania zadań:", error);
+        res.status(500).json({ message: 'Błąd serwera' });
     }
 };
 
 // Tworzenie nowego zadania
 exports.createTask = async (req, res) => {
-    const taskData = req.body;
     try {
-        const newTask = await taskService.createTask(taskData);
+        const newTask = await Task.create(req.body);
         res.status(201).json(newTask);
     } catch (error) {
-        res.status(500).send('Błąd tworzenia zadania');
+        console.error("Błąd tworzenia zadania:", error);
+
+        if (error.name === 'SequelizeValidationError' || error.name === 'SequelizeUniqueConstraintError') {
+            return res.status(400).json({ message: error.message, errors: error.errors });
+        }
+
+        res.status(500).json({ message: error.message || "Błąd tworzenia zadania" });
     }
 };
 
@@ -30,10 +37,11 @@ exports.getTaskById = async (req, res) => {
         if (task) {
             res.status(200).json(task);
         } else {
-            res.status(404).send('Zadanie nie znalezione');
+            res.status(404).json({ message: 'Zadanie nie znalezione' });
         }
     } catch (error) {
-        res.status(500).send('Błąd serwera');
+        console.error("Błąd pobierania zadania:", error);
+        res.status(500).json({ message: 'Błąd serwera' });
     }
 };
 
@@ -46,10 +54,11 @@ exports.updateTask = async (req, res) => {
         if (updatedTask) {
             res.status(200).json(updatedTask);
         } else {
-            res.status(404).send('Zadanie nie znalezione');
+            res.status(404).json({ message: 'Zadanie nie znalezione' });
         }
     } catch (error) {
-        res.status(500).send('Błąd aktualizacji zadania');
+        console.error("Błąd aktualizacji zadania:", error);
+        res.status(500).json({ message: 'Błąd aktualizacji zadania' });
     }
 };
 
@@ -60,6 +69,7 @@ exports.deleteTask = async (req, res) => {
         await taskService.deleteTask(taskId);
         res.status(204).send();  // No Content
     } catch (error) {
-        res.status(500).send('Błąd serwera');
+        console.error("Błąd usuwania zadania:", error);
+        res.status(500).json({ message: 'Błąd serwera' });
     }
 };

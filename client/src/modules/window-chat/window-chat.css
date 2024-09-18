@@ -30,6 +30,35 @@
    
 }
 
-.win-project-description[contenteditable]:focus{
+#project-description {
+    margin-top: 8px;
+    width: 95%;
+    height: 50%;
     outline: none;
+    border: none;
+    font-family: 'Gilroy';
+    font-weight: 200;
+    color: #B9B8B8;
+    border-color: none; 
+    background-color: #0C0E0D;
+    box-shadow: none;
+}
+
+#project-description:focus {
+    margin-top: 8px;
+    width: 95%;
+    outline: none;
+    border: none;
+    font-family: 'Gilroy';
+    font-weight: 200;
+    color: #B9B8B8;
+    border-color: none; 
+    background-color: #0C0E0D;
+    box-shadow: none;
+}
+
+.win-project-description [contenteditable]:focus{
+    outline: none;
+    background-color: #0C0E0D;
+
 }
