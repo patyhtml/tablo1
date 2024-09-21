@@ -1,23 +1,29 @@
-// models/userModel.js
-const { DataTypes } = require('sequelize');
-const sequelize = require('../config/db');
+const User = require('../models/userModel');
 
-const User = sequelize.define('User', {
-    name: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
-    email: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        unique: true,
-    },
-    password: {
-        type: DataTypes.STRING,
-        allowNull: false,
+// Pobieranie wszystkich użytkowników
+exports.findAll = async () => {
+    return await User.findAll();
+};
+
+// Tworzenie nowego użytkownika
+exports.create = async (userData) => {
+    return await User.create(userData);
+};
+
+// Pobieranie użytkownika po ID
+exports.findById = async (userId) => {
+    return await User.findByPk(userId);
+};
+
+// Pobieranie użytkownika po emailu
+exports.findOne = async (criteria) => {
+    return await User.findOne(criteria);
+};
+
+// Usuwanie użytkownika
+exports.destroy = async (userId) => {
+    const user = await User.findByPk(userId);
+    if (user) {
+        await user.destroy();
     }
-}, {
-    timestamps: true,  // Automatyczne kolumny `createdAt` i `updatedAt`
-});
-
-module.exports = User;
+};

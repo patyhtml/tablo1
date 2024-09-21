@@ -3,6 +3,7 @@ const express = require('express');
 const multer = require('multer');  // Import Multer do obsługi plików
 const cors = require('cors');
 const app = express();
+require('dotenv').config();
 const boardController = require('./controllers/boardController');
 const fileController = require('./controllers/fileController');  // Import kontrolera do plików
 const taskController = require('./controllers/taskController');
@@ -84,6 +85,7 @@ app.post('/api/users', userController.createUser); // Tworzenie nowego użytkown
 app.get('/api/users/:userId', userController.getUserById); // Pobieranie użytkownika po ID
 app.put('/api/users/:userId', userController.updateUser); // Aktualizacja użytkownika
 app.delete('/api/users/:userId', userController.deleteUser); // Usuwanie użytkownika
+app.post('/api/users', userController.loginUser); // Logowanie użytkownika
 
 // Trasy dla UserPlans
 app.get('/api/userPlans', userPlanController.getAllUserPlans); // Pobieranie wszystkich UserPlan

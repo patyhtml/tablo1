@@ -11,7 +11,7 @@ const User = sequelize.define('User', {
     },
     avatarId: {
         type: DataTypes.INTEGER,
-        allowNull: false,
+        notNull: true,
     },
     email: {
         type: DataTypes.STRING,
@@ -29,11 +29,11 @@ const User = sequelize.define('User', {
     },
     subscribe: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
     },
     agree: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
     },
     createdAt: {
         type: DataTypes.DATE,

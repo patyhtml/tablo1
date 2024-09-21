@@ -16,6 +16,11 @@ exports.getUserById = async (userId) => {
     return await userRepository.findById(userId);
 };
 
+// Pobieranie użytkownika po emailu
+exports.getUserByEmail = async (email) => {
+    return await userRepository.findOne({ where: { email } });
+};
+
 // Aktualizacja użytkownika
 exports.updateUser = async (userId, userData) => {
     const user = await userRepository.findById(userId);

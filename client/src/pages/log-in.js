@@ -15,27 +15,23 @@ function LogIn({setToken}) {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        
-        ApiService.post(userlist, {
-            email,
-            password
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log('Success:', data);
-            if (data) {
-                // Tutaj możesz obsłużyć sukces, np. zapisać token lub przekierować
+    
+        ApiService.post(userlist, { email, password })
+        .then(response => {
+            console.log('Odpowiedź z API:', response); // Sprawdź, co faktycznie dostajesz
+            if (response.token) {
+                setToken(response.token);
                 navigate('/board');
             } else {
-                throw new Error('Błąd logowania');
+                throw new Error('Błąd logowania: brak tokena');
             }
         })
         .catch(error => {
             console.error('Error:', error);
-            alert(error);
+            alert(error.message || 'Błąd logowania');
         });
-        
     };
+    
    
     return (
         <div>
