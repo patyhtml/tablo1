@@ -18,11 +18,11 @@ exports.createUser = async (req, res) => {
         const newUser = await userService.createUser(userData);
         res.status(201).json(newUser);
     } catch (error) {
-        res.status(500).send('Błąd tworzenia użytkownika');
+        res.status(500).send(error);
     }
 };
 
-// Pobieranie użytkownika po ID
+// Pobieranie użytkownika po IDs
 exports.getUserById = async (req, res) => {
     const userId = req.params.id;
     try {

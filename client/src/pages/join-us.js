@@ -39,11 +39,11 @@ function JoinUs() {
         .then(data => {
             console.log('Success:', data);
             // Przekierowanie do strony głównej
-            navigate('/');
+            navigate('/board');
         })
         .catch((error) => {
             console.error('Error:', error);
-            alert('Wystąpił błąd przy tworzeniu konta.');
+            alert(error);
         });
     };
 
@@ -122,7 +122,8 @@ function JoinUs() {
                         </label>
                     </div> 
                     <div className="space">
-                        <button type="submit" className="create-account-button">Create my Account</button>
+                    <button className="submit" onClick={handleCreateMyAccountClick}>Create my Account</button>
+                        
                     </div>
                 </form>
             </div>

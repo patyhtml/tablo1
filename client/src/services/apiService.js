@@ -25,7 +25,7 @@ export class ApiService {
             });
             return await this.handleResponse(response);
         } catch (error) {
-            console.error('Error in POST request:', error);
+            console.error(error);
             throw error;
         }
     }

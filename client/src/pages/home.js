@@ -110,44 +110,44 @@ function Home() {
                     <span className="make-goal__animate">l</span>
                 </h1>
 
-                <h2 id="make-goal2-heading" className="make-goal2__heading-text heading-xl" aria-hidden="true">
+                <h1 id="make-goal2-heading" className="make-goal2__heading-text heading-xl" aria-hidden="true">
                     <span className="make-goal__animate">&nbsp;</span>
                     <span className="make-goal2__animate">a</span>
                     <span className="make-goal2__animate">s</span>
                     <span className="make-goal__animate">&nbsp;</span>
-                </h2>
+                </h1>
 
-                <h3 id="make-goal3-heading" className="make-goal3__heading-text heading-xl" aria-hidden="true">
+                <h1 id="make-goal3-heading" className="make-goal3__heading-text heading-xl" aria-hidden="true">
                     <span className="make-goal3__animate">a</span>
                     <span className="make-goal__animate">&nbsp;</span>
-                </h3>
+                </h1>
 
-                <h4 id="make-goal4-heading" className="make-goal4__heading-text heading-xl" aria-hidden="true">
+                <h1 id="make-goal4-heading" className="make-goal4__heading-text heading-xl" aria-hidden="true">
                     <span className="make-goal4__animate">c</span>
                     <span className="make-goal4__animate">r</span>
                     <span className="make-goal4__animate">e</span>
                     <span className="make-goal4__animate">a</span>
-                </h4>
+                </h1>
 
-                <h4 id="make-goal5-heading" className="make-goal5__heading-text heading-xl" aria-hidden="true">
+                <h1 id="make-goal5-heading" className="make-goal5__heading-text heading-xl" aria-hidden="true">
                     <span className="make-goal5__animate">t</span>
                     <span className="make-goal5__animate">i</span>
                     <span className="make-goal5__animate">v</span>
                     <span className="make-goal5__animate">e</span>
                     <span className="make-goal__animate">&nbsp;</span>
-                </h4>
+                </h1>
 
-                <h4 id="make-goal6-heading" className="make-goal6__heading-text heading-xl" aria-hidden="true">
+                <h1 id="make-goal6-heading" className="make-goal6__heading-text heading-xl" aria-hidden="true">
                     <span className="make-goal6__animate">t</span>
                     <span className="make-goal6__animate">e</span>
                     <span className="make-goal6__animate">a</span>
                     <span className="make-goal6__animate">m</span>
-                </h4>
+                </h1>
 
 
-                <h7 id="make-goal7-heading" className="make-goal7__heading-text heading-xl" aria-hidden="true">
+                <h2 id="make-goal7-heading" className="make-goal7__heading-text heading-xl" aria-hidden="true">
                     <span className="make-goal7__animate">make managing creative projects easy and transparent for teams</span>
-                </h7>
+                </h2>
 
 
                 <div className="window">
@@ -168,7 +168,7 @@ function Home() {
 
             <section className="hom-Section2" data-block="Section2" id="Section2">
                 <div className="tasks"> </div>
-                <h8 id="tasks-heading" className="tasks__heading-text heading-xl" aria-hidden="true">
+                <h3 id="tasks-heading" className="tasks__heading-text heading-xl" aria-hidden="true">
                     <span className="tasks__animate">M</span>
                     <span className="tasks__animate">a</span>
                     <span className="tasks__animate">n</span>
@@ -186,12 +186,12 @@ function Home() {
                     <span className="tasks__animate">a</span>
                     <span className="tasks__animate">s</span>
                     <span className="tasks__animate">e</span>
-                </h8>
+                </h3>
 
-                <h9 id="tasks2-heading" className="tasks2__heading-text heading-xl" aria-hidden="true">
+                <h4 id="tasks2-heading" className="tasks2__heading-text heading-xl" aria-hidden="true">
                     <span className="tasks2__animate">Lists and cards are the building blocks of organizing work on a board. Grow from there with task assignments,
                         timelines, productivity metrics, calendars, and more.</span>
-                </h9>
+                </h4>
             </section>
 
 
@@ -208,7 +208,7 @@ function Home() {
 
             <section className="hom-Section3" data-block="Section3" id="Section3">
                 <div className="calendar"> </div>
-                <h10 id="calendar-heading" className="calendar__heading-text heading-xl" aria-hidden="true">
+                <h5 id="calendar-heading" className="calendar__heading-text heading-xl" aria-hidden="true">
                     <span className="calendar__animate">C</span>
                     <span className="calendar__animate">a</span>
                     <span className="calendar__animate">l</span>
@@ -217,19 +217,19 @@ function Home() {
                     <span className="calendar__animate">d</span>
                     <span className="calendar__animate">a</span>
                     <span className="calendar__animate">r</span>
-                </h10>
+                </h5>
 
-                <h11 id="calendar2-heading" className="calendar2__heading-text heading-xl" aria-hidden="true">
+                <h5 id="calendar2-heading" className="calendar2__heading-text heading-xl" aria-hidden="true">
                     <span className="calendar2__animate">See on the calendar how projects move along
                         the timeline to achieve their goal. Who is responsible
                         for which project.</span>
-                </h11>
+                </h5>
 
-                <h12 id="calendar3-heading" className="calendar3__heading-text heading-xl" aria-hidden="true">
+                <h5 id="calendar3-heading" className="calendar3__heading-text heading-xl" aria-hidden="true">
                     <span className="calendar3__animate">Due dates: They’re easy to set,
                         hard to miss (with reminders!),
                         and oh-so-satisfying to mark as “done.”</span>
-                </h12>
+                </h5>
 
 
 
@@ -259,7 +259,7 @@ function Home() {
 
                 <section className="hom-Section4" data-block="Section4" id="Section4">
                     <div className="correction"> </div>
-                    <h13 id="correction" className="correction_heading-text heading-xl" aria-hidden="true">
+                    <h6 id="correction" className="correction_heading-text heading-xl" aria-hidden="true">
                         <span className="correction__animate">C</span>
                         <span className="correction__animate">o</span>
                         <span className="correction__animate">r</span>
@@ -276,13 +276,13 @@ function Home() {
                         <span className="correction__animate">i</span>
                         <span className="correction__animate">n</span>
                         <span className="correction__animate">t</span>
-                    </h13>
-                    <h14 id="correction-point2" className="correction-point2__heading-text heading-xl" aria-hidden="true">
+                    </h6>
+                    <h6 id="correction-point2" className="correction-point2__heading-text heading-xl" aria-hidden="true">
                         <span className="correction-point2__animate">Do not exchange e-mails to express your opinion about
                             the project. Simply add correction points to the project
                             in an easy way so that the entire team can immediately
                             see what to improve to achieve the goal.</span>
-                    </h14>
+                    </h6>
                 </section>
             </div>
             <Footer />

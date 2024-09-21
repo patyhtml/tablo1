@@ -56,11 +56,8 @@ body {
 }
 
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2
+ {
     margin-top: 0;
     /* Resetuje domyślny margines */
     margin-bottom: 15px;
@@ -252,9 +249,9 @@ h6 {
     float: left;
 }
 
-h8,
-h9 {
-    padding-left: 70px;
+h3,
+h4 {
+    padding-left: 0px;
     margin-top: 0;
     /* Resetuje domyślny margines */
     margin-bottom: 20px;
@@ -476,9 +473,8 @@ h9 {
 }
 
 
-h10,
-h11,
-h12 {
+
+h5 {
     margin-top: 0;
     /* Resetuje domyślny margines */
     margin-bottom: 10px;
@@ -553,17 +549,16 @@ h12 {
 }
 
 .hom-Section4 {
-    padding: 20px;
-
-
+    max-width: 600px;
+    padding: 100px;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
 }
 
 /* Stylizacja nagłówków */
-h13,
-h14 {
+
+h6 {
     margin-top: 0;
     margin-left: 200px;
     margin-bottom: 25px;

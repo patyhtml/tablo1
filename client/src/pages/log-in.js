@@ -8,7 +8,7 @@ import { ApiService } from '../services/apiService';
 import { userlist } from '../services/apiRouteService';
 
 
-function LogIn() {
+function LogIn({setToken}) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
@@ -32,13 +32,11 @@ function LogIn() {
         })
         .catch(error => {
             console.error('Error:', error);
-            alert('Wystąpił błąd przy logowaniu.');
+            alert(error);
         });
         
     };
-    const handleLoginClick = () => {
-        navigate('/board');
-      };
+   
     return (
         <div>
             <Header />
@@ -70,7 +68,7 @@ function LogIn() {
                             />
                         </div>
                         <div className="button-group">
-                            <button type="submit" className="log-login-button" onClick={handleLoginClick}>Login</button>
+                            <button type="submit" className="log-login-button" onClick={handleSubmit}>Login</button>
                             <button type="button" className="forgot-password">Forgot your password</button>
                         </div>
                     </form>

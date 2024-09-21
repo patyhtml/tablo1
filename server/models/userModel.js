@@ -5,7 +5,7 @@ const sequelize = require('../config/db');
 const User = sequelize.define('User', {
     id: {
         type: DataTypes.INTEGER,
-        notNull: true,
+        allowNull: false,
         primaryKey: true,
         autoIncrement: true,
     },
@@ -25,9 +25,30 @@ const User = sequelize.define('User', {
 
     name: {
         type: DataTypes.STRING,
+        notNull: true,
+    },
+    subscribe: {
+        type: DataTypes.STRING,
         allowNull: false,
     },
- 
+    agree: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    createdAt: {
+        type: DataTypes.DATE,
+        allowNull: true,
+    },
+
+    updatedAt: {
+        type: DataTypes.DATE,
+        allowNull: true,
+    },
+    fieldList: {
+        type: DataTypes.DATE,
+        allowNull: true,
+    },
+
 }, {
     timestamps: false,  // Automatyczne kolumny `createdAt` i `updatedAt`
 });

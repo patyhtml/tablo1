@@ -37,7 +37,7 @@
     
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2 {
     margin-top: 0; /* Resetuje domyślny margines */
     margin-bottom: 15px; /* Ustawia odstęp między h1 i h2 */
 }
@@ -184,6 +184,7 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
+
 .pricing-plan-svg h2 {
     font-family: 'Gilroy', sans-serif;
     font-weight: 400;
@@ -194,11 +195,10 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .pricing-plan-svg h3 {
+
     font-family: 'Gilroy', sans-serif;
-    font-weight: 400;
-    font-size: 66px;
-    justify-content: start;
-    
+    font-weight: 500;
+    font-size: 66px;   
 
 }
 
@@ -209,7 +209,7 @@ h1, h2, h3, h4, h5, h6 {
 
     justify-content: end;
    
-   
+
    
 
 }
@@ -253,13 +253,10 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     align-items: flex-start;
 }
-.price h4,
-.price h5
-.price h6 {
-    margin: 0;
-}
+
 .price h4 {
     margin-bottom: 5px; /* Dodaj odstęp między <h4> a <h5> */
+    margin-left: 1px;
 }
 .spacer {
     height: 0%; /* Wysokość przestrzeni */
@@ -332,9 +329,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .h4, h5, h6 {
 
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+    margin-left: 1px;
      
 }
+
 
 .inline {
 

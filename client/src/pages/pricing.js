@@ -93,9 +93,6 @@ function Pricing() {
 
                 <div className="price">
                     <h4 style={{ color: color, paddingBottom: '20px' }}> per Month</h4>
-
-
-
                 </div>
                 <div className="pricing-plans__control pricing-plans__control--users">
                     <span className="users-many">How many users?</span>
@@ -141,7 +138,7 @@ function Pricing() {
                     <span className="make-goal__animate">d</span>
                 </h1>
 
-                <h2 id="make-goal2-heading" className="make-goal2__heading-text heading-xl" aria-hidden="true">
+                <h1 id="make-goal2-heading" className="make-goal2__heading-text heading-xl" aria-hidden="true">
                     <span className="make-goal__animate">&nbsp;</span>
                     <span className="make-goal2__animate">b</span>
                     <span className="make-goal2__animate">u</span>
@@ -149,39 +146,39 @@ function Pricing() {
                     <span className="make-goal2__animate">l</span>
                     <span className="make-goal2__animate">d</span>
                     <span className="make-goal__animate">&nbsp;</span>
-                </h2>
+                </h1>
 
 
-                <h3 id="make-goal3-heading" className="make-goal3__heading-text heading-xl" aria-hidden="true">
+                <h1 id="make-goal3-heading" className="make-goal3__heading-text heading-xl" aria-hidden="true">
                     <span className="make-goal3__animate">a</span>
                     <span className="make-goal__animate">&nbsp;</span>
-                </h3>
+                </h1>
 
-                <h4 id="make-goal4-heading" className="make-goal4__heading-text heading-xl" aria-hidden="true">
+                <h1 id="make-goal4-heading" className="make-goal4__heading-text heading-xl" aria-hidden="true">
                     <span className="make-goal4__animate">c</span>
                     <span className="make-goal4__animate">r</span>
                     <span className="make-goal4__animate">e</span>
                     <span className="make-goal4__animate">a</span>
-                </h4>
+                </h1>
 
-                <h4 id="make-goal5-heading" className="make-goal5__heading-text heading-xl" aria-hidden="true">
+                <h1 id="make-goal5-heading" className="make-goal5__heading-text heading-xl" aria-hidden="true">
                     <span className="make-goal5__animate">t</span>
                     <span className="make-goal5__animate">i</span>
                     <span className="make-goal5__animate">v</span>
                     <span className="make-goal5__animate">e</span>
                     <span className="make-goal__animate">&nbsp;</span>
-                </h4>
+                </h1>
 
-                <h4 id="make-goal6-heading" className="make-goal6__heading-text heading-xl" aria-hidden="true">
+                <h1 id="make-goal6-heading" className="make-goal6__heading-text heading-xl" aria-hidden="true">
                     <span className="make-goal6__animate">t</span>
                     <span className="make-goal6__animate">e</span>
                     <span className="make-goal6__animate">a</span>
                     <span className="make-goal6__animate">m</span>
-                </h4>
+                </h1>
 
-                <h7 id="make-goal7-heading" className="make-goal7__heading-text heading-xl" aria-hidden="true">
+                <h2 id="make-goal7-heading" className="make-goal7__heading-text heading-xl" aria-hidden="true">
                     <span className="make-goal7__animate">make managing creative projects easy and transparent for teams</span>
-                </h7>
+                </h2>
             </section>
 
 
@@ -196,7 +193,7 @@ function Pricing() {
                                 <h2 style={{ color: '#F2ADF3' }}>Tablo</h2>
                             </div>
                             <div className="price">
-                                <h3 style={{ color: '#F2ADF3' }}>$0</h3>
+                                <h3 style={{ color: '#F2ADF3'}}>$0</h3>
                                 <h4 style={{ color: '#F2ADF3' }}>Month</h4>
                                 <h5>Per user/month</h5>
 
@@ -452,7 +449,7 @@ function Pricing() {
 
                 </h1>
 
-                <h2 id="choose2-heading" className="choose2__heading-text heading-xl" aria-hidden="true">
+                <h1 id="choose2-heading" className="choose2__heading-text heading-xl" aria-hidden="true">
                     <span className="choose2__animate">&nbsp;</span>
                     <span className="choose2__animate">y</span>
                     <span className="choose2__animate">o</span>
@@ -460,9 +457,9 @@ function Pricing() {
                     <span className="choose2__animate">r</span>
 
                     <span className="choose2__animate">&nbsp;</span>
-                </h2>
+                </h1>
 
-                <h3 id="choose3-heading" className="choose3__heading-text heading-xl" aria-hidden="true">
+                <h1 id="choose3-heading" className="choose3__heading-text heading-xl" aria-hidden="true">
 
                     <span className="choose3__animate">p</span>
                     <span className="choose3__animate">l</span>
@@ -470,7 +467,7 @@ function Pricing() {
                     <span className="choose3__animate">n</span>
 
 
-                </h3>
+                </h1>
 
             </section>
 
@@ -656,7 +653,7 @@ function Pricing() {
 
                 </h1>
                 <div className="sub-headings-container"></div>
-                <h2 id="faq2-heading" className="faq2__heading-text heading-xl" aria-hidden="true">
+                <h1 id="faq2-heading" className="faq2__heading-text heading-xl" aria-hidden="true">
                     <span className="faq2__animate">&nbsp;</span>
                     <span className="faq2__animate">a</span>
                     <span className="faq2__animate">s</span>
@@ -664,9 +661,9 @@ function Pricing() {
                     <span className="faq2__animate">e</span>
                     <span className="faq2__animate">d</span>
                     <span className="faq2__animate">&nbsp;</span>
-                </h2>
+                </h1>
 
-                <h3 id="faq3-heading" className="faq3__heading-text heading-xl" aria-hidden="true">
+                <h1 id="faq3-heading" className="faq3__heading-text heading-xl" aria-hidden="true">
 
                     <span className="faq3__animate">q</span>
                     <span className="faq3__animate">u</span>
@@ -678,7 +675,7 @@ function Pricing() {
                     <span className="faq3__animate">n</span>
                     <span className="faq3__animate">s</span>
 
-                </h3>
+                </h1>
             </section>
 
 

@@ -76,7 +76,7 @@ return (
 
   
         <div className="subscription-box">
-            <h18>Subscribe to the Tablo</h18>
+            <h6>Subscribe to the Tablo</h6>
             <p>Newsletter to stay up to date with the lashes releases</p>
             <form id="subscription-form" action="#" method="post">
                 <div className="input-with-button">
