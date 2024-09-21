@@ -21,7 +21,7 @@ export const Card = ({ props }) => {
     const [selectedImage, setSelectedImage] = useState(null); // Stan do przechowywania wybranego zdjęcia
 
     // Stany do zarządzania tytułem, opisem i tagiem
-    const [title, setTitle] = useState(props.projectName);
+    const [title, setTitle] = useState(props.name);
     const [description, setDescription] = useState(props.description);
     const [tag, setTag] = useState(props.tag); // Edytowalny tag
 

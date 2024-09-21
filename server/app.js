@@ -11,6 +11,7 @@ const taskFileController = require('./controllers/taskFileController');
 const userBoardController = require('./controllers/userBoardController');
 const userController = require('./controllers/userController');
 const userPlanController = require('./controllers/userPlanController');
+const boardColumnController = require('./controllers/boardColumnController');
 
 // Import trasy dla zadań (jeśli istnieją)
 const taskRoutes = require('./routes/taskRoutes'); // Upewnij się, że ten plik istnieje
@@ -49,6 +50,12 @@ app.post('/api/boards', boardController.createBoard); // Dodawanie board for use
 app.get('/api/boards/:boardId', boardController.getBoardById); // Szczegóły board
 app.post('/api/boards/:boardId', boardController.updateBoard); // Zapis edycji board
 app.delete('/api/boards/:boardId', boardController.deleteBoard); // Usuwanie board
+// Trasy dla boardscolumns
+app.get('/api/boardcolumns', boardColumnController.getBoardColumns); // Pobieranie listy boards user
+// app.post('/api/boardcolumns', boardColumnController.createBoard); // Dodawanie board for user
+// app.get('/api/boardcolumns/:boardColumnId', boardColumnController.getBoardById); // Szczegóły board
+// app.post('/api/boardcolumns/:boardColumnId', boardColumnController.updateBoard); // Zapis edycji board
+// app.delete('/api/boardcolumns/:boardColumnId', boardColumnController.deleteBoard); // Usuwanie board
 
 // Trasy dla plików z użyciem Multer
 app.post('/api/files/upload', upload.single('file'), fileController.uploadFile); // Upload plików

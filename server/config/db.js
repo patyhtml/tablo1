@@ -11,7 +11,7 @@ const sequelize = new Sequelize('tablo', 'root', 'root', {
         idle: 10000
     },
     dialectOptions: {
-        socketPath: "/tmp/mysql.sock"
+        socketPath: "/tmp/mysql.sock",
     },
     define: {
         paranoid: true

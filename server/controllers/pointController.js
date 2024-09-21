@@ -15,7 +15,7 @@ exports.getAllPoints = async (req, res) => {
 exports.createPoint = async (req, res) => {
     const pointData = req.body;
     try {
-        await pointService.deletePoints(pointData.taskId)
+        // await pointService.deletePoints(pointData.taskId)
         const newPoint = await pointService.createPoints(pointData.points);
         res.status(201).json(newPoint);
     } catch (error) {

@@ -6,15 +6,20 @@ const sequelize = require('../config/db');
 const Task = sequelize.define('Task', {
     id: {
         type: DataTypes.INTEGER,
+        primaryKey: true,
+        allowNull:true,
         autoIncrement: true,
-        primaryKey: true
+  
     },
-    board_column_id: {
+    boardColumnId: {
+        type: DataTypes.INTEGER,
+    },
+    userId: {
         type: DataTypes.INTEGER,
     },
   
   
-    projectName: {
+    name: {
         type: DataTypes.STRING(255), // Odpowiada varchar(255)
         allowNull: false
     },
@@ -39,6 +44,7 @@ const Task = sequelize.define('Task', {
     },
     tag: {
         type: DataTypes.STRING(255), // Odpowiada varchar(255)
+
     },
     email: {
         type: DataTypes.STRING(255), // Odpowiada varchar(255)
@@ -46,14 +52,7 @@ const Task = sequelize.define('Task', {
             isEmail: true
         }
     },
-    createdAt: {
-        type: DataTypes.DATE, // Odpowiada datetime
-        allowNull: true
-    },
-    updatedAt: {
-        type: DataTypes.DATE, // Odpowiada datetime
-        allowNull: true
-    }
+    
 }, {
     timestamps: false, // Automatyczne kolumny `createdAt` i `updatedAt`
 });

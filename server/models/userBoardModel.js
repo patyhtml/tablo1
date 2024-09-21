@@ -6,13 +6,24 @@ const UserBoard = sequelize.define('UserBoard', {
     userId: {
         type: DataTypes.INTEGER,
         allowNull: false,
+        primaryKey: true
     },
     boardId: {
         type: DataTypes.INTEGER,
         allowNull: false,
+        primaryKey: true
+    },
+    isOwner: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false,
+    },
+    isInvited: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false,
     }
+
 }, {
-    timestamps: true,  // Automatyczne kolumny `createdAt` i `updatedAt`
+    timestamps: false,  // Automatyczne kolumny `createdAt` i `updatedAt`
 });
 
 module.exports = UserBoard;

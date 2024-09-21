@@ -3,6 +3,12 @@ const { DataTypes } = require('sequelize');
 const sequelize = require('../config/db');
 
 const File = sequelize.define('File', {
+    id: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        allowNull: false,
+        autoIncrement: true,
+    },
     originalName: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -20,7 +26,7 @@ const File = sequelize.define('File', {
         allowNull: false,
     }
 }, {
-    timestamps: true,  // Automatyczne kolumny `createdAt` i `updatedAt`
+    timestamps: false,  // Automatyczne kolumny `createdAt` i `updatedAt`
 });
 
 module.exports = File;

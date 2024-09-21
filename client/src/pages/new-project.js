@@ -79,13 +79,13 @@ function NewProject({ onSave }) {
 
 
         const response = await ApiService.get(boardlist)
-        const board_column_id = response[0].id
+        const boardColumnId = response[0].id
 
 
 
         const newProjectData = {
-            board_column_id,
-            projectName,
+            boardColumnId,
+            name:projectName,
             description,
             email,
             tag,

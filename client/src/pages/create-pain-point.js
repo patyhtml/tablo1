@@ -15,6 +15,7 @@ function CreatePainPoint() {
        
     const [todoItems, setTodoItems] = useState([]);
     const [draggedItem, setDraggedItem] = useState(null);
+    const [newTodoItems, setNewTodoItems] = useState([]);
    
 
     const handleDragStart = (event) => {
@@ -40,23 +41,25 @@ function CreatePainPoint() {
         const yPos = event.clientY - rect.top - draggedItem.offsetY;
         // console.log("Dropped at position:", xPos, yPos);
         const newItem = {
-            id: draggedItem.id,
-            x: xPos,
-            y: yPos,
-            title: `User name ${todoItems.length}`,
-            time: new Date().toLocaleTimeString(),
+            taskId:1,
+            cordX: xPos,
+            cordY: yPos,
+            name: `User name ${todoItems.length}`,
+            createdAt: new Date().toISOString().split('T')[0],
             description: `Write a description of ... ${todoItems.length}`
         };
 
       
         setTodoItems([...todoItems, newItem]);
+        setNewTodoItems([...newTodoItems, newItem]);
         setDraggedItem(null);
+        
         // console.log("New item added:", newItem);
     };
 
     const handleSaveAs = () => {
         ApiService.post(pointlist, {
-            points:todoItems,
+            points:newTodoItems,
             taskId:1
         })
             .then(response => {
@@ -122,8 +125,8 @@ function CreatePainPoint() {
                                         className="svg-pain-point"
                                         style={{
                                             position: 'absolute',
-                                            left: `${position.x}px`,
-                                            top: `${position.y}px`
+                                            left: `${position.cordX}px`,
+                                            top: `${position.cordY}px`
                                         }}
                                     />
                                 ))}

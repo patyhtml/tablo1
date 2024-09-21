@@ -3,8 +3,14 @@ const { DataTypes } = require('sequelize');
 const sequelize = require('../config/db');
 
 const User = sequelize.define('User', {
-    name: {
-        type: DataTypes.STRING,
+    id: {
+        type: DataTypes.INTEGER,
+        notNull: true,
+        primaryKey: true,
+        autoIncrement: true,
+    },
+    avatarId: {
+        type: DataTypes.INTEGER,
         allowNull: false,
     },
     email: {
@@ -15,9 +21,15 @@ const User = sequelize.define('User', {
     password: {
         type: DataTypes.STRING,
         allowNull: false,
-    }
+    },
+
+    name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+ 
 }, {
-    timestamps: true,  // Automatyczne kolumny `createdAt` i `updatedAt`
+    timestamps: false,  // Automatyczne kolumny `createdAt` i `updatedAt`
 });
 
 module.exports = User;

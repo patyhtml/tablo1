@@ -11,7 +11,14 @@ exports.getAllPoints = async () => {
 exports.createPoints = async (pointData) => {
     try {
         console.log('Otrzymane dane:', pointData); // Logujemy otrzymane dane
-        const result = await pointModel.bulkCreate(pointData); // Zapis do bazy danych
+        result=await Promise.all(pointData.map(async point=>{
+            return await pointRepository.create(point)
+
+        }))
+        
+        
+       
+        // const result = await pointModel.bulkCreate(pointData); // Zapis do bazy danych
         console.log('Zapisane dane:', result); // Logujemy zapisane dane
         return result;
     } catch (error) {
@@ -33,10 +40,10 @@ exports.deletePoint = async (pointId) => {
     }
 };
 
-exports.deletePoints = async (task_id) => {
+exports.deletePoints = async (taskId) => {
     await pointModel.destroy({
         where:{
-            task_id
+            taskId
         }
     });
     

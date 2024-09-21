@@ -3,18 +3,35 @@ const { DataTypes } = require('sequelize');
 const sequelize = require('../config/db');
 
 const Point = sequelize.define('Point', {
-    cord_x: {
+    id: {
+        type: DataTypes.INTEGER,
+        autoIncrement: true,
+        notNull: true,
+        primaryKey: true,
+    },
+    taskId: {
+        type: DataTypes.INTEGER,   
+    },
+    userId: {
+        type: DataTypes.INTEGER,   
+    },
+
+    cordX: {
         type: DataTypes.DOUBLE,
         allowNull: false,
     },
-    cord_y: {
+    cordY: {
         type: DataTypes.DOUBLE,
         allowNull: false,
     },
-    title: {
+    name: {
         type: DataTypes.STRING,
         allowNull: true,
     },
+    createdAt: {
+        type: DataTypes.DATE,
+            allowNull: true,
+        },
     description: {
         type: DataTypes.STRING,
         allowNull: true,

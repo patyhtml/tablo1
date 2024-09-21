@@ -20,8 +20,8 @@ export const WindowChat = ({ props }) => {
         <div className="window-chat">
             <div className="win-project-info">
                 <img src={AwatarChatPNG} alt="Awatar Chat" />
-                <h3 className="win-project-title">{props.title}</h3>
-                <span className="win-project-time">{props.time}</span>
+                <h3 className="win-project-title">{props.name}</h3>
+                <span className="win-project-time">{props.createdAt.split('T')[0]}</span>
                 <button className="expand-button" onClick={toggleExpand}>
                     <ExpandButtonDefaultSVG className="svg-expand-button-default" />
                 </button>

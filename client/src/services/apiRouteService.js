@@ -2,6 +2,7 @@ export const boardlist='/api/boards'
 export const board='/api/boards/:boardId'
 export const filelist='/api/files/upload'
 export const file='/api/files/:id'
+export const boardcolumnlist='/api/boardcolumns'
 
 export const pointlist='/api/points'
 export const taskfilelist='/api/taskfiles'
