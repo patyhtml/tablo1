@@ -88,7 +88,8 @@ exports.loginUser = async (req, res) => {
         });
 
         // Zwróć token w odpowiedzi
-        res.status(200).json({ token });
+        res.status(200).json({ token, user: { id: user.id, email: user.email } });
+
 
     } catch (error) {
         console.error('Błąd logowania:', error);

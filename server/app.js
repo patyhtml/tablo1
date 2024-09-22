@@ -3,6 +3,7 @@ const express = require('express');
 const multer = require('multer');  // Import Multer do obsługi plików
 const cors = require('cors');
 const app = express();
+const bodyParser = require('body-parser');
 require('dotenv').config();
 const boardController = require('./controllers/boardController');
 const fileController = require('./controllers/fileController');  // Import kontrolera do plików
@@ -37,6 +38,8 @@ const upload = multer({ dest: 'uploads/' });  // Folder, gdzie będą zapisywane
 
 // Trasy dla zadań (jeśli korzystasz z pliku zdefiniowanego w `taskRoutes`)
 app.use('/api/tasks', taskRoutes);
+
+app.use(bodyParser.json());
 
 // Jeśli nie korzystasz z `taskRoutes`, możesz bezpośrednio zdefiniować trasy dla zadań:
 app.get('/api/tasks', taskController.getAllTasks); // Pobieranie listy zadań

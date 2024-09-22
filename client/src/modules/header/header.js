@@ -34,7 +34,7 @@ export const Header = () => {
         <div className="hamburger-menu" id="hamburger-menu" onClick={toggleMenu}>
           <HamburgerIconSVG className="svg-hamburger-icon" />
         </div>
-        <nav className={`mobile-menu ${isMenuOpen ? 'show' : ''}`} id="mobile-menu">
+        <nav className={`mobile-menu-header ${isMenuOpen ? 'show' : ''}`} id="mobile-menu-header">
           <a href="#tools">Tools</a>
           <Link to="/pricing" className="link">Pricing</Link>
 

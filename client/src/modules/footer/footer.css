@@ -260,7 +260,24 @@
 /* Mobile view */
 @media (max-width: 375px) {
     /* General styles for horizontal scrolling */
-   
+    @media only screen and (max-width: 375px) {
+        .foo-join-button {
+            background-color: #F2ADF3;
+    border: none;
+    font-family: 'Gilroy';
+    font-weight: 500;
+    color: #0C0E0D;
+    font-size: 13px;
+        }
+        .foo-login-button {
+            background-color: #0C0E0D;
+            font-family: 'Gilroy';
+            font-weight: normal;
+            color: #FFFBDA;
+            font-size: 13px;
+            border: 1px solid #F2ADF3;
+        }
+    }
    
     .footer {
         flex-direction: column;
