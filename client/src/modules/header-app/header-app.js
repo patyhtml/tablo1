@@ -2,11 +2,14 @@
 import {ReactComponent as HamburgerIconSVG} from './../../assets/img/hamburger-icon.svg'
 import { Link, useNavigate } from 'react-router-dom';
 import './header-app.css'
+import { useAuth } from '../../providers/authProvider';
 export const Header = () => {
+  const {setToken} = useAuth()
   const navigate = useNavigate();
   
   const handleLogoutClick = () => {
-    navigate('/');
+    setToken(null)
+    navigate('/', {replace:true});
  
   };
 return (

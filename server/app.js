@@ -14,9 +14,10 @@ const userBoardController = require('./controllers/userBoardController');
 const userController = require('./controllers/userController');
 const userPlanController = require('./controllers/userPlanController');
 const boardColumnController = require('./controllers/boardColumnController');
+const authController = require('./controllers/authController');
 
 // Import trasy dla zadań (jeśli istnieją)
-const taskRoutes = require('./routes/taskRoutes'); // Upewnij się, że ten plik istnieje
+// const taskRoutes = require('./routes/taskRoutes'); // Upewnij się, że ten plik istnieje
 
 // Middleware do parsowania JSON (jeśli potrzebne do przetwarzania danych z żądań POST)
 app.use(express.json());
@@ -37,9 +38,11 @@ app.get('/', (req, res) => {
 const upload = multer({ dest: 'uploads/' });  // Folder, gdzie będą zapisywane pliki
 
 // Trasy dla zadań (jeśli korzystasz z pliku zdefiniowanego w `taskRoutes`)
-app.use('/api/tasks', taskRoutes);
+// app.use('/api/tasks', taskRoutes);
 
 app.use(bodyParser.json());
+
+app.post('/api/auth', authController.login); // Logowanie użytkownika
 
 // Jeśli nie korzystasz z `taskRoutes`, możesz bezpośrednio zdefiniować trasy dla zadań:
 app.get('/api/tasks', taskController.getAllTasks); // Pobieranie listy zadań
@@ -88,7 +91,8 @@ app.post('/api/users', userController.createUser); // Tworzenie nowego użytkown
 app.get('/api/users/:userId', userController.getUserById); // Pobieranie użytkownika po ID
 app.put('/api/users/:userId', userController.updateUser); // Aktualizacja użytkownika
 app.delete('/api/users/:userId', userController.deleteUser); // Usuwanie użytkownika
-app.post('/api/users', userController.loginUser); // Logowanie użytkownika
+
+
 
 // Trasy dla UserPlans
 app.get('/api/userPlans', userPlanController.getAllUserPlans); // Pobieranie wszystkich UserPlan

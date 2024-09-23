@@ -5,10 +5,11 @@ import Header from './../modules/header/header'
 import Footer from './../modules/footer/footer'
 import { ReactComponent as DividerSVG } from '../assets/img/divider.svg';
 import { ApiService } from '../services/apiService'; 
-import { userlist } from '../services/apiRouteService';
+import { authlogin } from '../services/apiRouteService';
+import { useAuth } from '../providers/authProvider';
 
-
-function LogIn({setToken}) {
+function LogIn() {
+    const {setToken} = useAuth()
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
@@ -16,12 +17,13 @@ function LogIn({setToken}) {
     const handleSubmit = (event) => {
         event.preventDefault();
     
-        ApiService.post(userlist, { email, password })
+        ApiService.post(authlogin, { email, password })
         .then(response => {
             console.log('Odpowiedź z API:', response); // Sprawdź, co faktycznie dostajesz
+           
             if (response.token) {
-                setToken(response.token);
-                navigate('/board');
+                setToken(response.token)
+                navigate('/board',{replace:true});
             } else {
                 throw new Error('Błąd logowania: brak tokena');
             }
