@@ -1,29 +1,33 @@
 .boa-container-wrapper {
     display: flex;
     width: 100%;
-    height: 100vh;
+    
+    overflow: auto;
 }
 
 .sidebar {
     width: 20%;
     /* Szerokość paska bocznego */
     background-color: #0C0E0D;
-    border-right: 1px solid #565656;
+    border-right: 0,5px solid #565656;
 }
 
 .boa-container {
+    width: 70%;
     flex-grow: 1;
     /* Zajmuje resztę dostępnej przestrzeni */
     display: flex;
     flex-direction: column;
     background-color: #0C0E0D;
+    overflow: auto;
 }
 
 .boa-board-content {
     display: flex;
     flex-grow: 1;
     overflow-x: auto;
-    height: 100%;
+    height: 100vh;
+   
     /* Pełna wysokość dostępnej przestrzeni */
 }
 
@@ -79,18 +83,106 @@
 
 /* Responsive styles */
 @media (max-width: 768px) {
+
+    .boa-container-wrapper {
+        display: flex;
+        width: 98%;
+       
+    }
     .boa-board-content {
         flex-direction: column;
         width: 100%;
+        min-height: 100%;
+        overflow: auto;
     }
 
     .boa-list {
         width: 100%;
         margin-right: 0;
         margin-bottom: 10px;
+        height: 100%;
+        
     }
 
     .boa-list:last-child {
         margin-bottom: 0;
+    }
+    .sidebar {
+        width: 20%;
+        height: 50%;
+        /* Szerokość paska bocznego */
+        background-color: #0C0E0D;
+      
+       
+    }
+    
+    .boa-container {
+        width: 80%;
+        flex-grow: 1;
+        /* Zajmuje resztę dostępnej przestrzeni */
+        display: flex;
+        flex-direction: column;
+        background-color: #0C0E0D;
+        overflow: auto;
+    }
+    
+    .boa-board-content {
+        display: flex;
+        flex-grow: 1;
+        overflow-x: auto;
+        height: 100%;
+       
+        /* Pełna wysokość dostępnej przestrzeni */
+    }
+    
+    .boa-list {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        background: #0C0E0D;
+        border-right: none;
+        /* Usunięcie odstępu między kolumnami */
+        height: 100%;
+        /* Pełna wysokość dostępnej przestrzeni */
+    }
+    
+    .boa-list:last-child {
+        margin-right: 0;
+    }
+    
+    .boa-list-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Gilroy';
+        background: #0C0E0D;
+        padding: 15px;
+    }
+    
+    .boa-tasks {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .boa-list-header h3 {
+        margin: 0;
+        font-family: 'Gilroy';
+        font-weight: 300;
+        font-size: 18px;
+        color: #B9B8B8;
+    }
+    
+    .add-list,
+    .more-options {
+        font-family: 'Gilroy';
+        font-weight: 300;
+        font-size: 30px;
+        color: #B9B8B8;
+        background: #0C0E0D;
+        border: none;
+        cursor: pointer;
     }
 }
